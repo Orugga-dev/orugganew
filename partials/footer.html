@@ -1,0 +1,19 @@
+<footer class="footer">
+  <div class="container">
+    <div class="hline"></div>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Orugga</div>
+      <div class="muted2">
+        <a data-foot="about" href="#">About Us</a> ·
+        <a data-foot="services" href="#">Services</a> ·
+        <a data-foot="work" href="#">Our work</a> ·
+        <a data-foot="clients" href="#">Clients</a> ·
+        <a data-foot="contact" href="#">Contacts</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year')?.textContent = new Date().getFullYear();
+</script>
