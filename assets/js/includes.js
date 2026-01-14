@@ -52,7 +52,7 @@
   };
 
   // Logos (new Orugga logo)
-  const logoDark = u("/assets/img/orugga_logo_color_on_dark_clean.png");
+  const logoDark = u("/assets/img/orugga_logo_white_on_dark_clean.png");
   const logoLight = u("/assets/img/orugga_logo_color_transparent.png");
 
   function pickLogo() {
