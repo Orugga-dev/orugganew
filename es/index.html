@@ -1,40 +1,163 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Orugga — Transformando ideas en soluciones innovadoras</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/styles.css"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Orugga — Transformamos ideas en soluciones innovadoras</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="../assets/css/styles.css"/>
 </head>
 <body>
-<div id="siteHeader"></div>
 
-<main>
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <h1>Transformando ideas en soluciones innovadoras</h1>
-      <p>
-        En Orugga impulsamos la transformación digital de tu negocio con aplicaciones de software a medida,
-        intuitivas y pensadas para generar impacto. Combinamos tecnología de punta y una mirada centrada
-        en el usuario para llevar tus proyectos al siguiente nivel.
-      </p>
-      <div style="margin-top:24px;display:flex;gap:12px">
-        <a class="btn" href="../es/contacto.html">Contact Us Today</a>
-        <a class="btn" href="../es/trabajos.html">Our work</a>
-      </div>
+<header class="header">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="./index.html" aria-label="Inicio Orugga">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-name">ORUGGA<span>.AI</span></div>
+      </a>
+
+      <nav class="menu" aria-label="Principal">
+        <a href="#services">Servicios</a>
+        <a href="#commitment">Compromiso</a>
+        <a href="#clients">Clientes</a>
+        <a href="#contact">Contacto</a>
+        <a class="btn primary" href="mailto:hello@orugga.com">Contactanos <span class="arrow">→</span></a>
+      </nav>
+
+      <button class="hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" data-mobile-toggle>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
     </div>
-    <div class="hero-image">
-      <img src="../assets/img/orugga_logo_color_transparent.png" alt="Orugga"/>
+
+    <div class="mobile-panel" data-mobile-panel>
+      <a href="#services">Servicios</a>
+      <a href="#commitment">Compromiso</a>
+      <a href="#clients">Clientes</a>
+      <a href="#contact">Contacto</a>
+      <a class="btn primary" href="mailto:hello@orugga.com">Contactanos <span class="arrow">→</span></a>
     </div>
   </div>
-</section>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Ingeniería de software • Delivery de producto</div>
+      <h1>Transformamos ideas en soluciones innovadoras</h1>
+      <p>
+        En Orugga impulsamos la transformación digital de tu negocio con aplicaciones de software a medida, diseñadas para generar impacto medible.
+        Combinamos rigor de ingeniería senior con mentalidad de producto para llevar tus proyectos al siguiente nivel.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="mailto:hello@orugga.com">Contactanos hoy <span class="arrow">→</span></a>
+        <a class="btn" href="#services">Ver servicios <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="container">
+      <h2>En Orugga creamos experiencias con impacto.</h2>
+      <p class="lead">Estos son los pilares que guían nuestro trabajo:</p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="tag">Pilar 01</div>
+          <h3>Consultoría y estrategia digital</h3>
+          <p>Te ayudamos a definir la estrategia óptima para destacarte en el ecosistema digital.</p>
+        </article>
+
+        <article class="card">
+          <div class="tag">Pilar 02</div>
+          <h3>UI/UX &amp; diseño de producto</h3>
+          <p>Diseñamos experiencias intuitivas y atractivas, con el usuario en el centro.</p>
+        </article>
+
+        <article class="card">
+          <div class="tag">Pilar 03</div>
+          <h3>Desarrollo de software</h3>
+          <p>Construimos soluciones robustas, escalables y de alta calidad, adaptadas a tus necesidades.</p>
+        </article>
+
+        <article class="card">
+          <div class="tag">Pilar 04</div>
+          <h3>Calidad, DevOps &amp; entrega</h3>
+          <p>Aseguramos excelencia con integración continua, testing y entregas confiables.</p>
+        </article>
+      </div>
+
+      <div style="margin-top:18px">
+        <a class="btn" href="#contact">Explorar servicios <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="commitment" class="section">
+    <div class="container">
+      <div class="callout">
+        <h2 style="margin-top:0">Tu proyecto, nuestro compromiso</h2>
+        <p class="lead" style="margin-bottom:18px">
+          Sea grande o pequeño, te ayudamos a hacerlo realidad.
+          Contactanos y empecemos a innovar juntos.
+        </p>
+        <a class="btn primary" href="mailto:hello@orugga.com">Contactanos <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="clients" class="section">
+    <div class="container">
+      <h2>Impulsamos el éxito de empresas como la tuya — ¡Hablemos!</h2>
+      <p class="lead">Algunos clientes y partners:</p>
+
+      <div class="logos" aria-label="Logos de clientes (placeholders)">
+        <span class="logo-pill">Cencosud</span>
+        <span class="logo-pill">Banco Argentina</span>
+        <span class="logo-pill">Personal</span>
+        <span class="logo-pill">TC</span>
+        <span class="logo-pill">...más</span>
+      </div>
+
+      <div style="margin-top:16px">
+        <a class="btn" href="#contact">Ver más clientes <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Dirección</h2>
+      <p class="lead">Paraná 522, Piso 2 Of 22, CABA, Argentina</p>
+      <a class="btn primary" href="mailto:hello@orugga.com">Escribinos <span class="arrow">→</span></a>
+    </div>
+  </section>
 </main>
 
-<div id="siteFooter"></div>
-<script src="../assets/js/includes.js"></script>
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <div style="font-weight:800; color:var(--text); margin-bottom:6px">Orugga</div>
+        <div>Ingeniería de software senior. Delivery de producto. Ejecución lista para IA.</div>
+      </div>
+      <div style="text-align:right">
+        <div><a href="../en/index.html">English</a></div>
+        <div style="margin-top:8px">© <span id="y"></span> Orugga. Todos los derechos reservados.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+<script src="../assets/js/site.js"></script>
 </body>
 </html>
