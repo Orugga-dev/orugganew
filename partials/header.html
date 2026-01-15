@@ -1,28 +1,29 @@
-<header class="header">
-  <div class="container header-inner">
-    <!-- Brand / Logo -->
-    <a class="brand" data-home href="/en/index.html">
+<header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/30 bg-black/20 border-b border-white/10">
+  <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between gap-4">
+    <a class="flex items-center gap-3" data-home href="#">
       <img
         data-logo
-        src="/assets/img/orugga_logo_transparent.png"
+        class="h-10 md:h-11 w-auto opacity-90 hover:opacity-100 hover:-translate-y-[1px] transition"
         alt="Orugga"
-        class="logo-img"
       />
     </a>
 
-    <!-- Main navigation -->
-    <nav class="nav">
-      <a data-nav="about" href="#">About Us</a>
-      <a data-nav="services" href="#">Services</a>
-      <a data-nav="work" href="#">Our work</a>
-      <a data-nav="clients" href="#">Clients</a>
-      <a data-nav="contact" href="#">Contacts</a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-slate-200">
+      <a class="hover:text-white transition" data-nav="home" href="#">Home</a>
+      <a class="hover:text-white transition" data-nav="services" href="#">Services</a>
+      <a class="hover:text-white transition" data-nav="contact" href="#">Contact</a>
     </nav>
 
-    <!-- Right actions -->
-    <div class="nav-right">
-      <a class="btn" data-cta href="#">Contact</a>
-      <a class="lang" data-lang-switch href="#">ES</a>
+    <div class="flex items-center gap-3">
+      <a data-cta href="#"
+        class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium hover:bg-white/10 transition">
+        Contact Us Today
+      </a>
+
+      <a data-lang-switch href="#"
+        class="hidden sm:inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-3 py-2 text-sm font-medium hover:bg-white/10 transition">
+        ES
+      </a>
     </div>
   </div>
 </header>
