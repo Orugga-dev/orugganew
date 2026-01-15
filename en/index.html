@@ -24,6 +24,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- ✅ IMPORTANT: load your clients CSS -->
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
   <style>
     :root { color-scheme: dark; }
 
@@ -45,9 +48,7 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-
-      opacity: .95; /* more intensity */
-
+      opacity: .95;
       -webkit-mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
       mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
     }
@@ -67,7 +68,6 @@
 
     <!-- HERO -->
     <section class="relative overflow-hidden min-h-[70vh]">
-      <!-- Particles canvas (background) -->
       <canvas id="heroParticles" class="hero-particles"></canvas>
 
       <div class="hero-content mx-auto max-w-7xl px-6 pt-16 md:pt-24 pb-14 md:pb-20">
@@ -169,11 +169,10 @@
         </p>
       </div>
 
-      <!-- Two lanes. IMPORTANT: keep each lane's list only ONCE. includes.js can duplicate for seamless loop. -->
       <div class="mt-10 space-y-4">
         <div class="clients-marquee">
           <div class="clients-track" data-clients-track>
-            <span class="client-pill">Teatro Colon</span>
+            <span class="client-pill">Teatro Colón</span>
             <span class="client-pill">Cencosud</span>
             <span class="client-pill">Cinemark</span>
             <span class="client-pill">Freddo</span>
@@ -195,7 +194,7 @@
             <span class="client-pill">Cinemark</span>
             <span class="client-pill">Shell</span>
             <span class="client-pill">Ticketek</span>
-            <span class="client-pill">Teatro Colon</span>
+            <span class="client-pill">Cencosud</span>
             <span class="client-pill">Luigi Bosca</span>
             <span class="client-pill">Cine Hoyts</span>
             <span class="client-pill">Freddo</span>
@@ -203,7 +202,7 @@
             <span class="client-pill">Equifax</span>
             <span class="client-pill">San Isidro</span>
             <span class="client-pill">Cartoon Network</span>
-            <span class="client-pill">Cencosud</span>
+            <span class="client-pill">Teatro Colón</span>
           </div>
         </div>
       </div>
@@ -274,7 +273,6 @@
       const ctx = canvas.getContext("2d", { alpha: true });
       if (!ctx) return;
 
-      // Tuning (kept subtle)
       const CFG = {
         density: 0.00003,
         maxParticles: 95,
@@ -282,11 +280,9 @@
         speed: 0.18,
         radiusMin: 0.8,
         radiusMax: 1.9,
-
         linkDist: 180,
         linkAlpha: 0.18,
         dotAlpha: 0.42,
-
         colors: [
           "rgba(255,255,255,0.95)",
           "rgba(56,189,248,1)",
