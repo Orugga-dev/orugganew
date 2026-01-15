@@ -31,7 +31,7 @@
 
     // Set logo (transparent png)
     const logo = headerHost.querySelector("[data-logo]");
-    if (logo) logo.src = u("/assets/img/orugga_logo_transparent.png");
+    if (logo) logo.src = u("/assets/img/orugga_logo_white_transparent_wgreen.png");
 
     // Home link on brand
     const home = headerHost.querySelector("[data-home]");
