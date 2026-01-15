@@ -40,16 +40,16 @@
     }
 
     /* Canvas sits behind hero content */
-  .hero-particles {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
+    .hero-particles {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
 
-  opacity: .95; /* more intensity */
+      opacity: .95; /* more intensity */
 
-  -webkit-mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
-  mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
+      -webkit-mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
+      mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
     }
 
     /* Keep hero content above canvas */
@@ -158,63 +158,62 @@
     </section>
 
     <!-- CLIENTS -->
-   <section id="clients" class="mx-auto max-w-7xl px-6 pb-16 md:pb-24 clients-section">
-  <div class="max-w-3xl">
-    <p class="text-xs uppercase tracking-[0.22em] text-slate-400">Trusted by</p>
-    <h2 class="mt-3 text-2xl md:text-4xl font-extrabold tracking-tight text-white">
-      Powering Success for Businesses Like Yours — Let’s Talk!
-    </h2>
-    <p class="mt-4 text-slate-300 leading-relaxed">
-      Across finance, retail, media, and entertainment.
-    </p>
-  </div>
-
-  <div class="mt-10 space-y-4">
-    <div class="clients-marquee">
-      <div class="clients-track" data-clients-track>
-        <span class="client-pill">Teatro Colón</span>
-        <span class="client-pill">Cencosud</span>
-        <span class="client-pill">Cinemark</span>
-        <span class="client-pill">Freddo</span>
-        <span class="client-pill">San Isidro</span>
-        <span class="client-pill">TransUnion</span>
-        <span class="client-pill">Shell</span>
-        <span class="client-pill">Cine Hoyts</span>
-        <span class="client-pill">Luigi Bosca</span>
-        <span class="client-pill">Equifax</span>
-        <span class="client-pill">BBVA</span>
-        <span class="client-pill">Cartoon Network</span>
-        <span class="client-pill">Ticketek</span>
+    <section id="clients" class="mx-auto max-w-7xl px-6 pb-16 md:pb-24 clients-section">
+      <div class="max-w-3xl">
+        <p class="text-xs uppercase tracking-[0.22em] text-slate-400">Trusted by</p>
+        <h2 class="mt-3 text-2xl md:text-4xl font-extrabold tracking-tight text-white">
+          Powering Success for Businesses Like Yours — Let’s Talk!
+        </h2>
+        <p class="mt-4 text-slate-300 leading-relaxed">
+          Across finance, retail, media, and entertainment.
+        </p>
       </div>
-    </div>
 
-    <div class="clients-marquee">
-      <div class="clients-track reverse" data-clients-track>
-        <span class="client-pill">BBVA</span>
-        <span class="client-pill">Cinemark</span>
-        <span class="client-pill">Shell</span>
-        <span class="client-pill">Ticketek</span>
-        <span class="client-pill">Cencosud</span>
-        <span class="client-pill">Luigi Bosca</span>
-        <span class="client-pill">Cine Hoyts</span>
-        <span class="client-pill">Freddo</span>
-        <span class="client-pill">TransUnion</span>
-        <span class="client-pill">Equifax</span>
-        <span class="client-pill">San Isidro</span>
-        <span class="client-pill">Cartoon Network</span>
-        <span class="client-pill">Teatro Colón</span>
+      <!-- Two lanes. IMPORTANT: keep each lane's list only ONCE. includes.js can duplicate for seamless loop. -->
+      <div class="mt-10 space-y-4">
+        <div class="clients-marquee">
+          <div class="clients-track" data-clients-track>
+            <span class="client-pill">Teatro Colon</span>
+            <span class="client-pill">Cencosud</span>
+            <span class="client-pill">Cinemark</span>
+            <span class="client-pill">Freddo</span>
+            <span class="client-pill">San Isidro</span>
+            <span class="client-pill">TransUnion</span>
+            <span class="client-pill">Shell</span>
+            <span class="client-pill">Cine Hoyts</span>
+            <span class="client-pill">Luigi Bosca</span>
+            <span class="client-pill">Equifax</span>
+            <span class="client-pill">BBVA</span>
+            <span class="client-pill">Cartoon Network</span>
+            <span class="client-pill">Ticketek</span>
+          </div>
+        </div>
+
+        <div class="clients-marquee">
+          <div class="clients-track reverse" data-clients-track>
+            <span class="client-pill">BBVA</span>
+            <span class="client-pill">Cinemark</span>
+            <span class="client-pill">Shell</span>
+            <span class="client-pill">Ticketek</span>
+            <span class="client-pill">Teatro Colon</span>
+            <span class="client-pill">Luigi Bosca</span>
+            <span class="client-pill">Cine Hoyts</span>
+            <span class="client-pill">Freddo</span>
+            <span class="client-pill">TransUnion</span>
+            <span class="client-pill">Equifax</span>
+            <span class="client-pill">San Isidro</span>
+            <span class="client-pill">Cartoon Network</span>
+            <span class="client-pill">Cencosud</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="mt-6">
-    <a href="#contact" class="text-sm font-semibold text-slate-200 hover:text-white underline decoration-white/20 hover:decoration-white/40 transition">
-      Show more clients →
-    </a>
-  </div>
-</section>
-
-
+      <div class="mt-6">
+        <a href="#contact" class="text-sm font-semibold text-slate-200 hover:text-white underline decoration-white/20 hover:decoration-white/40 transition">
+          Show more clients →
+        </a>
+      </div>
+    </section>
 
     <!-- CONTACT -->
     <section id="contact" class="mx-auto max-w-7xl px-6 py-16 md:py-20">
@@ -264,27 +263,6 @@
   <!-- Partials loader -->
   <script src="../assets/js/includes.js"></script>
 
-  <!-- Clients marquee + particles -->
-  <style>
-    .client-pill {
-      white-space: nowrap;
-      padding: 0.5rem 1rem;
-      border-radius: 9999px;
-      border: 1px solid rgba(255,255,255,.1);
-      background: rgba(255,255,255,.05);
-      font-size: 0.875rem;
-      color: #e5e7eb;
-    }
-    @keyframes marquee {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
-    }
-    .animate-marquee {
-      animation: marquee 36s linear infinite;
-      will-change: transform;
-    }
-  </style>
-
   <script>
     (function () {
       const canvas = document.getElementById("heroParticles");
@@ -298,23 +276,24 @@
 
       // Tuning (kept subtle)
       const CFG = {
-  density: 0.00003,
-  maxParticles: 95,
-  minParticles: 46,
-  speed: 0.18,
-  radiusMin: 0.8,
-  radiusMax: 1.9,
+        density: 0.00003,
+        maxParticles: 95,
+        minParticles: 46,
+        speed: 0.18,
+        radiusMin: 0.8,
+        radiusMax: 1.9,
 
-  linkDist: 180,     // MÁS CONEXIONES
-  linkAlpha: 0.18,   // LÍNEAS MÁS VISIBLES
-  dotAlpha: 0.42,    // PUNTOS MÁS PRESENTES
+        linkDist: 180,
+        linkAlpha: 0.18,
+        dotAlpha: 0.42,
 
-  colors: [
-    "rgba(255,255,255,0.95)",
-    "rgba(56,189,248,1)",
-    "rgba(34,197,94,1)"
-  ]
-};
+        colors: [
+          "rgba(255,255,255,0.95)",
+          "rgba(56,189,248,1)",
+          "rgba(34,197,94,1)"
+        ]
+      };
+
       let w = 0, h = 0, dpr = 1;
       let particles = [];
       let raf = 0;
@@ -355,27 +334,22 @@
       function step() {
         ctx.clearRect(0, 0, w, h);
 
-        // draw links
         for (let i = 0; i < particles.length; i++) {
           const a = particles[i];
 
-          // update
           a.x += a.vx;
           a.y += a.vy;
 
-          // wrap
           if (a.x < -20) a.x = w + 20;
           if (a.x > w + 20) a.x = -20;
           if (a.y < -20) a.y = h + 20;
           if (a.y > h + 20) a.y = -20;
 
-          // dot
           ctx.beginPath();
           ctx.fillStyle = a.c.replace("0.9", CFG.dotAlpha.toFixed(2));
           ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2);
           ctx.fill();
 
-          // links (only forward to reduce work)
           for (let j = i + 1; j < particles.length; j++) {
             const b = particles[j];
             const dx = a.x - b.x;
@@ -383,7 +357,7 @@
             const dist = Math.hypot(dx, dy);
             if (dist > CFG.linkDist) continue;
 
-            const t = 1 - dist / CFG.linkDist; // 0..1
+            const t = 1 - dist / CFG.linkDist;
             ctx.strokeStyle = `rgba(255,255,255,${(CFG.linkAlpha * t).toFixed(3)})`;
             ctx.lineWidth = 1.35;
             ctx.beginPath();
@@ -396,7 +370,6 @@
         raf = requestAnimationFrame(step);
       }
 
-      // Resize observer for sticky header/layout changes
       let ro = null;
       if ("ResizeObserver" in window) {
         ro = new ResizeObserver(() => resize());
@@ -405,11 +378,9 @@
         window.addEventListener("resize", resize);
       }
 
-      // init
       resize();
       raf = requestAnimationFrame(step);
 
-      // cleanup on page hide (optional)
       document.addEventListener("visibilitychange", () => {
         if (document.hidden) cancelAnimationFrame(raf);
         else raf = requestAnimationFrame(step);
