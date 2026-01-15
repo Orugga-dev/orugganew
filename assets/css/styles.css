@@ -357,3 +357,59 @@ body{
 .header.is-scrolled .nav{
   gap: 16px;
 }
+
+
+/* ================================
+   Fixed + shrinking header behavior
+   ================================ */
+:root{
+  --header-h: 88px;
+}
+
+/* keep anchor links from hiding under fixed header */
+html{
+  scroll-padding-top: var(--header-h);
+}
+
+body.has-fixed-header{
+  padding-top: var(--header-h);
+}
+
+/* make sure header sits above all decorative layers */
+.header{
+  z-index: 1000;
+}
+
+/* smooth shrink */
+.header > div{
+  transition: padding 200ms ease, gap 200ms ease;
+}
+
+/* slightly denser on scroll */
+.header.is-scrolled{
+  background: rgba(7,11,20,.78);
+  border-bottom-color: rgba(255,255,255,.12);
+  box-shadow: 0 8px 28px rgba(0,0,0,.35);
+}
+
+.header.is-scrolled > div{
+  padding-top: .6rem !important;
+  padding-bottom: .6rem !important;
+}
+
+.header .logo-img{
+  height: 64px;
+  transition: height 200ms ease, transform 200ms ease, opacity 200ms ease;
+}
+
+/* reduce logo height a touch when scrolling */
+.header.is-scrolled .logo-img{
+  height: 56px !important;
+}
+
+@media (min-width: 768px){
+  .header .logo-img{ height: 72px; }
+  .header.is-scrolled .logo-img{
+    height: 64px !important;
+  }
+}

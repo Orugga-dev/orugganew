@@ -39,9 +39,18 @@
 
     const THRESHOLD = 12;
 
+    document.body.classList.add("has-fixed-header");
+
+    const setOffset = () => {
+      // Keep layout stable for fixed headers
+      const h = header.getBoundingClientRect().height;
+      document.documentElement.style.setProperty("--header-h", `${Math.round(h)}px`);
+    };
+
     const apply = () => {
       const y = window.scrollY || document.documentElement.scrollTop || 0;
       header.classList.toggle("is-scrolled", y > THRESHOLD);
+      setOffset();
     };
 
     apply();
