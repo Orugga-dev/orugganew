@@ -19,7 +19,9 @@
 
   const switchTo = (lang === "en") ? "/es/index.html" : "/en/index.html";
 
-  // ✅ NEW: marquee init (duplicates items for seamless loop)
+  /* =========================
+     CLIENTS MARQUEE
+     ========================= */
   function initClientsMarquee() {
     const tracks = document.querySelectorAll("[data-clients-track]");
     if (!tracks.length) return;
@@ -32,6 +34,30 @@
     });
   }
 
+  /* =========================
+     HEADER SHRINK ON SCROLL
+     ========================= */
+  function initHeaderShrink() {
+    const header = document.querySelector(".header");
+    if (!header) return;
+
+    const THRESHOLD = 12; // px from top
+
+    const apply = () => {
+      const y = window.scrollY || document.documentElement.scrollTop || 0;
+      header.classList.toggle("is-scrolled", y > THRESHOLD);
+    };
+
+    // initial state
+    apply();
+
+    window.addEventListener("scroll", apply, { passive: true });
+    window.addEventListener("resize", apply, { passive: true });
+  }
+
+  /* =========================
+     PARTIALS INJECTION
+     ========================= */
   async function injectPartials() {
     const headerHost = document.getElementById("siteHeader");
     const footerHost = document.getElementById("siteFooter");
@@ -42,7 +68,7 @@
 
     const r = routes[lang];
 
-    // ✅ CHANGE: Set logo (transparent png)
+    // Logo (transparent)
     const logo = headerHost.querySelector("[data-logo]");
     if (logo) logo.src = u("/assets/img/orugga_logo_white_transparent_wgreen.png");
 
@@ -81,8 +107,9 @@
       langSwitch.textContent = (lang === "en") ? "ES" : "EN";
     }
 
-    // ✅ NEW: initialize marquee after DOM is injected
+    // Init behaviors AFTER DOM is injected
     initClientsMarquee();
+    initHeaderShrink();
   }
 
   injectPartials();
