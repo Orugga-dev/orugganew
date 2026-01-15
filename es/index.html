@@ -1,163 +1,213 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Orugga — Transformamos ideas en soluciones innovadoras</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orugga</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'],
+          },
+        },
+      },
+    }
+  </script>
 
-  <link rel="stylesheet" href="../assets/css/styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      background: radial-gradient(1200px 600px at 15% 10%, rgba(16, 185, 129, 0.12), transparent 55%),
+                  radial-gradient(900px 450px at 85% 20%, rgba(56, 189, 248, 0.10), transparent 55%),
+                  #05070f;
+    }
+    .noise {
+      position: fixed; inset: 0; pointer-events: none; opacity: .08; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+    }
+  </style>
 </head>
-<body>
 
-<header class="header">
-  <div class="container">
-    <div class="nav">
-      <a class="brand" href="./index.html" aria-label="Inicio Orugga">
-        <div class="brand-mark" aria-hidden="true"></div>
-        <div class="brand-name">ORUGGA<span>.AI</span></div>
+<body class="font-sans text-slate-100">
+  <div class="noise"></div>
+
+  <!-- Top nav -->
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/30 bg-black/20 border-b border-white/10">
+    <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between gap-4">
+      <a href="./index.html" class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-xl bg-white/5 border border-white/10 grid place-items-center">
+          <span class="text-sm font-bold tracking-tight">O</span>
+        </div>
+        <span class="text-base md:text-lg font-semibold tracking-tight">Orugga</span>
       </a>
 
-      <nav class="menu" aria-label="Principal">
-        <a href="#services">Servicios</a>
-        <a href="#commitment">Compromiso</a>
-        <a href="#clients">Clientes</a>
-        <a href="#contact">Contacto</a>
-        <a class="btn primary" href="mailto:hello@orugga.com">Contactanos <span class="arrow">→</span></a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-200">
+        <a class="hover:text-white transition" href="./index.html">Inicio</a>
+        <a class="hover:text-white transition" href="#services">Servicios</a>
+        <a class="hover:text-white transition" href="#contact">Contacto</a>
       </nav>
 
-      <button class="hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" data-mobile-toggle>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <path d="M4 7h16M4 12h16M4 17h16"/>
-        </svg>
-      </button>
+      <a href="#contact" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium hover:bg-white/10 transition">
+        Contactanos hoy
+      </a>
     </div>
+  </header>
 
-    <div class="mobile-panel" data-mobile-panel>
-      <a href="#services">Servicios</a>
-      <a href="#commitment">Compromiso</a>
-      <a href="#clients">Clientes</a>
-      <a href="#contact">Contacto</a>
-      <a class="btn primary" href="mailto:hello@orugga.com">Contactanos <span class="arrow">→</span></a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
-    <div class="container">
-      <div class="eyebrow">Ingeniería de software • Delivery de producto</div>
-      <h1>Transformamos ideas en soluciones innovadoras</h1>
-      <p>
-        En Orugga impulsamos la transformación digital de tu negocio con aplicaciones de software a medida, diseñadas para generar impacto medible.
-        Combinamos rigor de ingeniería senior con mentalidad de producto para llevar tus proyectos al siguiente nivel.
+  <!-- Hero -->
+  <section class="relative">
+    <div class="mx-auto max-w-7xl px-6 pt-16 md:pt-24 pb-14 md:pb-20">
+      <p class="text-xs uppercase tracking-[0.22em] text-slate-400">Orugga</p>
+      <h1 class="mt-4 text-4xl md:text-6xl font-extrabold tracking-tight text-white">
+        Transformamos ideas en soluciones innovadoras
+      </h1>
+      <p class="mt-6 max-w-3xl text-base md:text-lg leading-relaxed text-slate-300">
+        En Orugga impulsamos la transformación digital de tu negocio con aplicaciones de software a medida e intuitivas, diseñadas para generar un impacto real. Con tecnología de vanguardia y un enfoque centrado en las personas, llevamos tus proyectos al siguiente nivel.
       </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="mailto:hello@orugga.com">Contactanos hoy <span class="arrow">→</span></a>
-        <a class="btn" href="#services">Ver servicios <span class="arrow">→</span></a>
+
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">
+          Contactanos hoy
+        </a>
+        <a href="#services" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">
+          Ver servicios →
+        </a>
       </div>
     </div>
   </section>
 
-  <section id="services" class="section">
-    <div class="container">
-      <h2>En Orugga creamos experiencias con impacto.</h2>
-      <p class="lead">Estos son los pilares que guían nuestro trabajo:</p>
+  <!-- Core pillars -->
+  <section id="services" class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+    <div class="max-w-4xl">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">
+        En Orugga creamos experiencias con impacto. Estos son los pilares que guían nuestro trabajo:
+      </h2>
+    </div>
 
-      <div class="grid">
-        <article class="card">
-          <div class="tag">Pilar 01</div>
-          <h3>Consultoría y estrategia digital</h3>
-          <p>Te ayudamos a definir la estrategia óptima para destacarte en el ecosistema digital.</p>
-        </article>
+    <div class="mt-10 grid gap-5 md:gap-6 sm:grid-cols-2">
+      
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.02)]">
+            <h3 class="text-lg md:text-xl font-semibold tracking-tight text-white">Desarrollo de software</h3>
+            <p class="mt-3 text-sm md:text-base leading-relaxed text-slate-300">Desarrollamos soluciones robustas y escalables, haciéndonos cargo de la entrega de punta a punta.</p>
+          </div>
+        
 
-        <article class="card">
-          <div class="tag">Pilar 02</div>
-          <h3>UI/UX &amp; diseño de producto</h3>
-          <p>Diseñamos experiencias intuitivas y atractivas, con el usuario en el centro.</p>
-        </article>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.02)]">
+            <h3 class="text-lg md:text-xl font-semibold tracking-tight text-white">Soluciones de IA</h3>
+            <p class="mt-3 text-sm md:text-base leading-relaxed text-slate-300">Aplicamos IA donde genera valor: automatización, soporte a decisiones y mejoras medibles de productividad.</p>
+          </div>
+        
 
-        <article class="card">
-          <div class="tag">Pilar 03</div>
-          <h3>Desarrollo de software</h3>
-          <p>Construimos soluciones robustas, escalables y de alta calidad, adaptadas a tus necesidades.</p>
-        </article>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.02)]">
+            <h3 class="text-lg md:text-xl font-semibold tracking-tight text-white">Diseño de interfaces</h3>
+            <p class="mt-3 text-sm md:text-base leading-relaxed text-slate-300">Diseñamos UI/UX intuitivo, alineando objetivos de negocio con experiencias claras y accesibles.</p>
+          </div>
+        
 
-        <article class="card">
-          <div class="tag">Pilar 04</div>
-          <h3>Calidad, DevOps &amp; entrega</h3>
-          <p>Aseguramos excelencia con integración continua, testing y entregas confiables.</p>
-        </article>
-      </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.02)]">
+            <h3 class="text-lg md:text-xl font-semibold tracking-tight text-white">Consultoría y estrategia</h3>
+            <p class="mt-3 text-sm md:text-base leading-relaxed text-slate-300">Te acompañamos a definir estrategia, alcance y roadmap para ejecutar con foco.</p>
+          </div>
+        
+    </div>
 
-      <div style="margin-top:18px">
-        <a class="btn" href="#contact">Explorar servicios <span class="arrow">→</span></a>
+    <div class="mt-10">
+      <a href="#contact" class="text-sm font-semibold text-slate-200 hover:text-white underline decoration-white/20 hover:decoration-white/40 transition">
+        Ver servicios →
+      </a>
+    </div>
+  </section>
+
+  <!-- Commitment -->
+  <section class="mx-auto max-w-7xl px-6 pb-16 md:pb-20">
+    <div class="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12">
+      <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight text-white">
+        Tu proyecto, nuestro compromiso
+      </h2>
+      <p class="mt-4 max-w-4xl text-base md:text-lg leading-relaxed text-slate-300">
+        Sea grande o chico, nos comprometemos a ayudarte a hacerlo realidad. Escribinos y empecemos a innovar juntos.
+      </p>
+      <div class="mt-8">
+        <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">
+          Contactanos
+        </a>
       </div>
     </div>
   </section>
 
-  <section id="commitment" class="section">
-    <div class="container">
-      <div class="callout">
-        <h2 style="margin-top:0">Tu proyecto, nuestro compromiso</h2>
-        <p class="lead" style="margin-bottom:18px">
-          Sea grande o pequeño, te ayudamos a hacerlo realidad.
-          Contactanos y empecemos a innovar juntos.
-        </p>
-        <a class="btn primary" href="mailto:hello@orugga.com">Contactanos <span class="arrow">→</span></a>
+  <!-- Clients -->
+  <section class="mx-auto max-w-7xl px-6 pb-16 md:pb-24">
+    <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight text-white">
+      Impulsamos el éxito de negocios como el tuyo — ¡Hablemos!
+    </h2>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">TC</span><span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">Carg</span><span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">Personal</span><span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">Banco Argentina</span><span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">Cencosud</span>
+    </div>
+
+    <div class="mt-6">
+      <a href="#contact" class="text-sm font-semibold text-slate-200 hover:text-white underline decoration-white/20 hover:decoration-white/40 transition">
+        Ver más clientes →
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact / Address -->
+  <section id="contact" class="mx-auto max-w-7xl px-6 pb-20">
+    <div class="grid gap-6 lg:grid-cols-5">
+      <div class="lg:col-span-2 rounded-3xl border border-white/10 bg-white/5 p-8">
+        <h3 class="text-lg font-semibold text-white">Dirección</h3>
+        <p class="mt-3 text-sm leading-relaxed text-slate-300">Paraná 522, Piso 2 Of 22, CABA, Argentina</p>
+
+        <div class="mt-8">
+          <a href="mailto:contact@orugga.com" class="text-sm font-semibold text-slate-200 hover:text-white underline decoration-white/20 hover:decoration-white/40 transition">
+            contact@orugga.com
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-3 rounded-3xl border border-white/10 bg-white/5 p-8">
+        <h3 class="text-lg font-semibold text-white">Contacto</h3>
+        <form class="mt-6 grid gap-4" action="mailto:contact@orugga.com" method="post" enctype="text/plain">
+          <div>
+            <label class="text-sm text-slate-300">Tu nombre</label>
+            <input class="mt-2 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-white/20" name="name" placeholder="Jane Doe" />
+          </div>
+          <div>
+            <label class="text-sm text-slate-300">Email</label>
+            <input class="mt-2 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-white/20" name="email" placeholder="name@company.com" />
+          </div>
+          <div>
+            <label class="text-sm text-slate-300">Mensaje</label>
+            <textarea class="mt-2 min-h-[120px] w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-white/20" name="message" placeholder="Contanos sobre tu proyecto…"></textarea>
+          </div>
+          <div class="pt-2">
+            <button type="submit" class="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">
+              Enviar mensaje
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
 
-  <section id="clients" class="section">
-    <div class="container">
-      <h2>Impulsamos el éxito de empresas como la tuya — ¡Hablemos!</h2>
-      <p class="lead">Algunos clientes y partners:</p>
-
-      <div class="logos" aria-label="Logos de clientes (placeholders)">
-        <span class="logo-pill">Cencosud</span>
-        <span class="logo-pill">Banco Argentina</span>
-        <span class="logo-pill">Personal</span>
-        <span class="logo-pill">TC</span>
-        <span class="logo-pill">...más</span>
-      </div>
-
-      <div style="margin-top:16px">
-        <a class="btn" href="#contact">Ver más clientes <span class="arrow">→</span></a>
+  <footer class="border-t border-white/10 py-10">
+    <div class="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-sm text-slate-400">
+      <p>© Orugga. Todos los derechos reservados.</p>
+      <div class="flex items-center gap-4">
+        <a class="hover:text-slate-200 transition" href="./index.html">Inicio</a>
+        <a class="hover:text-slate-200 transition" href="#services">Servicios</a>
+        <a class="hover:text-slate-200 transition" href="#contact">Contacto</a>
       </div>
     </div>
-  </section>
-
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Dirección</h2>
-      <p class="lead">Paraná 522, Piso 2 Of 22, CABA, Argentina</p>
-      <a class="btn primary" href="mailto:hello@orugga.com">Escribinos <span class="arrow">→</span></a>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="cols">
-      <div>
-        <div style="font-weight:800; color:var(--text); margin-bottom:6px">Orugga</div>
-        <div>Ingeniería de software senior. Delivery de producto. Ejecución lista para IA.</div>
-      </div>
-      <div style="text-align:right">
-        <div><a href="../en/index.html">English</a></div>
-        <div style="margin-top:8px">© <span id="y"></span> Orugga. Todos los derechos reservados.</div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-</script>
-<script src="../assets/js/site.js"></script>
+  </footer>
 </body>
 </html>
