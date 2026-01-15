@@ -320,3 +320,40 @@ body{
     display:none;
   }
 }
+/* =========================
+   HEADER SHRINK ON SCROLL
+   ========================= */
+
+.header{
+  transition: background .18s ease, border-color .18s ease, padding .18s ease, box-shadow .18s ease;
+}
+
+.header .header-inner{
+  transition: padding .18s ease;
+}
+
+/* tu logo actual usa .logo-img */
+.logo-img{
+  transition: height .18s ease, opacity .18s ease, transform .18s ease;
+}
+
+/* estado scrolleado */
+.header.is-scrolled{
+  background: rgba(7,11,20,.92);
+  box-shadow: 0 18px 40px rgba(0,0,0,.25);
+}
+
+.header.is-scrolled .header-inner{
+  padding: 10px 0; /* antes 16px */
+}
+
+.header.is-scrolled .logo-img{
+  height: 44px; /* antes 56px */
+  opacity: .98;
+  transform: translateY(-0.5px);
+}
+
+/* opcional: links un poquito más “tight” */
+.header.is-scrolled .nav{
+  gap: 16px;
+}
