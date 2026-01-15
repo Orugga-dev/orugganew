@@ -39,7 +39,7 @@
   width: max-content;
   will-change: transform;
 
-  /* ✅ critical: never wrap into multiple rows */
+  /* ✅ hard stop for wrapping */
   flex-wrap: nowrap;
   white-space: nowrap;
 
