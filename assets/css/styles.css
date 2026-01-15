@@ -38,6 +38,11 @@
   gap: 12px;
   width: max-content;
   will-change: transform;
+
+  /* ✅ critical: never wrap into multiple rows */
+  flex-wrap: nowrap;
+  white-space: nowrap;
+
   animation: marquee-left 34s linear infinite;
 }
 
