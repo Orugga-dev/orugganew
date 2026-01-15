@@ -40,13 +40,16 @@
     }
 
     /* Canvas sits behind hero content */
-    .hero-particles {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      opacity: .85; /* overall intensity */
-      mask-image: radial-gradient(circle at 30% 35%, black 45%, transparent 80%);
+  .hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  opacity: .95; /* more intensity */
+
+  -webkit-mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
+  mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
     }
 
     /* Keep hero content above canvas */
@@ -363,7 +366,7 @@
 
             const t = 1 - dist / CFG.linkDist; // 0..1
             ctx.strokeStyle = `rgba(255,255,255,${(CFG.linkAlpha * t).toFixed(3)})`;
-            ctx.lineWidth = 1;
+            ctx.lineWidth = 1.35;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
