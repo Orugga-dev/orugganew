@@ -1,33 +1,40 @@
 (() => {
   const path = location.pathname;
 
-  // Detect language based on URL: /en/... or /es/...
+  // Detect language based on URL folder: /en/... or /es/...
   const isEN = path.includes("/en/");
   const lang = isEN ? "en" : "es";
 
-  // GitHub Pages repo base handling (supports /<repo>/en/..)
-  const parts = path.split("/").filter(Boolean);
-  const langIdx = parts.findIndex(p => p === "en" || p === "es");
-  const basePrefix = langIdx > 0 ? "/" + parts.slice(0, langIdx).join("/") : "";
-  const u = (p) => basePrefix + p;
-
-  // Routes per language
-  const routes = {
-    en: { home: "/en/index.html", services: "/en/index.html#services", contact: "/en/index.html#contact" },
-    es: { home: "/es/index.html", services: "/es/index.html#services", contact: "/es/index.html#contact" }
+  // Use RELATIVE paths to avoid GitHub Pages base-path issues.
+  // Pages live under /en and /es, while assets + partials live one level up.
+  const P = {
+    partialHeader: "../partials/header.html",
+    partialFooter: "../partials/footer.html",
+    logo: "../assets/img/orugga_logo_white_transparent_wgreen.png",
+    switchTo: isEN ? "../es/index.html" : "../en/index.html",
+    routes: {
+      en: {
+        home: "./index.html",
+        services: "./index.html#services",
+        contact: "./index.html#contact",
+      },
+      es: {
+        home: "./index.html",
+        services: "./index.html#services",
+        contact: "./index.html#contacto",
+      },
+    },
   };
-
-  const switchTo = (lang === "en") ? "/es/index.html" : "/en/index.html";
 
   // Duplicates items for seamless loop (translateX(-50%))
   function initClientsMarquee() {
     const tracks = document.querySelectorAll("[data-clients-track]");
     if (!tracks.length) return;
 
-    tracks.forEach(track => {
+    tracks.forEach((track) => {
       if (track.dataset.duped === "1") return;
       const kids = Array.from(track.children);
-      kids.forEach(node => track.appendChild(node.cloneNode(true)));
+      kids.forEach((node) => track.appendChild(node.cloneNode(true)));
       track.dataset.duped = "1";
     });
   }
@@ -39,18 +46,13 @@
 
     const THRESHOLD = 12;
 
-    document.body.classList.add("has-fixed-header");
-
-    const setOffset = () => {
-      // Keep layout stable for fixed headers
-      const h = header.getBoundingClientRect().height;
-      document.documentElement.style.setProperty("--header-h", `${Math.round(h)}px`);
-    };
-
     const apply = () => {
       const y = window.scrollY || document.documentElement.scrollTop || 0;
       header.classList.toggle("is-scrolled", y > THRESHOLD);
-      setOffset();
+
+      // Keep a reliable CSS var for layouts that depend on header height
+      const h = header.getBoundingClientRect().height;
+      document.documentElement.style.setProperty("--header-h", `${Math.round(h)}px`);
     };
 
     apply();
@@ -73,7 +75,7 @@
       btn.setAttribute("aria-expanded", open ? "true" : "false");
     });
 
-    // nice-to-have: close menu when clicking a link inside
+    // close menu when clicking a link inside
     panel.addEventListener("click", (e) => {
       const a = e.target.closest("a");
       if (!a) return;
@@ -87,48 +89,60 @@
     const footerHost = document.getElementById("siteFooter");
     if (!headerHost || !footerHost) return;
 
-    headerHost.innerHTML = await fetch(u("/partials/header.html")).then(r => r.text());
-    footerHost.innerHTML = await fetch(u("/partials/footer.html")).then(r => r.text());
+    // Fetch partials (relative paths to avoid base-path 404s)
+    const [headerHTML, footerHTML] = await Promise.all([
+      fetch(P.partialHeader).then((r) => {
+        if (!r.ok) throw new Error(`Header partial not found: ${P.partialHeader}`);
+        return r.text();
+      }),
+      fetch(P.partialFooter).then((r) => {
+        if (!r.ok) throw new Error(`Footer partial not found: ${P.partialFooter}`);
+        return r.text();
+      }),
+    ]);
 
-    const r = routes[lang];
+    headerHost.innerHTML = headerHTML;
+    footerHost.innerHTML = footerHTML;
 
-    // Set logo (transparent png)
+    const r = P.routes[lang];
+
+    // Set logo
     const logo = headerHost.querySelector("[data-logo]");
-    if (logo) logo.src = u("/assets/img/orugga_logo_white_transparent_wgreen.png");
+    if (logo) logo.src = P.logo;
 
     // Home link on brand
     const home = headerHost.querySelector("[data-home]");
-    if (home) home.href = u(r.home);
+    if (home) home.href = r.home;
 
     // Nav links
     const navHome = headerHost.querySelector('[data-nav="home"]');
-    if (navHome) navHome.href = u(r.home);
+    if (navHome) navHome.href = r.home;
 
     const navServices = headerHost.querySelector('[data-nav="services"]');
-    if (navServices) navServices.href = u(r.services);
+    if (navServices) navServices.href = r.services;
 
     const navContact = headerHost.querySelector('[data-nav="contact"]');
-    if (navContact) navContact.href = u(r.contact);
+    if (navContact) navContact.href = r.contact;
 
     // CTA
     const cta = headerHost.querySelector("[data-cta]");
-    if (cta) cta.href = u(r.contact);
+    if (cta) cta.href = r.contact;
 
     // Footer links
     const fHome = footerHost.querySelector('[data-foot="home"]');
-    if (fHome) fHome.href = u(r.home);
+    if (fHome) fHome.href = r.home;
 
     const fServices = footerHost.querySelector('[data-foot="services"]');
-    if (fServices) fServices.href = u(r.services);
+    if (fServices) fServices.href = r.services;
 
     const fContact = footerHost.querySelector('[data-foot="contact"]');
-    if (fContact) fContact.href = u(r.contact);
+    if (fContact) fContact.href = r.contact;
 
     // Language switch
     const langSwitch = headerHost.querySelector("[data-lang-switch]");
     if (langSwitch) {
-      langSwitch.href = u(switchTo);
-      langSwitch.textContent = (lang === "en") ? "ES" : "EN";
+      langSwitch.href = P.switchTo;
+      langSwitch.textContent = lang === "en" ? "ES" : "EN";
     }
 
     // Init behaviors AFTER DOM injection
@@ -137,5 +151,8 @@
     initMobileNav();
   }
 
-  injectPartials();
+  // Keep failures visible in console (helps debugging on Pages)
+  injectPartials().catch((err) => {
+    console.error("Failed to inject partials:", err);
+  });
 })();
