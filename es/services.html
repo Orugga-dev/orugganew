@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orugga — Servicios</title>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Your site CSS -->
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <style>
+    :root { color-scheme: dark; }
+
+    body{
+      background:
+        radial-gradient(1200px 600px at 15% 10%, rgba(16, 185, 129, 0.12), transparent 55%),
+        radial-gradient(900px 450px at 85% 20%, rgba(56, 189, 248, 0.10), transparent 55%),
+        #05070f;
+    }
+
+    .noise {
+      position: fixed; inset: 0; pointer-events: none; opacity: .08; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+    }
+
+    /* Same visual family as index hero */
+    .hero-particles {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: .95;
+      -webkit-mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
+      mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
+    }
+    .hero-content { position: relative; z-index: 1; }
+
+    /* Subtle variant for internal pages */
+    .hero--subtle .hero-particles {
+      opacity: .55;
+      -webkit-mask-image: radial-gradient(circle at 45% 30%, black 62%, transparent 96%);
+      mask-image: radial-gradient(circle at 45% 30%, black 62%, transparent 96%);
+    }
+  </style>
+</head>
+
+<body class="font-sans text-slate-100">
+  <div class="noise"></div>
+
+  <!-- HEADER (loaded via includes.js) -->
+  <div id="siteHeader"></div>
+
+  <main>
+    <!-- HERO (animated, subtle) -->
+    <section class="relative overflow-hidden min-h-[60vh] hero--subtle">
+  <canvas id="heroParticles" class="hero-particles"></canvas>
+
+      <div class="hero-content mx-auto max-w-7xl px-6 pt-16 md:pt-24 pb-14 md:pb-20">
+        <p class="text-xs uppercase tracking-wider text-slate-500 mb-4">
+          Servicios
+        </p>
+
+        <h1 class="mt-4 hero-title">
+      Cómo ayudamos a empresas a
+      <span class="text-[color:var(--accent)]">ejecutar</span>
+      software en entornos reales.
+    </h1>
+
+        <p class="mt-6 max-w-3xl text-lg text-slate-300">
+          Trabajamos junto a equipos de producto, tecnología y negocio para ejecutar software con foco en operación y continuidad.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a
+            href="./index.html#contacto"
+            class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black hover:bg-white/90 transition"
+          >Contactanos</a>
+
+          <a
+            href="#capabilities"
+            class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white hover:bg-white/10 transition"
+          >Explorar capacidades →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUILT FOR REAL-WORLD CONSTRAINTS -->
+    <section id="capabilities" class="mx-auto max-w-7xl px-6 pb-20">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">
+        Capacidades para entornos reales
+      </h2>
+      <p class="mt-3 text-slate-300 max-w-3xl">
+        Estas son las capacidades en las que enfocamos la ejecución cuando el software debe operar en entornos reales y complejos.
+      </p>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2">
+        <!-- IA aplicada a procesos y sistemas reales -->
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-8 h-full">
+          <div class="mb-4 h-7 w-7 text-white/60">
+            <!-- CPU / AI icon (outline) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <path d="M9 9h6v6H9z"/>
+              <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
+            </svg>
+          </div>
+          <p class="mt-1 text-lg font-semibold text-white">IA aplicada a procesos y sistemas reales</p>
+          <p class="mt-3 text-slate-300 leading-relaxed">
+            Diseñamos e implementamos soluciones de IA que se integran a sistemas existentes y flujos operativos reales, priorizando impacto, viabilidad y sostenibilidad en producción.
+          </p>
+        </div>
+
+        <!-- Desarrollo de software para sistemas críticos -->
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-8 h-full">
+          <div class="mb-4 h-7 w-7 text-white/60">
+            <!-- Code icon (outline) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 18l6-6-6-6"/>
+              <path d="M8 6l-6 6 6 6"/>
+            </svg>
+          </div>
+          <p class="mt-1 text-lg font-semibold text-white">Desarrollo de software para sistemas críticos</p>
+          <p class="mt-3 text-slate-300 leading-relaxed">
+            Desarrollamos sistemas que soportan procesos críticos del negocio, con foco en estabilidad, mantenibilidad y continuidad operativa.
+          </p>
+        </div>
+
+        <!-- Desarrollo UX / UI -->
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-8 h-full">
+          <div class="mb-4 h-7 w-7 text-white/60">
+            <!-- Layers icon (outline) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l10 6-10 6L2 8l10-6Z"/>
+              <path d="M22 12l-10 6-10-6"/>
+              <path d="M22 16l-10 6-10-6"/>
+            </svg>
+          </div>
+          <p class="mt-1 text-lg font-semibold text-white">Desarrollo UX / UI</p>
+          <p class="mt-3 text-slate-300 leading-relaxed">
+            Diseñamos y desarrollamos interfaces pensadas para sistemas complejos, donde la claridad, la consistencia y la usabilidad impactan directamente en la operación.
+          </p>
+        </div>
+
+        <!-- Consulting & Strategy -->
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-8 h-full">
+          <div class="mb-4 h-7 w-7 text-white/60">
+            <!-- Compass icon (outline) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M16 8l-2 6-6 2 2-6 6-2Z"/>
+            </svg>
+          </div>
+          <p class="mt-1 text-lg font-semibold text-white">Consultoría y estrategia técnica</p>
+          <p class="mt-3 text-slate-300 leading-relaxed">
+            Ayudamos a definir qué construir, cómo hacerlo y en qué orden, priorizando decisiones que puedan ejecutarse de manera realista dentro del contexto técnico del negocio.
+          </p>
+        </div>
+      </div>
+    </section>
+
+<!-- ================= TECHNOLOGY CHOICES — CAPABILITY FIELD ================= -->
+<section class="relative max-w-7xl mx-auto px-6 py-32 overflow-hidden capability-field">
+
+  <!-- Subtle technical grid background (ambient drift) -->
+  <div
+    class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-out
+           bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),
+               linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)]
+           bg-[size:48px_48px] capability-field-bg"
+    data-reveal
+    aria-hidden="true">
+  </div>
+
+  <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+    <!-- Intro -->
+    <div class="lg:col-span-5">
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+        Decisiones tecnológicas<br />
+        con foco en ejecución.
+      </h2>
+
+      <p class="mt-8 text-slate-400 leading-relaxed max-w-md">
+        Elegimos tecnología por confiabilidad, mantenibilidad y viabilidad a largo plazo, no por tendencias pasajeras.
+      </p>
+    </div>
+
+    <!-- Capability field -->
+    <div class="lg:col-span-7 relative">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-14">
+
+        <div
+          class="group capability-item relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
+          data-reveal>
+          <h3 class="text-lg font-semibold text-white">
+            Mobile
+          </h3>
+          <p class="mt-2 text-slate-400">
+            Android · iOS · Flutter · React Native
+          </p>
+        </div>
+
+        <div
+          class="group capability-item relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
+          data-reveal>
+          <h3 class="text-lg font-semibold text-white">
+            Backend
+          </h3>
+          <p class="mt-2 text-slate-400">
+            Java · Ecosistema JVM
+          </p>
+        </div>
+
+        <div
+          class="group capability-item relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
+          data-reveal>
+          <h3 class="text-lg font-semibold text-white">
+            Bases de datos
+          </h3>
+          <p class="mt-2 text-slate-400">
+            PostgreSQL · MySQL · Oracle · SQL Server
+          </p>
+        </div>
+
+        <div
+          class="group capability-item relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
+          data-reveal>
+          <h3 class="text-lg font-semibold text-white">
+            APIs e integraciones
+          </h3>
+          <p class="mt-2 text-slate-400">
+            APIs REST · Integraciones de sistemas
+          </p>
+        </div>
+
+        <div
+          class="group capability-item relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
+          data-reveal>
+          <h3 class="text-lg font-semibold text-white">
+            Estándares web
+          </h3>
+          <p class="mt-2 text-slate-400">
+            Estándares web modernos
+          </p>
+        </div>
+
+        <div
+          class="group capability-item relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
+          data-reveal>
+          <h3 class="text-lg font-semibold text-white">
+            Legacy / plataformas
+          </h3>
+          <p class="mt-2 text-slate-400">
+            Plataformas legacy y especializadas
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- FOOTER (loaded via includes.js) -->
+  <div id="siteFooter"></div>
+
+  <!-- Includes -->
+  <script src="../assets/js/includes.js"></script>
+
+  <!-- Hero particles (shared) -->
+  <script src="../assets/js/hero-particles.js"></script>
+</body>
+</html>

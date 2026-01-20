@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orugga</title>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ✅ IMPORTANT: load your clients CSS -->
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <style>
+    :root { color-scheme: dark; }
+
+    body{
+      background:
+        radial-gradient(1200px 600px at 15% 10%, rgba(16, 185, 129, 0.12), transparent 55%),
+        radial-gradient(900px 450px at 85% 20%, rgba(56, 189, 248, 0.10), transparent 55%),
+        #05070f;
+    }
+
+    .noise {
+      position: fixed; inset: 0; pointer-events: none; opacity: .08; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+    }
+
+    /* Canvas sits behind hero content */
+    .hero-particles {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: .95;
+      -webkit-mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
+      mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
+    }
+
+    /* Keep hero content above canvas */
+    .hero-content { position: relative; z-index: 1; }
+  </style>
+</head>
+
+<body class="font-sans text-slate-100">
+  <div class="noise"></div>
+
+  <!-- HEADER (loaded via includes.js) -->
+  <div id="siteHeader"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="relative overflow-hidden min-h-[70vh]">
+      <canvas id="heroParticles" class="hero-particles"></canvas>
+
+      <div class="hero-content mx-auto max-w-7xl px-6 pt-16 md:pt-24 pb-14 md:pb-20">
+        <p class="text-xs uppercase tracking-[0.22em] text-slate-400">Orugga</p>
+
+        <h1 class="mt-4 hero-title hero-title--primary">
+  Senior software engineering, with
+  <span class="text-[color:var(--accent)]">execution</span>
+  you can trust.
+</h1>
+
+
+        <p class="mt-6 max-w-3xl text-base md:text-lg leading-relaxed text-slate-300">
+          We build robust products, modern platforms, and AI solutions—end-to-end.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="#contact"
+             class="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">
+            Contact us
+          </a>
+
+          <a href="./services.html"
+   class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">
+  Explore services →
+</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE PILLARS -->
+    <section id="services" class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+      <div class="max-w-4xl mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">
+          How we build software
+        </h2>
+
+        <p class="mt-3 text-base md:text-lg text-slate-400 leading-relaxed">
+          The core capabilities that define our work.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-5 md:gap-6 sm:grid-cols-2">
+        <!-- 1) AI Solutions (first) -->
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 group">
+          <!-- subtle eyebrow -->
+          <p class="text-xs uppercase tracking-wider text-slate-500 mb-3">
+            AI-Driven
+          </p>
+
+          <!-- icon: slightly higher contrast than the rest -->
+          <div class="mb-4 h-7 w-7 text-white/70 transition-colors group-hover:text-white/85">
+            <!-- CPU / AI icon (stroke/outline) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <path d="M9 9h6v6H9z"/>
+              <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
+            </svg>
+          </div>
+
+          <h3 class="text-lg md:text-xl font-semibold">AI Solutions</h3>
+          <p class="mt-3 text-slate-300 leading-relaxed">
+            We design and build AI-driven solutions focused on automation, decision support, and measurable productivity gains.
+          </p>
+        </div>
+
+        <!-- 2) Software Development -->
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 group">
+          <div class="mb-4 h-7 w-7 text-white/55 transition-colors group-hover:text-white/80">
+            <!-- Code icon (stroke/outline) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 18l6-6-6-6"/>
+              <path d="M8 6l-6 6 6 6"/>
+            </svg>
+          </div>
+
+          <h3 class="text-lg md:text-xl font-semibold">Software Development</h3>
+          <p class="mt-3 text-slate-300 leading-relaxed">
+            We build robust, scalable software and take full responsibility for delivery, end to end.
+          </p>
+        </div>
+
+        <!-- 3) Interface Design -->
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 group">
+          <div class="mb-4 h-7 w-7 text-white/55 transition-colors group-hover:text-white/80">
+            <!-- Layers icon (stroke/outline) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l10 6-10 6L2 8l10-6Z"/>
+              <path d="M22 12l-10 6-10-6"/>
+              <path d="M22 16l-10 6-10-6"/>
+            </svg>
+          </div>
+
+          <h3 class="text-lg md:text-xl font-semibold">Interface Design</h3>
+          <p class="mt-3 text-slate-300 leading-relaxed">
+            We design intuitive user interfaces that align business goals with real product usability.
+          </p>
+        </div>
+
+        <!-- 4) Consulting & Strategy -->
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8 group">
+          <div class="mb-4 h-7 w-7 text-white/55 transition-colors group-hover:text-white/80">
+            <!-- Compass icon (stroke/outline) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M16 8l-2 6-6 2 2-6 6-2Z"/>
+            </svg>
+          </div>
+
+          <h3 class="text-lg md:text-xl font-semibold">Consulting &amp; Strategy</h3>
+          <p class="mt-3 text-slate-300 leading-relaxed">
+            We help define the right strategy, scope, and roadmap to support successful execution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+ <!-- CLIENTS -->
+<section id="clients" class="mx-auto max-w-7xl px-6 pb-16 md:pb-12 clients-section">
+  <div class="max-w-3xl">
+    <p class="text-xs uppercase tracking-[0.22em] text-slate-400">Trusted by</p>
+
+    <h2 class="mt-3 text-2xl md:text-4xl font-extrabold tracking-tight text-white">
+      Trusted by teams that rely on execution.
+    </h2>
+
+    <p class="mt-4 text-slate-300 leading-relaxed">
+      Across multiple industries and complex environments.
+    </p>
+
+    <p class="text-xs text-slate-500 hidden md:block">
+      Hover to pause
+    </p>
+  </div>
+
+  <!-- ===== Trusted by – Row 1 (infinite) ===== -->
+  <div class="clients-marquee mt-10">
+    <div class="clients-track">
+      <!-- Set 1 -->
+      <span class="client-pill">Samsung</span>
+      <span class="client-pill">Twitter</span>
+      <span class="client-pill">BBVA</span>
+      <span class="client-pill">Movistar</span>
+      <span class="client-pill">Claro</span>
+      <span class="client-pill">Despegar</span>
+      <span class="client-pill">ESPN</span>
+      <span class="client-pill">Sony Music</span>
+      <span class="client-pill">Telecom</span>
+      <span class="client-pill">Nokia</span>
+      <span class="client-pill">Motorola</span>
+      <span class="client-pill">Infobae</span>
+      <span class="client-pill">Banelco</span>
+      <span class="client-pill">Prisma</span>
+      <span class="client-pill">Cinemark</span>
+
+      <!-- Set 2 (duplicate) -->
+      <span class="client-pill">Samsung</span>
+      <span class="client-pill">Twitter</span>
+      <span class="client-pill">BBVA</span>
+      <span class="client-pill">Movistar</span>
+      <span class="client-pill">Claro</span>
+      <span class="client-pill">Despegar</span>
+      <span class="client-pill">ESPN</span>
+      <span class="client-pill">Sony Music</span>
+      <span class="client-pill">Telecom</span>
+      <span class="client-pill">Nokia</span>
+      <span class="client-pill">Motorola</span>
+      <span class="client-pill">Infobae</span>
+      <span class="client-pill">Banelco</span>
+      <span class="client-pill">Prisma</span>
+      <span class="client-pill">Cinemark</span>
+    </div>
+  </div>
+
+  <!-- ===== Trusted by – Row 2 (reverse, infinite) ===== -->
+  <div class="clients-marquee mt-4">
+    <div class="clients-track reverse">
+      <!-- Set 1 -->
+      <span class="client-pill">Correo Argentino</span>
+      <span class="client-pill">Buenos Aires Ciudad</span>
+      <span class="client-pill">Frávega</span>
+      <span class="client-pill">Turner</span>
+      <span class="client-pill">MTV</span>
+      <span class="client-pill">Rock &amp; Pop</span>
+      <span class="client-pill">Nación Servicios</span>
+      <span class="client-pill">OCA</span>
+      <span class="client-pill">Navteq / HERE</span>
+      <span class="client-pill">BlackBerry</span>
+      <span class="client-pill">Dahua</span>
+      <span class="client-pill">Thermomix</span>
+      <span class="client-pill">AssistCargo</span>
+      <span class="client-pill">SomniMed</span>
+      <span class="client-pill">Frame</span>
+
+      <!-- Set 2 (duplicate) -->
+      <span class="client-pill">Correo Argentino</span>
+      <span class="client-pill">Buenos Aires Ciudad</span>
+      <span class="client-pill">Frávega</span>
+      <span class="client-pill">Turner</span>
+      <span class="client-pill">MTV</span>
+      <span class="client-pill">Rock &amp; Pop</span>
+      <span class="client-pill">Nación Servicios</span>
+      <span class="client-pill">OCA</span>
+      <span class="client-pill">Navteq / HERE</span>
+      <span class="client-pill">BlackBerry</span>
+      <span class="client-pill">Dahua</span>
+      <span class="client-pill">Thermomix</span>
+      <span class="client-pill">AssistCargo</span>
+      <span class="client-pill">SomniMed</span>
+      <span class="client-pill">Frame</span>
+    </div>
+  </div>
+
+  <!-- Footer CTA -->
+  <div class="mt-6">
+    <a href="#clients" class="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-white transition">
+      Show more clients →
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT (index CTA only — premium card design) -->
+<section id="contact" class="mx-auto max-w-7xl px-6 py-24">
+  <div
+    class="relative overflow-hidden rounded-3xl border border-white/10
+           bg-gradient-to-br from-white/[0.08] to-white/[0.02]
+           backdrop-blur-xl px-10 py-12 md:px-14 md:py-14">
+
+    <!-- subtle inner glow -->
+    <div
+      class="pointer-events-none absolute inset-0 rounded-3xl
+             bg-[radial-gradient(900px_320px_at_15%_20%,rgba(255,255,255,0.08),transparent_60%)]">
+    </div>
+
+    <div class="relative max-w-4xl">
+      <p class="text-xs uppercase tracking-[0.22em] text-slate-400">
+        Contact
+      </p>
+
+      <h2 class="mt-4 text-3xl md:text-5xl font-extrabold tracking-tight text-white">
+        Ready to build your next product?
+      </h2>
+
+      <p class="mt-5 max-w-3xl text-slate-300 leading-relaxed">
+        From strategy and design to production delivery, we work as a reliable engineering partner focused on results.
+      </p>
+
+      <div class="mt-8">
+        <a href="./contact.html"
+           class="inline-flex items-center justify-center rounded-full
+                  bg-white px-6 py-3 text-sm font-semibold text-black
+                  hover:bg-slate-100 transition">
+          Contact us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  </main>
+
+  <!-- FOOTER (loaded via includes.js) -->
+  <div id="siteFooter"></div>
+
+  <!-- Partials loader -->
+  <script src="../assets/js/includes.js"></script>
+
+  <!-- Hero particles (shared) -->
+  <script src="../assets/js/hero-particles.js"></script>
+</body>
+</html>

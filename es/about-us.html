@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orugga — Nosotros</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <style>
+    :root { color-scheme: dark; }
+
+    body {
+      background:
+        radial-gradient(1200px 600px at 15% 10%, rgba(16,185,129,.12), transparent 55%),
+        radial-gradient(900px 450px at 85% 20%, rgba(56,189,248,.10), transparent 55%),
+        #05070f;
+    }
+
+    /* --- Reconocimientos micro-interactions (subtle, enterprise) --- */
+    .tl-item {
+      position: relative;
+      transition: transform 220ms ease, filter 220ms ease;
+    }
+    .tl-item:hover,
+    .tl-item:focus-within { transform: translateY(-2px); }
+
+    .tl-item::before {
+      content: "";
+      position: absolute;
+      inset: -14px -18px;
+      border-radius: 18px;
+      background:
+        radial-gradient(520px 180px at 30% 20%, rgba(255,255,255,.08), transparent 60%),
+        radial-gradient(520px 220px at 10% 30%, rgba(16,185,129,.10), transparent 62%);
+      opacity: 0;
+      transition: opacity 220ms ease;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .tl-item:hover::before,
+    .tl-item:focus-within::before { opacity: 1; }
+
+    .tl-content { position: relative; z-index: 1; }
+
+    .tl-line { transition: opacity 220ms ease; opacity: .55; }
+    .tl-wrap:hover .tl-line { opacity: .80; }
+
+    .tl-dot-outer {
+      transition: border-color 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+    }
+    .tl-dot-inner {
+      transition: transform 220ms ease, background-color 220ms ease, opacity 220ms ease;
+      opacity: .95;
+    }
+    .tl-item:hover .tl-dot-outer,
+    .tl-item:focus-within .tl-dot-outer {
+      border-color: rgba(255,255,255,.20);
+      box-shadow:
+        0 0 0 6px rgba(16,185,129,.06),
+        0 0 36px rgba(16,185,129,.10);
+    }
+    .tl-item:hover .tl-dot-inner,
+    .tl-item:focus-within .tl-dot-inner {
+      background-color: rgba(16,185,129,1);
+      transform: scale(1.05);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .tl-item:hover .tl-dot-inner,
+      .tl-item:focus-within .tl-dot-inner { animation: tlPulse 1.25s ease-in-out infinite; }
+      @keyframes tlPulse {
+        0%, 100% { transform: scale(1.02); }
+        50% { transform: scale(1.18); }
+      }
+    }
+
+    /* --- Timeline scan / traveling highlight --- */
+    .tl-wrap { position: relative; }
+    .tl-line-scan {
+      position: absolute;
+      left: 1rem; /* aligns with left-4 */
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: .9;
+    }
+    .tl-line-scan::before {
+      content: "";
+      position: absolute;
+      left: -1px;
+      width: 3px;
+      height: 140px;
+      top: -160px;
+      border-radius: 999px;
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(16,185,129,.00),
+        rgba(16,185,129,.18),
+        rgba(255,255,255,.12),
+        rgba(16,185,129,.18),
+        rgba(16,185,129,.00),
+        transparent
+      );
+      filter: blur(.25px);
+      will-change: transform;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .tl-line-scan::before { animation: tlScan 5.6s linear infinite; }
+      @keyframes tlScan {
+        0%   { transform: translateY(0); }
+        100% { transform: translateY(calc(100% + 220px)); }
+      }
+      .tl-wrap:hover .tl-line-scan::before { animation-duration: 3.8s; }
+    }
+
+    /* --- NEW: Who are we — bracket rail + dots (no cards) --- */
+    .who-rail {
+      position: relative;
+      padding-left: 56px; /* space for rail + dot */
+    }
+    .who-rail::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 2px;
+      bottom: 2px;
+      width: 1px;
+      background: rgba(255,255,255,.10);
+    }
+    /* little bracket caps */
+    .who-rail::after {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 2px;
+      width: 12px;
+      height: calc(100% - 4px);
+      border-left: 1px solid rgba(255,255,255,.10);
+      border-top: 1px solid rgba(255,255,255,.10);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      border-radius: 8px;
+      transform: translateX(-12px);
+      opacity: .55;
+      pointer-events: none;
+    }
+
+    .who-item {
+      position: relative;
+      padding: 18px 0 28px 0;
+    }
+    .who-item + .who-item {
+      border-top: 1px solid rgba(255,255,255,.10);
+      padding-top: 28px;
+    }
+
+    .who-dot {
+      position: absolute;
+      left: 18px;
+      top: 26px;
+      width: 14px;
+      height: 14px;
+      transform: translateX(-50%);
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(8px);
+      display: grid;
+      place-items: center;
+      transition: box-shadow 220ms ease, border-color 220ms ease;
+    }
+    .who-dot::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.92);
+      transition: transform 220ms ease, background-color 220ms ease;
+    }
+
+    .who-title {
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(148,163,184,.75);
+    }
+
+    .who-year {
+      font-size: clamp(40px, 5.4vw, 58px);
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-top: 10px;
+    }
+
+    .who-desc {
+      margin-top: 12px;
+      color: rgba(203,213,225,.92);
+      line-height: 1.65;
+      max-width: 56ch;
+    }
+
+    .who-item:hover .who-dot,
+    .who-item:focus-within .who-dot {
+      border-color: rgba(255,255,255,.22);
+      box-shadow:
+        0 0 0 8px rgba(16,185,129,.06),
+        0 0 44px rgba(16,185,129,.10);
+    }
+    .who-item:hover .who-dot::before,
+    .who-item:focus-within .who-dot::before {
+      background: rgba(16,185,129,1);
+      transform: scale(1.05);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .tl-item, .tl-item::before, .tl-dot-outer, .tl-dot-inner, .tl-line,
+      .tl-line-scan::before, .who-dot, .who-dot::before {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-sans text-slate-100">
+
+  <!-- HEADER -->
+  <div id="siteHeader"></div>
+
+  <main>
+   <!-- HERO -->
+<section class="relative overflow-hidden min-h-[60vh] hero--subtle pt-20 md:pt-28">
+ <canvas id="heroParticles" class="hero-particles"></canvas>
+  <!-- subtle overlay for readability (same family as other pages) -->
+  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/35 to-black/70"></div>
+
+  <div class="relative mx-auto max-w-7xl px-6">
+    <p class="text-xs uppercase tracking-wider text-slate-500 mb-4">
+      Quiénes somos
+    </p>
+
+    <!-- Match Services sizing: slightly tighter than your current md:text-6xl -->
+    <h1 class="hero-title max-w-4xl">
+  Construyendo software con criterio y experiencia
+  <span class="text-[color:var(--accent)]">desde 2005</span>.
+</h1>
+
+
+    <p class="mt-6 max-w-3xl text-lg text-slate-300">
+      A lo largo de los años trabajamos en distintos tipos de soluciones y plataformas, desde productos digitales y sistemas backend hasta soluciones basadas en IA, siempre en contextos reales de operación.
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a
+        href="./index.html#contacto"
+        class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black hover:bg-white/90 transition"
+      >
+        Contactanos
+      </a>
+
+      <a
+        href="#who-we-are"
+        class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white hover:bg-white/10 transition"
+      >
+        Explorar →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE (editorial rail, no dots) -->
+<section id="who-we-are" class="mx-auto max-w-7xl px-6 pb-24">
+  <div class="grid gap-10 lg:grid-cols-12 lg:items-start">
+
+    <div class="lg:col-span-5">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">
+        ¿Quiénes somos?
+      </h2>
+
+      <p class="mt-3 text-slate-300 leading-relaxed max-w-prose">
+        Un equipo de ingeniería con experiencia, formado para trabajar bajo las restricciones del mundo real, con foco en ejecución, responsabilidad y sostenibilidad a largo plazo.
+      </p>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="who-rail">
+        <article class="who-item who-hover">
+          <p class="who-title">Desde</p>
+          <p class="who-year">2005</p>
+          <p class="who-desc">
+            Construyendo y llevando a producción software en entornos web, mobile, plataformas e integraciones complejas.
+          </p>
+        </article>
+
+        <article class="who-item who-hover">
+          <p class="who-title">Desde</p>
+          <p class="who-year">2011</p>
+          <p class="who-desc">
+            Acompañando startups con un enfoque pragmático, orientado a ejecución.
+          </p>
+        </article>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+    <!-- RECOGNITIONS -->
+    <section class="mx-auto max-w-7xl px-6 pb-24">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">
+        Reconocimientos
+      </h2>
+
+      <p class="mt-3 max-w-3xl text-slate-300">
+        Reconocimientos obtenidos a partir de productos reales, utilizados por usuarios reales.
+      </p>
+
+      <div class="tl-wrap mt-16 relative">
+        <div class="tl-line absolute left-4 top-0 bottom-0 w-px bg-white/10"></div>
+        <div class="tl-line-scan"></div>
+
+        <article class="tl-item relative pl-20 pb-16">
+          <div class="absolute left-0 top-1.5 flex items-center justify-center">
+            <div class="tl-dot-outer h-10 w-10 rounded-full border border-white/15 bg-black/60 backdrop-blur flex items-center justify-center">
+              <div class="tl-dot-inner h-2.5 w-2.5 rounded-full bg-white"></div>
+            </div>
+          </div>
+
+          <div class="tl-content">
+            <p class="text-sm font-semibold text-white">2009</p>
+            <h3 class="mt-2 text-xl font-semibold text-white">
+              Nokia Calling All Innovators
+            </h3>
+            <p class="mt-2 max-w-2xl text-slate-300 leading-relaxed">
+              1er puesto en América y 2° puesto a nivel mundial en el desafío “Eco Challenge”.
+            </p>
+          </div>
+        </article>
+
+        <article class="tl-item relative pl-20 pb-16">
+          <div class="absolute left-0 top-1.5 flex items-center justify-center">
+            <div class="tl-dot-outer h-10 w-10 rounded-full border border-white/15 bg-black/60 backdrop-blur flex items-center justify-center">
+              <div class="tl-dot-inner h-2.5 w-2.5 rounded-full bg-white"></div>
+            </div>
+          </div>
+
+          <div class="tl-content">
+            <p class="text-sm font-semibold text-white">2012</p>
+            <h3 class="mt-2 text-xl font-semibold text-white">
+              BlackBerry Achievement Awards
+            </h3>
+            <p class="mt-2 max-w-2xl text-slate-300 leading-relaxed">
+              3er puesto a nivel mundial en la categoría “Best Mobile App” con Cines Hoyts Social Ticketing.
+            </p>
+          </div>
+        </article>
+
+        <article class="tl-item relative pl-20">
+          <div class="absolute left-0 top-1.5 flex items-center justify-center">
+            <div class="tl-dot-outer h-10 w-10 rounded-full border border-white/15 bg-black/60 backdrop-blur flex items-center justify-center">
+              <div class="tl-dot-inner h-2.5 w-2.5 rounded-full bg-white"></div>
+            </div>
+          </div>
+
+          <div class="tl-content">
+            <p class="text-sm font-semibold text-white">2013</p>
+            <h3 class="mt-2 text-xl font-semibold text-white">
+              Microsoft premium partner
+            </h3>
+            <p class="mt-2 max-w-2xl text-slate-300 leading-relaxed">
+              Seleccionados como uno de los 10 socios estratégicos de desarrollo en Latinoamérica.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="mt-16">
+        <a
+          href="./index.html#contacto"
+          class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+        >
+          Contactanos
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- Includes -->
+  <script src="../assets/js/includes.js"></script>
+
+  <!-- Hero particles (shared) -->
+  <script src="../assets/js/hero-particles.js"></script>
+
+</body>
+</html>
