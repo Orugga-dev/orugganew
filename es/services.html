@@ -3,401 +3,229 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Favicons -->
-<link rel="icon" href="../assets/img/favicon.ico" sizes="any">
-<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="../assets/img/favicon-96x96.png" sizes="96x96">
-<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
-<link rel="manifest" href="../assets/img/site.webmanifest">
+  <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/favicon-96x96.png" sizes="96x96">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../assets/img/site.webmanifest">
 
-  <title>Orugga — Servicios</title>
+  <title>Servicios — IA, Mobile y Desarrollo de Software | Orugga</title>
+  <meta name="description" content="Orugga construye automatización con IA, apps móviles (iOS, Android, Flutter), plataformas fintech, backends escalables e interfaces modernas. Más de 20 años de entrega end-to-end para empresas de LATAM y el mundo.">
+  <meta name="keywords" content="desarrollo de software Argentina, apps móviles LATAM, software factory fintech, iOS Android Flutter, billetera digital, integración de APIs, modernización de sistemas, automatización con inteligencia artificial">
+  <meta name="robots" content="index, follow">
+  <link rel="alternate" hreflang="es" href="https://www.orugga.com/es/services.html">
+  <link rel="alternate" hreflang="en" href="https://www.orugga.com/en/services.html">
+  <link rel="canonical" href="https://www.orugga.com/es/services.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Orugga">
+  <meta property="og:title" content="Servicios — IA, Mobile y Desarrollo de Software | Orugga">
+  <meta property="og:description" content="Automatización con IA, desarrollo móvil, plataformas fintech y backends escalables. 20+ años entregando software en producción.">
+  <meta property="og:url" content="https://www.orugga.com/es/services.html">
+  <meta property="og:image" content="https://www.orugga.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Servicios — Orugga Software Factory">
+  <meta name="twitter:description" content="IA, mobile, fintech y backend. Entrega de software de punta a punta para LATAM y el mundo.">
+  <meta name="twitter:image" content="https://www.orugga.com/assets/img/og-image.jpg">
 
-  <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
-          },
-        },
-      },
+      theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','Segoe UI','Roboto','Helvetica Neue','Arial'] } } }
     }
   </script>
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Your site CSS -->
   <link rel="stylesheet" href="../assets/css/styles.css" />
 
   <style>
     :root { color-scheme: dark; }
-
-    body{
-      background:
-        radial-gradient(1200px 600px at 15% 10%, rgba(16, 185, 129, 0.12), transparent 55%),
-        radial-gradient(900px 450px at 85% 20%, rgba(56, 189, 248, 0.10), transparent 55%),
-        #05070f;
-    }
-
-    .noise {
-      position: fixed; inset: 0; pointer-events: none; opacity: .08; mix-blend-mode: overlay;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
-    }
-
-    /* Same visual family as index hero */
-    .hero-particles {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      opacity: .95;
-      -webkit-mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
-      mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
-    }
-    .hero-content { position: relative; z-index: 1; }
-
-    /* Subtle variant for internal pages */
-    .hero--subtle .hero-particles {
-      opacity: .55;
-      -webkit-mask-image: radial-gradient(circle at 45% 30%, black 62%, transparent 96%);
-      mask-image: radial-gradient(circle at 45% 30%, black 62%, transparent 96%);
-    }
+    body { background: radial-gradient(1200px 600px at 15% 10%, rgba(16,185,129,0.12), transparent 55%), radial-gradient(900px 450px at 85% 20%, rgba(56,189,248,0.10), transparent 55%), #05070f; }
+    .noise { position:fixed;inset:0;pointer-events:none;opacity:.08;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E"); }
+    .hero-particles { position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.55;-webkit-mask-image:radial-gradient(circle at 45% 30%,black 62%,transparent 96%);mask-image:radial-gradient(circle at 45% 30%,black 62%,transparent 96%); }
+    .hero-content { position:relative;z-index:1; }
+    .service-card { border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);border-radius:20px;padding:2rem;transition:border-color 0.2s,background 0.2s; }
+    .service-card:hover { border-color:rgba(111,191,142,0.3);background:rgba(111,191,142,0.04); }
+    .service-tag { display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6FBF8E;border:1px solid rgba(111,191,142,0.3);border-radius:999px;padding:3px 10px;margin-bottom:1rem; }
+    .industry-pill { display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:5px 12px;white-space:nowrap; }
+    .industry-pill:before { content:'';width:6px;height:6px;border-radius:50%;background:#6FBF8E;flex-shrink:0; }
+    .tech-badge { font-size:12px;font-weight:500;color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:3px 10px; }
+    .stat-num { font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-0.03em;color:#fff;line-height:1; }
+    .stat-label { font-size:13px;color:rgba(255,255,255,0.45);margin-top:4px; }
+    .case-teaser { border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.5rem;display:flex;flex-direction:column;gap:0.75rem;transition:border-color 0.2s;text-decoration:none; }
+    .case-teaser:hover { border-color:rgba(111,191,142,0.3); }
+    .cap-item { opacity:0;transform:translateY(12px);transition:opacity 0.5s ease,transform 0.5s ease; }
+    .cap-item.is-visible { opacity:1;transform:translateY(0); }
   </style>
 </head>
 
 <body class="font-sans text-slate-100">
   <div class="noise"></div>
-
-  <!-- HEADER (loaded via includes.js) -->
   <div id="siteHeader"></div>
 
   <main>
-    <!-- HERO (animated, subtle) -->
-    <section class="relative overflow-hidden min-h-[60vh] hero--subtle">
-  <canvas id="heroParticles" class="hero-particles"></canvas>
-
-      <div class="hero-content mx-auto max-w-7xl px-6 pt-16 md:pt-24 pb-14 md:pb-20">
-        <p class="text-xs uppercase tracking-wider text-slate-500 mb-4">
-          Servicios
-        </p>
-
-        <h1 class="mt-4 hero-title">
-      Cómo ayudamos a empresas a
-      <span class="text-[color:var(--accent)]">ejecutar</span>
-      software en entornos reales.
-    </h1>
-
-        <p class="mt-6 max-w-3xl text-lg text-slate-300">
-          Trabajamos junto a equipos de producto, tecnología y negocio para ejecutar software con foco en operación y continuidad.
-        </p>
-
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a
-            href="./index.html#contacto"
-            class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black hover:bg-white/90 transition"
-          >Contactanos</a>
-
-          <a
-            href="#capabilities"
-            class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white hover:bg-white/10 transition"
-          >Explorar capacidades →</a>
+    <section class="relative overflow-hidden min-h-[55vh]">
+      <canvas id="heroParticles" class="hero-particles"></canvas>
+      <div class="hero-content mx-auto max-w-7xl px-6 pt-20 md:pt-28 pb-16">
+        <p class="text-xs uppercase tracking-wider text-slate-500 mb-4">Servicios</p>
+        <h1 class="hero-title max-w-4xl">Software que corre en <span class="text-[color:var(--accent)]">producción</span>, no solo en demos.</h1>
+        <p class="mt-6 max-w-2xl text-lg text-slate-300 leading-relaxed">Desde automatización con IA hasta apps móviles, plataformas fintech e integraciones complejas — somos responsables de la entrega de punta a punta, en entornos reales de negocio.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="./contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">Iniciar un proyecto</a>
+          <a href="#servicios" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Explorar servicios →</a>
         </div>
       </div>
     </section>
 
-    <!-- BUILT FOR REAL-WORLD CONSTRAINTS -->
-    <section id="capabilities" class="mx-auto max-w-7xl px-6 pb-20">
-      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">
-        Capacidades para entornos reales
-      </h2>
-      <p class="mt-3 text-slate-300 max-w-3xl">
-        Estas son las capacidades en las que enfocamos la ejecución cuando el software debe operar en entornos reales y complejos.
-      </p>
+    <section class="border-y border-white/5 bg-white/[0.02]">
+      <div class="mx-auto max-w-7xl px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div><div class="stat-num">20+</div><div class="stat-label">Años entregando software en producción</div></div>
+        <div><div class="stat-num">800M+</div><div class="stat-label">Transacciones / mes en nuestra arquitectura</div></div>
+        <div><div class="stat-num">80K+</div><div class="stat-label">Préstamos fintech procesados en el año 1</div></div>
+        <div><div class="stat-num">10M+</div><div class="stat-label">Usuarios en plataformas que construimos</div></div>
+      </div>
+    </section>
 
-      <div class="mt-10 grid gap-6 sm:grid-cols-2">
-        <!-- IA aplicada a procesos y sistemas reales -->
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-8 h-full">
-          <div class="mb-4 h-7 w-7 text-white/60">
-            <!-- CPU / AI icon (outline) -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="4" y="4" width="16" height="16" rx="2"/>
-              <path d="M9 9h6v6H9z"/>
-              <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
-            </svg>
-          </div>
-          <p class="mt-1 text-lg font-semibold text-white">IA aplicada a procesos y sistemas reales</p>
-          <p class="mt-3 text-slate-300 leading-relaxed">
-            Diseñamos e implementamos soluciones de IA que se integran a sistemas existentes y flujos operativos reales, priorizando impacto, viabilidad y sostenibilidad en producción.
-          </p>
+    <section id="servicios" class="mx-auto max-w-7xl px-6 py-20">
+      <div class="max-w-2xl mb-14">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Qué construimos</h2>
+        <p class="mt-3 text-slate-400 leading-relaxed">Seis áreas donde tenemos experiencia profunda y probada — desde las decisiones tempranas de producto hasta el deploy en producción.</p>
+      </div>
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+        <div class="service-card">
+          <span class="service-tag">IA aplicada</span>
+          <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></div>
+          <h3 class="text-lg font-semibold text-white">IA Generativa y Automatización</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Diseñamos y construimos sistemas con IA enfocados en ganancias reales de productividad: procesamiento de documentos, soporte a decisiones, automatización de flujos y productos potenciados por LLMs. Integramos con OpenAI, Anthropic y modelos open-source.</p>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="tech-badge">Integración LLM</span><span class="tech-badge">Sistemas RAG</span><span class="tech-badge">Automatización</span><span class="tech-badge">APIs de IA</span></div>
         </div>
 
-        <!-- Desarrollo de software para sistemas críticos -->
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-8 h-full">
-          <div class="mb-4 h-7 w-7 text-white/60">
-            <!-- Code icon (outline) -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 18l6-6-6-6"/>
-              <path d="M8 6l-6 6 6 6"/>
-            </svg>
-          </div>
-          <p class="mt-1 text-lg font-semibold text-white">Desarrollo de software para sistemas críticos</p>
-          <p class="mt-3 text-slate-300 leading-relaxed">
-            Desarrollamos sistemas que soportan procesos críticos del negocio, con foco en estabilidad, mantenibilidad y continuidad operativa.
-          </p>
+        <div class="service-card">
+          <span class="service-tag">Mobile</span>
+          <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg></div>
+          <h3 class="text-lg font-semibold text-white">Desarrollo de Apps Móviles</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Apps nativas iOS y Android, multiplataforma con Flutter y React Native. Construimos apps de ticketing, banca, e-commerce, fidelización y streaming para clientes en LATAM y EEUU — incluyendo Cinemark (cliente desde 2009) y Despegar.</p>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="tech-badge">iOS · Android</span><span class="tech-badge">Flutter</span><span class="tech-badge">React Native</span><span class="tech-badge">Wearables · SmartTV</span></div>
         </div>
 
-        <!-- Desarrollo UX / UI -->
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-8 h-full">
-          <div class="mb-4 h-7 w-7 text-white/60">
-            <!-- Layers icon (outline) -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2l10 6-10 6L2 8l10-6Z"/>
-              <path d="M22 12l-10 6-10-6"/>
-              <path d="M22 16l-10 6-10-6"/>
-            </svg>
-          </div>
-          <p class="mt-1 text-lg font-semibold text-white">Desarrollo UX / UI</p>
-          <p class="mt-3 text-slate-300 leading-relaxed">
-            Diseñamos y desarrollamos interfaces pensadas para sistemas complejos, donde la claridad, la consistencia y la usabilidad impactan directamente en la operación.
-          </p>
+        <div class="service-card">
+          <span class="service-tag">Fintech</span>
+          <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h3 class="text-lg font-semibold text-white">Plataformas Fintech y Pagos Digitales</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Sistemas de crédito online end-to-end, billeteras digitales, gateways de pago e integraciones de scoring en tiempo real. Procesamos más de 80.000 préstamos y ~USD 40M en nuestros primeros despliegues fintech. Experiencia con BBVA, Banelco, Visa, TransUnion y Equifax.</p>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="tech-badge">Crédito online</span><span class="tech-badge">Billeteras digitales</span><span class="tech-badge">APIs de scoring</span><span class="tech-badge">Cumplimiento PCI</span></div>
         </div>
 
-        <!-- Consulting & Strategy -->
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-8 h-full">
-          <div class="mb-4 h-7 w-7 text-white/60">
-            <!-- Compass icon (outline) -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M16 8l-2 6-6 2 2-6 6-2Z"/>
-            </svg>
-          </div>
-          <p class="mt-1 text-lg font-semibold text-white">Consultoría y estrategia técnica</p>
-          <p class="mt-3 text-slate-300 leading-relaxed">
-            Ayudamos a definir qué construir, cómo hacerlo y en qué orden, priorizando decisiones que puedan ejecutarse de manera realista dentro del contexto técnico del negocio.
-          </p>
+        <div class="service-card">
+          <span class="service-tag">Backend</span>
+          <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="6" rx="2"/><rect x="4" y="14" width="16" height="6" rx="2"/><path d="M8 7h.01M12 7h.01M8 17h.01M12 17h.01"/></svg></div>
+          <h3 class="text-lg font-semibold text-white">Backends Escalables e Integración de APIs</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Backends cloud, microservicios, APIs REST e integraciones complejas con terceros. Diseñamos arquitecturas que manejan más de 800M de transacciones mensuales (SUBE) y construimos SDKs desplegados globalmente por TransUnion en Sudáfrica, India y Colombia.</p>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="tech-badge">Java · JVM</span><span class="tech-badge">APIs REST</span><span class="tech-badge">Desarrollo de SDKs</span><span class="tech-badge">AWS · Azure</span></div>
+        </div>
+
+        <div class="service-card">
+          <span class="service-tag">Modernización</span>
+          <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-8"/><path d="M22 20V7"/></svg></div>
+          <h3 class="text-lg font-semibold text-white">Modernización de Sistemas Legacy y Middleware</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Conectamos lo viejo con lo nuevo: integramos apps móviles y plataformas modernas con backends legacy, ERPs, bases de datos gubernamentales y APIs especializadas. Experiencia con la integración AFIP/Aduana de Correo Argentino y la conexión GDS Sabre/Amadeus de Despegar.</p>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="tech-badge">Middleware</span><span class="tech-badge">Integración legacy</span><span class="tech-badge">Conectores ERP</span><span class="tech-badge">APIs GDS</span></div>
+        </div>
+
+        <div class="service-card">
+          <span class="service-tag">Diseño y Estrategia</span>
+          <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8l-2 6-6 2 2-6 6-2Z"/></svg></div>
+          <h3 class="text-lg font-semibold text-white">Diseño UX/UI y Estrategia de Producto</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Diseño de interfaces alineado con las restricciones reales del negocio y la tecnología. Entregamos UX para Banelco (certificación Microsoft), documentación con cumplimiento FDA, y consultoría IoT para Telecom/Cablevisión con IAE Business School.</p>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="tech-badge">UX research</span><span class="tech-badge">Estrategia de producto</span><span class="tech-badge">UX regulatorio</span><span class="tech-badge">Kioscos interactivos</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 pb-20">
+      <div class="border border-white/8 rounded-2xl bg-white/[0.02] p-8 md:p-10">
+        <h2 class="text-xl font-bold text-white mb-2">Industrias que conocemos bien</h2>
+        <p class="text-sm text-slate-400 mb-7">Experiencia real en estos sectores — no teoría.</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="industry-pill">Fintech y Banca</span>
+          <span class="industry-pill">E-commerce y Retail</span>
+          <span class="industry-pill">Ticketing Móvil y Eventos</span>
+          <span class="industry-pill">Viajes y Transporte</span>
+          <span class="industry-pill">Medios y Entretenimiento</span>
+          <span class="industry-pill">Telecomunicaciones e IoT</span>
+          <span class="industry-pill">Gobierno y Servicios Públicos</span>
+          <span class="industry-pill">Healthtech y Medtech</span>
+          <span class="industry-pill">Logística y Tracking</span>
+          <span class="industry-pill">EdTech</span>
         </div>
       </div>
     </section>
 
-<!-- ================= TECHNOLOGY CHOICES — CAPABILITY FIELD ================= -->
-<section class="relative max-w-7xl mx-auto px-6 py-32 overflow-hidden capability-field">
-
-  <!-- Subtle technical grid background (ambient drift) -->
-  <div
-    class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-out
-           bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),
-               linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)]
-           bg-[size:48px_48px] capability-field-bg"
-    data-reveal
-    aria-hidden="true">
-  </div>
-
-  <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-16">
-
-    <!-- Intro -->
-    <div class="lg:col-span-5">
-      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
-        Decisiones tecnológicas<br />
-        con foco en ejecución.
-      </h2>
-
-      <p class="mt-8 text-slate-400 leading-relaxed max-w-md">
-        Elegimos tecnología por confiabilidad, mantenibilidad y viabilidad a largo plazo, no por tendencias pasajeras.
-      </p>
-    </div>
-
-    <!-- Capability field -->
-    <div class="lg:col-span-7 relative">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-14">
-
-        <!-- 1) Mobile -->
-        <div
-          class="group capability-item or-card relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
-          data-reveal
-        >
-          <svg
-            class="or-icon h-5 w-5 mb-3 text-slate-400 group-hover:text-emerald-400 transition"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <rect x="7" y="2" width="10" height="20" rx="2"></rect>
-            <circle cx="12" cy="18" r="1"></circle>
-          </svg>
-
-          <h3 class="text-lg font-semibold text-white">
-            Mobile
-          </h3>
-          <p class="mt-2 text-slate-400">
-            Android · iOS · Flutter · React Native
-          </p>
+    <section class="mx-auto max-w-7xl px-6 pb-24">
+      <div class="grid gap-10 lg:grid-cols-12 lg:items-start">
+        <div class="lg:col-span-5">
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Decisiones tecnológicas<br>guiadas por la entrega.</h2>
+          <p class="mt-3 text-slate-400 leading-relaxed max-w-prose">Elegimos tecnologías por su confiabilidad, mantenibilidad a largo plazo y porque realmente se entregan a tiempo. No por tendencias.</p>
         </div>
-
-        <!-- 2) Backend -->
-        <div
-          class="group capability-item or-card relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
-          data-reveal
-        >
-          <svg
-            class="or-icon h-5 w-5 mb-3 text-slate-400 group-hover:text-emerald-400 transition"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <rect x="4" y="4" width="16" height="6" rx="2"></rect>
-            <rect x="4" y="14" width="16" height="6" rx="2"></rect>
-            <path d="M8 7h.01M12 7h.01M16 7h.01"></path>
-            <path d="M8 17h.01M12 17h.01M16 17h.01"></path>
-          </svg>
-
-          <h3 class="text-lg font-semibold text-white">
-            Backend
-          </h3>
-          <p class="mt-2 text-slate-400">
-            Java · Ecosistema JVM
-          </p>
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
+            <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg><h3 class="text-base font-semibold text-white">Mobile</h3><p class="mt-1 text-sm text-slate-400">Android · iOS · Flutter · React Native · Wearables · SmartTV</p></div>
+            <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="6" rx="2"/><rect x="4" y="14" width="16" height="6" rx="2"/></svg><h3 class="text-base font-semibold text-white">Backend</h3><p class="mt-1 text-sm text-slate-400">Java · JVM · PHP (Lumen) · Node.js · Python</p></div>
+            <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/><path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg><h3 class="text-base font-semibold text-white">Bases de datos</h3><p class="mt-1 text-sm text-slate-400">PostgreSQL · MySQL · Oracle · SQL Server · NoSQL</p></div>
+            <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 1 0-7l.7-.7a5 5 0 0 1 7 7l-.7.7"/><path d="M14 11a5 5 0 0 1 0 7l-.7.7a5 5 0 0 1-7-7l.7-.7"/></svg><h3 class="text-base font-semibold text-white">APIs e Integraciones</h3><p class="mt-1 text-sm text-slate-400">REST · GraphQL · GDS (Sabre, Amadeus) · Pasarelas de pago · APIs gubernamentales</p></div>
+            <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 4 5.7 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.7-4-9s1.5-6.4 4-9Z"/></svg><h3 class="text-base font-semibold text-white">Web y Cloud</h3><p class="mt-1 text-sm text-slate-400">Web responsive · React · AWS · Azure · Backends cloud · SaaS y PaaS</p></div>
+            <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg><h3 class="text-base font-semibold text-white">IA y Tecnologías Emergentes</h3><p class="mt-1 text-sm text-slate-400">Integración LLM · IoT · Reconocimiento de imágenes · Geofencing y Beacons · SDKs</p></div>
+          </div>
         </div>
-
-        <!-- 3) Bases de datos -->
-        <div
-          class="group capability-item or-card relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
-          data-reveal
-        >
-          <svg
-            class="or-icon h-5 w-5 mb-3 text-slate-400 group-hover:text-emerald-400 transition"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <ellipse cx="12" cy="5" rx="7" ry="3"></ellipse>
-            <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"></path>
-            <path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"></path>
-          </svg>
-
-          <h3 class="text-lg font-semibold text-white">
-            Bases de datos
-          </h3>
-          <p class="mt-2 text-slate-400">
-            PostgreSQL · MySQL · Oracle · SQL Server
-          </p>
-        </div>
-
-        <!-- 4) APIs e integraciones -->
-        <div
-          class="group capability-item or-card relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
-          data-reveal
-        >
-          <svg
-            class="or-icon h-5 w-5 mb-3 text-slate-400 group-hover:text-emerald-400 transition"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M10 13a5 5 0 0 1 0-7l.7-.7a5 5 0 0 1 7 7l-.7.7"></path>
-            <path d="M14 11a5 5 0 0 1 0 7l-.7.7a5 5 0 0 1-7-7l.7-.7"></path>
-          </svg>
-
-          <h3 class="text-lg font-semibold text-white">
-            APIs e integraciones
-          </h3>
-          <p class="mt-2 text-slate-400">
-            APIs REST · Integraciones de sistemas
-          </p>
-        </div>
-
-        <!-- 5) Estándares web -->
-        <div
-          class="group capability-item or-card relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
-          data-reveal
-        >
-          <svg
-            class="or-icon h-5 w-5 mb-3 text-slate-400 group-hover:text-emerald-400 transition"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <circle cx="12" cy="12" r="9"></circle>
-            <path d="M3 12h18"></path>
-            <path d="M12 3c2.5 2.6 4 5.7 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.7-4-9s1.5-6.4 4-9Z"></path>
-          </svg>
-
-          <h3 class="text-lg font-semibold text-white">
-            Estándares web
-          </h3>
-          <p class="mt-2 text-slate-400">
-            Estándares web modernos
-          </p>
-        </div>
-
-        <!-- 6) Legacy / plataformas -->
-        <div
-          class="group capability-item or-card relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
-          data-reveal
-        >
-          <svg
-            class="or-icon h-5 w-5 mb-3 text-slate-400 group-hover:text-emerald-400 transition"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M4 20V10"></path>
-            <path d="M10 20V4"></path>
-            <path d="M16 20v-8"></path>
-            <path d="M22 20V7"></path>
-          </svg>
-
-          <h3 class="text-lg font-semibold text-white">
-            Legacy / plataformas
-          </h3>
-          <p class="mt-2 text-slate-400">
-            Plataformas legacy y especializadas
-          </p>
-        </div>
-
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <section class="mx-auto max-w-7xl px-6 pb-24">
+      <h2 class="text-2xl font-bold text-white mb-2">Trabajo real, resultados reales</h2>
+      <p class="text-slate-400 mb-8">Algunos de los proyectos que definen lo que hacemos.</p>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="./work/fintech-lending.html" class="case-teaser group">
+          <span class="service-tag">Fintech</span>
+          <h3 class="text-base font-semibold text-white group-hover:text-[color:var(--accent)] transition">Plataforma de Crédito Online</h3>
+          <p class="text-sm text-slate-400">Plataforma de crédito end-to-end: más de 80.000 préstamos y ~USD 40M en cartera en el primer año.</p>
+          <span class="text-xs text-[color:var(--accent)] mt-auto">Ver caso de éxito →</span>
+        </a>
+        <a href="./work/cinemark-ticketing.html" class="case-teaser group">
+          <span class="service-tag">Mobile · Ticketing</span>
+          <h3 class="text-base font-semibold text-white group-hover:text-[color:var(--accent)] transition">Cinemark Mobile Ticketing</h3>
+          <p class="text-sm text-slate-400">Primera app de ticketing en Android, Windows Phone, BB10, SmartTV y ticketing social en LATAM. Cliente desde 2009.</p>
+          <span class="text-xs text-[color:var(--accent)] mt-auto">Ver caso de éxito →</span>
+        </a>
+        <a href="./contact.html" class="case-teaser group" style="border-style:dashed;">
+          <span class="service-tag">+30 proyectos</span>
+          <h3 class="text-base font-semibold text-white">TransUnion · BBVA · Despegar · SUBE · Samsung · y más</h3>
+          <p class="text-sm text-slate-400">Consultanos sobre experiencia específica en tu industria.</p>
+          <span class="text-xs text-[color:var(--accent)] mt-auto">Contactanos →</span>
+        </a>
+      </div>
+    </section>
 
+    <section class="mx-auto max-w-7xl px-6 pb-24">
+      <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl px-10 py-12 md:px-14 md:py-14">
+        <div class="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(900px_320px_at_15%_20%,rgba(255,255,255,0.08),transparent_60%)]"></div>
+        <div class="relative max-w-3xl">
+          <p class="text-xs uppercase tracking-[0.22em] text-slate-400">¿Listo para construir?</p>
+          <h2 class="mt-4 text-3xl md:text-4xl font-extrabold tracking-tight text-white">Contanos sobre tu proyecto.</h2>
+          <p class="mt-4 text-slate-300 leading-relaxed">Tanto si necesitás una app móvil, una solución de IA, una plataforma fintech o un equipo que tome el control de un sistema legacy — ya lo hicimos antes, a escala.</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="./contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">Contactanos</a>
+            <a href="./about-us.html" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Sobre Orugga →</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER (loaded via includes.js) -->
   <div id="siteFooter"></div>
-
-  <!-- Includes -->
   <script src="../assets/js/includes.js"></script>
-
-  <!-- Hero particles (shared) -->
   <script src="../assets/js/hero-particles.js"></script>
 </body>
 </html>

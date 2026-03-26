@@ -3,378 +3,304 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Favicons -->
-<link rel="icon" href="../assets/img/favicon.ico" sizes="any">
-<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="../assets/img/favicon-96x96.png" sizes="96x96">
-<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
-<link rel="manifest" href="../assets/img/site.webmanifest">
+  <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/favicon-96x96.png" sizes="96x96">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../assets/img/site.webmanifest">
 
-  <title>Orugga — Services</title>
+  <title>Services — AI, Mobile &amp; Software Development | Orugga</title>
+  <meta name="description" content="Orugga builds AI-driven automation, mobile apps (iOS, Android, Flutter), fintech platforms, scalable backends and modern interfaces. 20+ years of end-to-end software delivery for LATAM and global companies.">
+  <meta name="keywords" content="AI software development, mobile app development LATAM, fintech software, iOS Android Flutter, software factory Argentina, digital wallet development, API integration, legacy modernization">
+  <meta name="robots" content="index, follow">
+  <link rel="alternate" hreflang="en" href="https://www.orugga.com/en/services.html">
+  <link rel="alternate" hreflang="es" href="https://www.orugga.com/es/services.html">
+  <link rel="canonical" href="https://www.orugga.com/en/services.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Orugga">
+  <meta property="og:title" content="Services — AI, Mobile &amp; Software Development | Orugga">
+  <meta property="og:description" content="AI automation, mobile development, fintech platforms and scalable backends. 20+ years delivering production software globally.">
+  <meta property="og:url" content="https://www.orugga.com/en/services.html">
+  <meta property="og:image" content="https://www.orugga.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Services — Orugga Software Factory">
+  <meta name="twitter:description" content="AI, mobile, fintech and backend services. End-to-end software delivery for LATAM and global companies.">
+  <meta name="twitter:image" content="https://www.orugga.com/assets/img/og-image.jpg">
 
-  <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
-          },
-        },
-      },
+      theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','Segoe UI','Roboto','Helvetica Neue','Arial'] } } }
     }
   </script>
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Your site CSS -->
   <link rel="stylesheet" href="../assets/css/styles.css" />
 
   <style>
     :root { color-scheme: dark; }
-
-    body{
+    body {
       background:
-        radial-gradient(1200px 600px at 15% 10%, rgba(16, 185, 129, 0.12), transparent 55%),
-        radial-gradient(900px 450px at 85% 20%, rgba(56, 189, 248, 0.10), transparent 55%),
+        radial-gradient(1200px 600px at 15% 10%, rgba(16,185,129,0.12), transparent 55%),
+        radial-gradient(900px 450px at 85% 20%, rgba(56,189,248,0.10), transparent 55%),
         #05070f;
     }
-
-    .noise {
-      position: fixed; inset: 0; pointer-events: none; opacity: .08; mix-blend-mode: overlay;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
-    }
-
-    /* Same visual family as index hero */
-    .hero-particles {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      opacity: .95;
-      -webkit-mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
-      mask-image: radial-gradient(circle at 45% 35%, black 72%, transparent 98%);
-    }
-    .hero-content { position: relative; z-index: 1; }
-
-    /* Subtle variant for internal pages */
-    .hero--subtle .hero-particles {
-      opacity: .55;
-      -webkit-mask-image: radial-gradient(circle at 45% 30%, black 62%, transparent 96%);
-      mask-image: radial-gradient(circle at 45% 30%, black 62%, transparent 96%);
-    }
+    .noise { position:fixed;inset:0;pointer-events:none;opacity:.08;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E"); }
+    .hero-particles { position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.55;-webkit-mask-image:radial-gradient(circle at 45% 30%,black 62%,transparent 96%);mask-image:radial-gradient(circle at 45% 30%,black 62%,transparent 96%); }
+    .hero-content { position:relative;z-index:1; }
+    .service-card { border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);border-radius:20px;padding:2rem;transition:border-color 0.2s,background 0.2s; }
+    .service-card:hover { border-color:rgba(111,191,142,0.3);background:rgba(111,191,142,0.04); }
+    .service-tag { display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6FBF8E;border:1px solid rgba(111,191,142,0.3);border-radius:999px;padding:3px 10px;margin-bottom:1rem; }
+    .industry-pill { display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:5px 12px;white-space:nowrap; }
+    .industry-pill:before { content:'';width:6px;height:6px;border-radius:50%;background:#6FBF8E;flex-shrink:0; }
+    .tech-badge { font-size:12px;font-weight:500;color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:3px 10px; }
+    .stat-num { font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-0.03em;color:#fff;line-height:1; }
+    .stat-label { font-size:13px;color:rgba(255,255,255,0.45);margin-top:4px; }
+    .case-teaser { border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.5rem;display:flex;flex-direction:column;gap:0.75rem;transition:border-color 0.2s;text-decoration:none; }
+    .case-teaser:hover { border-color:rgba(111,191,142,0.3); }
+    .cap-item { opacity:0;transform:translateY(12px);transition:opacity 0.5s ease,transform 0.5s ease; }
+    .cap-item.is-visible { opacity:1;transform:translateY(0); }
   </style>
 </head>
 
 <body class="font-sans text-slate-100">
   <div class="noise"></div>
-
-  <!-- HEADER (loaded via includes.js) -->
   <div id="siteHeader"></div>
 
   <main>
-    <!-- HERO (animated, subtle) -->
-    <section class="relative overflow-hidden min-h-[60vh] hero--subtle">
-  <canvas id="heroParticles" class="hero-particles"></canvas>
 
-      <div class="hero-content mx-auto max-w-7xl px-6 pt-16 md:pt-24 pb-14 md:pb-20">
-        <p class="text-xs uppercase tracking-wider text-slate-500 mb-4">
-          Services
+    <!-- HERO -->
+    <section class="relative overflow-hidden min-h-[55vh]">
+      <canvas id="heroParticles" class="hero-particles"></canvas>
+      <div class="hero-content mx-auto max-w-7xl px-6 pt-20 md:pt-28 pb-16">
+        <p class="text-xs uppercase tracking-wider text-slate-500 mb-4">Services</p>
+        <h1 class="hero-title max-w-4xl">
+          Software that runs in
+          <span class="text-[color:var(--accent)]">production</span>,
+          not just demos.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg text-slate-300 leading-relaxed">
+          From AI-driven automation to mobile apps, fintech platforms, and complex system integrations — we own delivery end-to-end, in real business environments.
         </p>
-
-        <h1 class="mt-4 hero-title">
-      What we
-      <span class="text-[color:var(--accent)]">actually build</span>
-      and how we deliver it.
-    </h1>
-
-        <p class="mt-6 max-w-3xl text-lg text-slate-300">
-          From AI-driven systems to core platforms and interfaces, these are the capabilities we own end-to-end — built and shipped in real production environments.
-        </p>
-
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a href="./index.html#contact" class="btn btn-primary btn-lg">
-            Contact us
-          </a>
-
-          <a href="#capabilities" class="btn btn-ghost btn-lg">
-            Explore capabilities →
-          </a>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="./contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">Start a project</a>
+          <a href="#services" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Explore services →</a>
         </div>
       </div>
     </section>
 
-    <!-- BUILT FOR REAL-WORLD CONSTRAINTS -->
-    <section id="capabilities" class="mx-auto max-w-7xl px-6 pb-20">
-      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">
-        Built for real-world constraints
-      </h2>
-      <p class="mt-3 text-slate-300 max-w-3xl">
-        These are the capabilities we optimize for when shipping software in complex, real-world environments.
-      </p>
+    <!-- STATS BAR -->
+    <section class="border-y border-white/5 bg-white/[0.02]">
+      <div class="mx-auto max-w-7xl px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div><div class="stat-num">20+</div><div class="stat-label">Years shipping production software</div></div>
+        <div><div class="stat-num">800M+</div><div class="stat-label">Transactions / month on our architecture</div></div>
+        <div><div class="stat-num">80K+</div><div class="stat-label">Fintech loans processed in year 1</div></div>
+        <div><div class="stat-num">10M+</div><div class="stat-label">End users on platforms we've built</div></div>
+      </div>
+    </section>
 
-      <div class="mt-10 grid gap-6 sm:grid-cols-2">
-        <!-- AI Solutions -->
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-8 h-full">
-          <div class="mb-4 h-7 w-7 text-white/60">
-            <!-- CPU / AI icon (outline) -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="4" y="4" width="16" height="16" rx="2"/>
-              <path d="M9 9h6v6H9z"/>
-              <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
-            </svg>
+    <!-- CORE SERVICES -->
+    <section id="services" class="mx-auto max-w-7xl px-6 py-20">
+      <div class="max-w-2xl mb-14">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">What we build</h2>
+        <p class="mt-3 text-slate-400 leading-relaxed">Six areas where we have deep, proven experience — from early product decisions to production deployment.</p>
+      </div>
+
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+        <div class="service-card">
+          <span class="service-tag">AI-driven</span>
+          <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></div>
+          <h3 class="text-lg font-semibold text-white">Generative AI &amp; Automation</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">We design and build AI-driven systems focused on real productivity gains: document processing, decision support, workflow automation, and LLM-powered products. We integrate with OpenAI, Anthropic, and open-source models.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="tech-badge">LLM integration</span>
+            <span class="tech-badge">RAG systems</span>
+            <span class="tech-badge">Workflow automation</span>
+            <span class="tech-badge">AI APIs</span>
           </div>
-          <p class="mt-1 text-lg font-semibold text-white">AI Solutions</p>
-          <p class="mt-3 text-slate-300 leading-relaxed">
-            We design and build AI-driven systems focused on automation, decision support, and measurable productivity gains in real operational contexts.
-          </p>
         </div>
 
-        <!-- Software Development -->
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-8 h-full">
-          <div class="mb-4 h-7 w-7 text-white/60">
-            <!-- Code icon (outline) -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 18l6-6-6-6"/>
-              <path d="M8 6l-6 6 6 6"/>
-            </svg>
+        <div class="service-card">
+          <span class="service-tag">Mobile</span>
+          <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg></div>
+          <h3 class="text-lg font-semibold text-white">Mobile App Development</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Native iOS and Android apps, cross-platform Flutter, and React Native. We've built mobile ticketing, banking, e-commerce, loyalty, and streaming apps for clients across LATAM and the US — including Cinemark (client since 2009) and Despegar.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="tech-badge">iOS · Android</span>
+            <span class="tech-badge">Flutter</span>
+            <span class="tech-badge">React Native</span>
+            <span class="tech-badge">Wearables · SmartTV</span>
           </div>
-          <p class="mt-1 text-lg font-semibold text-white">Software Development</p>
-          <p class="mt-3 text-slate-300 leading-relaxed">
-            We build robust, scalable software with clear ownership of delivery. From architecture to production.
-          </p>
         </div>
 
-        <!-- Interface Design -->
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-8 h-full">
-          <div class="mb-4 h-7 w-7 text-white/60">
-            <!-- Layers icon (outline) -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2l10 6-10 6L2 8l10-6Z"/>
-              <path d="M22 12l-10 6-10-6"/>
-              <path d="M22 16l-10 6-10-6"/>
-            </svg>
+        <div class="service-card">
+          <span class="service-tag">Fintech</span>
+          <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h3 class="text-lg font-semibold text-white">Fintech &amp; Digital Payment Platforms</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">End-to-end online lending systems, digital wallets, payment gateways, and real-time credit scoring integrations. We've processed 80,000+ loans and ~$40M USD in our first-year fintech deployments. Experience with BBVA, Banelco, Visa, TransUnion, and Equifax.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="tech-badge">Online lending</span>
+            <span class="tech-badge">Digital wallets</span>
+            <span class="tech-badge">Credit scoring APIs</span>
+            <span class="tech-badge">PCI compliance</span>
           </div>
-          <p class="mt-1 text-lg font-semibold text-white">Interface Design</p>
-          <p class="mt-3 text-slate-300 leading-relaxed">
-            We design interfaces that prioritize clarity, usability, and adoption. Aligned with real business and technical constraints.
-          </p>
         </div>
 
-        <!-- Consulting & Strategy -->
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-8 h-full">
-          <div class="mb-4 h-7 w-7 text-white/60">
-            <!-- Compass icon (outline) -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M16 8l-2 6-6 2 2-6 6-2Z"/>
-            </svg>
+        <div class="service-card">
+          <span class="service-tag">Backend</span>
+          <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="6" rx="2"/><rect x="4" y="14" width="16" height="6" rx="2"/><path d="M8 7h.01M12 7h.01M8 17h.01M12 17h.01"/></svg></div>
+          <h3 class="text-lg font-semibold text-white">Scalable Backends &amp; API Integration</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Cloud-based backends, microservices, REST APIs, and complex third-party integrations. We architected systems handling 800M+ monthly transactions (SUBE, Argentina's national transit system) and built SDKs deployed globally by TransUnion across South Africa, India, and Colombia.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="tech-badge">Java · JVM</span>
+            <span class="tech-badge">REST APIs</span>
+            <span class="tech-badge">SDK development</span>
+            <span class="tech-badge">AWS · Azure</span>
           </div>
-          <p class="mt-1 text-lg font-semibold text-white">Consulting &amp; Strategy</p>
-          <p class="mt-3 text-slate-300 leading-relaxed">
-            We help define strategy, scope, and delivery roadmaps that are realistic, executable, and aligned with your technical reality.
-          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-tag">Modernization</span>
+          <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-8"/><path d="M22 20V7"/></svg></div>
+          <h3 class="text-lg font-semibold text-white">Legacy System Modernization &amp; Middleware</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">We bridge old and new: integrating mobile apps and modern platforms with legacy backends, ERP systems, government databases, and specialized APIs. Experience with Correo Argentino's customs/IRS integration and Despegar's Sabre/Amadeus GDS connection.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="tech-badge">Middleware</span>
+            <span class="tech-badge">Legacy integration</span>
+            <span class="tech-badge">ERP connectors</span>
+            <span class="tech-badge">GDS APIs</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <span class="service-tag">Design &amp; Strategy</span>
+          <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8l-2 6-6 2 2-6 6-2Z"/></svg></div>
+          <h3 class="text-lg font-semibold text-white">UX/UI Design &amp; Product Strategy</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Interface design aligned with real technical and business constraints. We've delivered UX for Banelco (Microsoft certification), FDA-compliant medical device documentation, and IoT strategy consulting for Telecom/Cablevisión with IAE Business School.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="tech-badge">UX research</span>
+            <span class="tech-badge">Product strategy</span>
+            <span class="tech-badge">Regulatory UX</span>
+            <span class="tech-badge">Interactive kiosks</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INDUSTRY VERTICALS -->
+    <section class="mx-auto max-w-7xl px-6 pb-20">
+      <div class="border border-white/8 rounded-2xl bg-white/[0.02] p-8 md:p-10">
+        <h2 class="text-xl font-bold text-white mb-2">Industries we know well</h2>
+        <p class="text-sm text-slate-400 mb-7">Real experience across these sectors — not theory.</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="industry-pill">Fintech &amp; Banking</span>
+          <span class="industry-pill">E-commerce &amp; Retail</span>
+          <span class="industry-pill">Mobile Ticketing &amp; Events</span>
+          <span class="industry-pill">Travel &amp; Transportation</span>
+          <span class="industry-pill">Media &amp; Entertainment</span>
+          <span class="industry-pill">Telecom &amp; IoT</span>
+          <span class="industry-pill">Government &amp; Public Services</span>
+          <span class="industry-pill">Healthtech &amp; Medtech</span>
+          <span class="industry-pill">Logistics &amp; Tracking</span>
+          <span class="industry-pill">EdTech</span>
         </div>
       </div>
     </section>
 
-<!-- ================= TECHNOLOGY CHOICES ================= -->
-<section class="mx-auto max-w-7xl px-6 pb-24">
-  <div class="grid gap-10 lg:grid-cols-12 lg:items-start">
-
-    <!-- Left: title + description -->
-    <div class="lg:col-span-5">
-      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">
-        Technology choices,<br />
-        driven by real-world delivery.
-      </h2>
-
-      <p class="mt-3 text-slate-300 leading-relaxed max-w-prose">
-        We choose technologies based on reliability, maintainability, and long-term
-        viability. Not trends.
-      </p>
-    </div>
-
-    <!-- Right: capability field -->
-    <div class="lg:col-span-7 relative">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-14">
-
-        <!-- 1) Mobile -->
-        <div
-          class="group capability-item or-card relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
-          data-reveal
-        >
-          <svg
-            class="or-icon h-5 w-5 mb-3 text-slate-400 group-hover:text-emerald-400 transition"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <rect x="7" y="2" width="10" height="20" rx="2"></rect>
-            <circle cx="12" cy="18" r="1"></circle>
-          </svg>
-
-          <h3 class="text-lg font-semibold text-white">Mobile</h3>
-          <p class="mt-2 text-slate-400">
-            Android · iOS · Flutter · React Native
-          </p>
+    <!-- TECH STACK -->
+    <section class="mx-auto max-w-7xl px-6 pb-24">
+      <div class="grid gap-10 lg:grid-cols-12 lg:items-start">
+        <div class="lg:col-span-5">
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Technology choices<br>driven by delivery.</h2>
+          <p class="mt-3 text-slate-400 leading-relaxed max-w-prose">We choose technologies based on reliability, long-term maintainability, and what actually ships on time. Not trends.</p>
         </div>
-
-        <!-- 2) Backend -->
-        <div
-          class="group capability-item or-card relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
-          data-reveal
-        >
-          <svg
-            class="or-icon h-5 w-5 mb-3 text-slate-400 group-hover:text-emerald-400 transition"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <rect x="4" y="4" width="16" height="6" rx="2"></rect>
-            <rect x="4" y="14" width="16" height="6" rx="2"></rect>
-            <path d="M8 7h.01M12 7h.01M16 7h.01"></path>
-            <path d="M8 17h.01M12 17h.01M16 17h.01"></path>
-          </svg>
-
-          <h3 class="text-lg font-semibold text-white">Backend</h3>
-          <p class="mt-2 text-slate-400">
-            Java · JVM ecosystem
-          </p>
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
+            <div class="cap-item" data-reveal>
+              <svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg>
+              <h3 class="text-base font-semibold text-white">Mobile</h3>
+              <p class="mt-1 text-sm text-slate-400">Android · iOS · Flutter · React Native · Wearables · SmartTV</p>
+            </div>
+            <div class="cap-item" data-reveal>
+              <svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="6" rx="2"/><rect x="4" y="14" width="16" height="6" rx="2"/></svg>
+              <h3 class="text-base font-semibold text-white">Backend</h3>
+              <p class="mt-1 text-sm text-slate-400">Java · JVM ecosystem · PHP (Lumen) · Node.js · Python</p>
+            </div>
+            <div class="cap-item" data-reveal>
+              <svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/><path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+              <h3 class="text-base font-semibold text-white">Databases</h3>
+              <p class="mt-1 text-sm text-slate-400">PostgreSQL · MySQL · Oracle · SQL Server · NoSQL</p>
+            </div>
+            <div class="cap-item" data-reveal>
+              <svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 1 0-7l.7-.7a5 5 0 0 1 7 7l-.7.7"/><path d="M14 11a5 5 0 0 1 0 7l-.7.7a5 5 0 0 1-7-7l.7-.7"/></svg>
+              <h3 class="text-base font-semibold text-white">APIs &amp; Integrations</h3>
+              <p class="mt-1 text-sm text-slate-400">REST · GraphQL · GDS (Sabre, Amadeus) · Payment gateways · Government APIs</p>
+            </div>
+            <div class="cap-item" data-reveal>
+              <svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 4 5.7 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.7-4-9s1.5-6.4 4-9Z"/></svg>
+              <h3 class="text-base font-semibold text-white">Web &amp; Cloud</h3>
+              <p class="mt-1 text-sm text-slate-400">Responsive web · React · AWS · Azure · Cloud backends · SaaS &amp; PaaS</p>
+            </div>
+            <div class="cap-item" data-reveal>
+              <svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+              <h3 class="text-base font-semibold text-white">AI &amp; Emerging Tech</h3>
+              <p class="mt-1 text-sm text-slate-400">LLM integration · IoT · Image recognition · Geofencing &amp; Beacons · SDK development</p>
+            </div>
+          </div>
         </div>
-
-        <!-- 3) Databases -->
-        <div
-          class="group capability-item or-card relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
-          data-reveal
-        >
-          <svg
-            class="or-icon h-5 w-5 mb-3 text-slate-400 group-hover:text-emerald-400 transition"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <ellipse cx="12" cy="5" rx="7" ry="3"></ellipse>
-            <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"></path>
-            <path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"></path>
-          </svg>
-
-          <h3 class="text-lg font-semibold text-white">Databases</h3>
-          <p class="mt-2 text-slate-400">
-            PostgreSQL · MySQL · Oracle · SQL Server
-          </p>
-        </div>
-
-        <!-- 4) APIs & Integrations -->
-        <div
-          class="group capability-item or-card relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
-          data-reveal
-        >
-          <svg
-            class="or-icon h-5 w-5 mb-3 text-slate-400 group-hover:text-emerald-400 transition"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M10 13a5 5 0 0 1 0-7l.7-.7a5 5 0 0 1 7 7l-.7.7"></path>
-            <path d="M14 11a5 5 0 0 1 0 7l-.7.7a5 5 0 0 1-7-7l.7-.7"></path>
-          </svg>
-
-          <h3 class="text-lg font-semibold text-white">APIs & Integrations</h3>
-          <p class="mt-2 text-slate-400">
-            REST APIs · System integrations
-          </p>
-        </div>
-
-        <!-- 5) Web standards -->
-        <div
-          class="group capability-item or-card relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
-          data-reveal
-        >
-          <svg
-            class="or-icon h-5 w-5 mb-3 text-slate-400 group-hover:text-emerald-400 transition"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <circle cx="12" cy="12" r="9"></circle>
-            <path d="M3 12h18"></path>
-            <path d="M12 3c2.5 2.6 4 5.7 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.7-4-9s1.5-6.4 4-9Z"></path>
-          </svg>
-
-          <h3 class="text-lg font-semibold text-white">Web standards</h3>
-          <p class="mt-2 text-slate-400">
-            Modern web standards
-          </p>
-        </div>
-
-        <!-- 6) Legacy / platforms -->
-        <div
-          class="group capability-item or-card relative opacity-0 translate-y-4 transition-all duration-700 ease-out"
-          data-reveal
-        >
-          <svg
-            class="or-icon h-5 w-5 mb-3 text-slate-400 group-hover:text-emerald-400 transition"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M4 20V10"></path>
-            <path d="M10 20V4"></path>
-            <path d="M16 20v-8"></path>
-            <path d="M22 20V7"></path>
-          </svg>
-
-          <h3 class="text-lg font-semibold text-white">Legacy / platforms</h3>
-          <p class="mt-2 text-slate-400">
-            Legacy & specialized platforms
-          </p>
-        </div>
-
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <!-- CASE STUDY TEASERS -->
+    <section class="mx-auto max-w-7xl px-6 pb-24">
+      <h2 class="text-2xl font-bold text-white mb-2">Real work, real results</h2>
+      <p class="text-slate-400 mb-8">A few of the projects that define what we do.</p>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="./work/fintech-lending.html" class="case-teaser group">
+          <span class="service-tag">Fintech</span>
+          <h3 class="text-base font-semibold text-white group-hover:text-[color:var(--accent)] transition">Online Lending Platform</h3>
+          <p class="text-sm text-slate-400">End-to-end credit platform: 80,000+ loans, ~$40M USD loan book in year one.</p>
+          <span class="text-xs text-[color:var(--accent)] mt-auto">Read case study →</span>
+        </a>
+        <a href="./work/cinemark-ticketing.html" class="case-teaser group">
+          <span class="service-tag">Mobile · Ticketing</span>
+          <h3 class="text-base font-semibold text-white group-hover:text-[color:var(--accent)] transition">Cinemark Mobile Ticketing</h3>
+          <p class="text-sm text-slate-400">First Android, Windows Phone, BB10, SmartTV, and social ticketing apps in LATAM. Client since 2009.</p>
+          <span class="text-xs text-[color:var(--accent)] mt-auto">Read case study →</span>
+        </a>
+        <a href="./contact.html" class="case-teaser group" style="border-style:dashed;">
+          <span class="service-tag">+30 projects</span>
+          <h3 class="text-base font-semibold text-white">TransUnion · BBVA · Despegar · SUBE · Samsung · and more</h3>
+          <p class="text-sm text-slate-400">Ask us about specific industry experience relevant to your project.</p>
+          <span class="text-xs text-[color:var(--accent)] mt-auto">Get in touch →</span>
+        </a>
+      </div>
+    </section>
 
+    <!-- CTA -->
+    <section class="mx-auto max-w-7xl px-6 pb-24">
+      <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl px-10 py-12 md:px-14 md:py-14">
+        <div class="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(900px_320px_at_15%_20%,rgba(255,255,255,0.08),transparent_60%)]"></div>
+        <div class="relative max-w-3xl">
+          <p class="text-xs uppercase tracking-[0.22em] text-slate-400">Ready to build?</p>
+          <h2 class="mt-4 text-3xl md:text-4xl font-extrabold tracking-tight text-white">Tell us about your project.</h2>
+          <p class="mt-4 text-slate-300 leading-relaxed">Whether you need a mobile app, an AI solution, a fintech platform, or a team to take over a legacy system — we've done it before, at scale.</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="./contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">Contact us</a>
+            <a href="./about-us.html" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">About Orugga →</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <!-- FOOTER (loaded via includes.js) -->
   <div id="siteFooter"></div>
-
-  <!-- Includes -->
   <script src="../assets/js/includes.js"></script>
-
-  <!-- Hero particles (shared) -->
   <script src="../assets/js/hero-particles.js"></script>
 </body>
 </html>

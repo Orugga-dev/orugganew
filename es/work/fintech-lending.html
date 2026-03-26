@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../../assets/img/favicon.ico" sizes="any">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+
+  <title>Plataforma de Crédito Online — Caso de Éxito | Orugga</title>
+  <meta name="description" content="Cómo Orugga construyó una plataforma de crédito online end-to-end que procesó más de 80.000 préstamos y ~USD 40M en cartera en su primer año de operación.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.orugga.com/es/work/fintech-lending.html">
+  <link rel="alternate" hreflang="es" href="https://www.orugga.com/es/work/fintech-lending.html">
+  <link rel="alternate" hreflang="en" href="https://www.orugga.com/en/work/fintech-lending.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Orugga">
+  <meta property="og:title" content="Plataforma de Crédito Online — Caso de Éxito | Orugga">
+  <meta property="og:description" content="Crédito online end-to-end: 80.000+ préstamos, ~USD 40M en cartera, primer año.">
+  <meta property="og:url" content="https://www.orugga.com/es/work/fintech-lending.html">
+  <meta property="og:image" content="https://www.orugga.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] } } } }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+
+  <style>
+    :root { color-scheme: dark; }
+    body { background: radial-gradient(1200px 600px at 10% 5%, rgba(16,185,129,0.10), transparent 55%), radial-gradient(800px 400px at 90% 15%, rgba(56,189,248,0.08), transparent 55%), #05070f; }
+    .noise { position:fixed;inset:0;pointer-events:none;opacity:.06;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E"); }
+    .stat-card { border:1px solid rgba(111,191,142,0.2);background:rgba(111,191,142,0.05);border-radius:16px;padding:1.5rem; }
+    .stat-big { font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-0.04em;color:#6FBF8E;line-height:1; }
+    .stat-sub { font-size:13px;color:rgba(255,255,255,0.5);margin-top:6px;line-height:1.4; }
+    .section-label { font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#6FBF8E;margin-bottom:0.75rem; }
+    .tech-pill { font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:4px 12px; }
+    .timeline-item { position:relative;padding-left:2rem;padding-bottom:2rem;border-left:1px solid rgba(255,255,255,0.1); }
+    .timeline-item:last-child { border-left-color:transparent;padding-bottom:0; }
+    .timeline-dot { position:absolute;left:-5px;top:4px;width:10px;height:10px;border-radius:50%;background:#6FBF8E;border:2px solid #05070f; }
+    .back-link { display:inline-flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s; }
+    .back-link:hover { color:rgba(255,255,255,0.8); }
+    .insight-block { border-left:2px solid #6FBF8E;padding-left:1.25rem;margin:2rem 0; }
+  </style>
+</head>
+
+<body class="font-sans text-slate-100">
+  <div class="noise"></div>
+  <div id="siteHeader"></div>
+
+  <main class="mx-auto max-w-4xl px-6 pt-20 md:pt-28 pb-24">
+
+    <a href="../services.html" class="back-link mb-10 block">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Volver a servicios
+    </a>
+
+    <div class="mb-4 flex flex-wrap items-center gap-2">
+      <span style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#6FBF8E;border:1px solid rgba(111,191,142,0.3);border-radius:999px;padding:3px 10px;">Fintech</span>
+      <span style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:3px 10px;">Crédito Online</span>
+    </div>
+
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+      Plataforma de crédito<br>online end-to-end
+    </h1>
+
+    <p class="mt-5 text-lg text-slate-300 leading-relaxed max-w-2xl">
+      Diseñamos y construimos una solución de crédito digital completa desde cero — frontend responsive, backend cloud, integraciones de scoring en tiempo real y módulo de gestión de campañas — que pasó de cero a USD 40M en su primer año de operación.
+    </p>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12">
+      <div class="stat-card"><div class="stat-big">80K+</div><div class="stat-sub">Préstamos otorgados en el primer año</div></div>
+      <div class="stat-card"><div class="stat-big">~USD 40M</div><div class="stat-sub">Cartera de préstamos, primer año</div></div>
+      <div class="stat-card col-span-2 md:col-span-1"><div class="stat-big">Tiempo real</div><div class="stat-sub">Scoring crediticio vía múltiples integraciones de APIs</div></div>
+    </div>
+
+    <hr style="border-color:rgba(255,255,255,0.08);margin:3rem 0;">
+
+    <div class="mb-10">
+      <p class="section-label">El desafío</p>
+      <h2 class="text-xl md:text-2xl font-bold text-white mb-4">Construir un negocio de crédito desde cero, en un entorno regulatorio complejo</h2>
+      <p class="text-slate-300 leading-relaxed">El cliente necesitaba una plataforma completa de originación de créditos — no solo un frontend, sino todo el stack: una experiencia de solicitud de préstamo para el usuario, un backend cloud que pudiera manejar flujos de adquisición impulsados por campañas, e integraciones en tiempo real con bureaus de crédito y proveedores de identidad para evaluar solicitantes al instante.</p>
+      <p class="mt-4 text-slate-300 leading-relaxed">La plataforma también necesitaba soportar múltiples campañas simultáneas con diferentes parámetros de préstamo, tasas y flujos de adquisición — configurables sin intervención del equipo técnico.</p>
+    </div>
+
+    <div class="mb-10">
+      <p class="section-label">Qué construimos</p>
+      <h2 class="text-xl md:text-2xl font-bold text-white mb-6">Un stack de crédito completamente integrado</h2>
+      <div class="space-y-6">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3 class="text-base font-semibold text-white">Frontend web responsive</h3>
+          <p class="mt-1 text-sm text-slate-400 leading-relaxed">Una interfaz de solicitud de préstamo rápida y mobile-first, diseñada para la conversión. Flujo de UX simple que guiaba a los solicitantes del interés a la presentación en minutos.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3 class="text-base font-semibold text-white">Backend cloud con flujos de campaña configurables</h3>
+          <p class="mt-1 text-sm text-slate-400 leading-relaxed">Un backend flexible que permitió al equipo del cliente configurar productos de préstamo, tasas y campañas de adquisición de forma independiente — sin cambios en el código para lanzar una nueva variante de producto.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3 class="text-base font-semibold text-white">Scoring crediticio en tiempo real vía múltiples APIs</h3>
+          <p class="mt-1 text-sm text-slate-400 leading-relaxed">Integraciones con múltiples bureaus de crédito y proveedores de verificación de identidad, llamados en tiempo real durante el flujo de solicitud para evaluar y aprobar solicitantes sin revisión manual para usuarios calificados.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3 class="text-base font-semibold text-white">Módulo de gestión de campañas</h3>
+          <p class="mt-1 text-sm text-slate-400 leading-relaxed">Un módulo de administración integrado para crear, gestionar y hacer seguimiento de campañas de adquisición de usuarios con parámetros personalizados — permitiendo al negocio iterar rápidamente sobre ofertas y canales.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-block">
+      <p class="text-slate-200 leading-relaxed italic">"La plataforma que construimos no era solo software — era la infraestructura para un negocio financiero. Hacer bien las integraciones de scoring crediticio, en tiempo real, a escala, fue el desafío técnico central."</p>
+      <p class="text-sm text-slate-500 mt-2">— Equipo de ingeniería Orugga</p>
+    </div>
+
+    <div class="mb-12">
+      <p class="section-label">Tecnologías utilizadas</p>
+      <div class="flex flex-wrap gap-2 mt-3">
+        <span class="tech-pill">Web responsive (HTML/CSS/JS)</span>
+        <span class="tech-pill">Backend cloud</span>
+        <span class="tech-pill">Integraciones REST API</span>
+        <span class="tech-pill">APIs de bureaus de crédito</span>
+        <span class="tech-pill">Verificación de identidad</span>
+        <span class="tech-pill">Sistema de gestión de campañas</span>
+      </div>
+    </div>
+
+    <div class="mb-12">
+      <p class="section-label">Experiencia relacionada</p>
+      <p class="text-sm text-slate-400 leading-relaxed">Este proyecto es parte de la experiencia fintech más amplia de Orugga, que incluye UX mobile banking para Banelco (la red de cajeros más grande de Argentina, adquirida por Visa), el SDK Seamless Onboarding de TransUnion desplegado globalmente, la suite InstaTouch® de Equifax para autenticación y pagos móviles, y desarrollo de plataforma de fidelización para BBVA en Argentina.</p>
+    </div>
+
+    <div class="border border-white/10 rounded-2xl bg-white/[0.03] p-8 text-center">
+      <h2 class="text-xl font-bold text-white mb-2">¿Estás construyendo algo en fintech?</h2>
+      <p class="text-sm text-slate-400 mb-6">Trabajamos en todo el stack fintech — desde apps para el consumidor hasta integraciones de backend y UX con cumplimiento regulatorio. Hablemos.</p>
+      <a href="../contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">Contactanos</a>
+    </div>
+
+  </main>
+
+  <div id="siteFooter"></div>
+  <script src="../../assets/js/includes.js"></script>
+</body>
+</html>

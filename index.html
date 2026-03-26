@@ -2,9 +2,24 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="0; url=./en/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Orugga</title>
+  <title>Orugga — Mobile Innovation &amp; Software Factory</title>
+  <meta name="description" content="Orugga is a software factory with 20+ years of experience. We build AI solutions, mobile apps, and scalable platforms for companies across LATAM and globally." />
+  <link rel="icon" href="./assets/img/favicon.ico" sizes="any">
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
+  <style>body{margin:0;background:#05070f;}</style>
 </head>
-<body></body>
+<body>
+  <script>
+    // Detect browser language and redirect accordingly
+    // Prefers ES for Spanish-speaking LATAM users, EN for everyone else
+    var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    var isSpanish = lang.startsWith('es');
+    window.location.replace(isSpanish ? './es/index.html' : './en/index.html');
+  </script>
+  <!-- Fallback for no-JS -->
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=./en/index.html" />
+  </noscript>
+</body>
 </html>

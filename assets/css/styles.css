@@ -756,3 +756,17 @@ body{
 .btn-ghost:hover {
   background: rgba(255, 255, 255, 0.10);
 }
+
+
+/* =========================
+   CLS PREVENTION
+   Prevents Cumulative Layout Shift while header/footer load via JS
+   ========================= */
+
+#siteHeader {
+  min-height: 80px; /* Reserves space before includes.js injects the header */
+}
+
+#siteFooter {
+  min-height: 60px;
+}

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../../assets/img/favicon.ico" sizes="any">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+
+  <title>Cinemark Mobile Ticketing — Case Study | Orugga</title>
+  <meta name="description" content="How Orugga built LATAM's first mobile ticketing apps for Cinemark across Android, Windows Phone, BB10, SmartTV, and social platforms. Client since 2009.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.orugga.com/en/work/cinemark-ticketing.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Orugga">
+  <meta property="og:title" content="Cinemark Mobile Ticketing — Case Study | Orugga">
+  <meta property="og:description" content="5 firsts in LATAM mobile ticketing: Android, Windows Phone, BB10, SmartTV, and Social Ticketing. Client since 2009.">
+  <meta property="og:url" content="https://www.orugga.com/en/work/cinemark-ticketing.html">
+  <meta property="og:image" content="https://www.orugga.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','Segoe UI','Roboto','Helvetica Neue','Arial'] } } }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      background:
+        radial-gradient(1200px 600px at 10% 5%, rgba(16,185,129,0.10), transparent 55%),
+        radial-gradient(800px 400px at 90% 15%, rgba(56,189,248,0.08), transparent 55%),
+        #05070f;
+    }
+    .noise { position:fixed;inset:0;pointer-events:none;opacity:.06;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E"); }
+
+    .section-label { font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#6FBF8E;margin-bottom:0.75rem; }
+    .tech-pill { font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:4px 12px; }
+    .back-link { display:inline-flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s; }
+    .back-link:hover { color:rgba(255,255,255,0.8); }
+    .insight-block { border-left:2px solid #6FBF8E;padding-left:1.25rem;margin:2rem 0; }
+
+    /* First badges */
+    .first-badge { display:flex;gap:1rem;align-items:flex-start;padding:1.25rem;border:1px solid rgba(111,191,142,0.15);border-radius:14px;background:rgba(111,191,142,0.04); }
+    .first-number { font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6FBF8E;background:rgba(111,191,142,0.15);border-radius:6px;padding:3px 8px;white-space:nowrap;flex-shrink:0;margin-top:2px; }
+
+    /* Award badge */
+    .award-badge { display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(234,179,8,0.3);background:rgba(234,179,8,0.06);border-radius:12px;padding:0.75rem 1rem; }
+    .award-icon { color:#EAB308;flex-shrink:0; }
+  </style>
+</head>
+
+<body class="font-sans text-slate-100">
+  <div class="noise"></div>
+  <div id="siteHeader"></div>
+
+  <main class="mx-auto max-w-4xl px-6 pt-20 md:pt-28 pb-24">
+
+    <!-- BACK -->
+    <a href="../services.html" class="back-link mb-10 block">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Back to services
+    </a>
+
+    <!-- HEADER -->
+    <div class="mb-4 flex flex-wrap items-center gap-2">
+      <span style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#6FBF8E;border:1px solid rgba(111,191,142,0.3);border-radius:999px;padding:3px 10px;">Mobile · Ticketing</span>
+      <span style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:3px 10px;">Client since 2009</span>
+    </div>
+
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+      Cinemark Mobile<br>Ticketing
+    </h1>
+
+    <p class="mt-5 text-lg text-slate-300 leading-relaxed max-w-2xl">
+      We partnered with Cinemark Hoyts starting in 2009 to build Latin America's first mobile movie ticketing apps across five different platforms — each a regional first. What began as a single Android app grew into a 15-year technology partnership.
+    </p>
+
+    <!-- AWARD -->
+    <div class="mt-8 inline-flex">
+      <div class="award-badge">
+        <svg class="award-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <div>
+          <div style="font-size:13px;font-weight:600;color:#EAB308;">BlackBerry Achievement Awards 2012</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.45);">3rd place worldwide — Best Mobile App — Cines Hoyts Social Ticketing</div>
+        </div>
+      </div>
+    </div>
+
+    <hr style="border-color:rgba(255,255,255,0.08);margin:3rem 0;">
+
+    <!-- 5 FIRSTS -->
+    <div class="mb-12">
+      <p class="section-label">The record</p>
+      <h2 class="text-xl md:text-2xl font-bold text-white mb-6">5 LATAM firsts across a single client relationship</h2>
+
+      <div class="space-y-3">
+        <div class="first-badge">
+          <span class="first-number">1st</span>
+          <div>
+            <div class="text-sm font-semibold text-white">Android movie ticketing app in Argentina</div>
+            <div class="text-sm text-slate-400 mt-1">Full movie selection, seat picker, and mobile payment — built before mobile ticketing was a standard expectation anywhere in the region.</div>
+          </div>
+        </div>
+        <div class="first-badge">
+          <span class="first-number">1st</span>
+          <div>
+            <div class="text-sm font-semibold text-white">Windows Phone movie ticketing app in LATAM</div>
+            <div class="text-sm text-slate-400 mt-1">Selected by Microsoft as part of their LATAM platform launch strategy — we built the Cinemark app as a flagship example for the ecosystem.</div>
+          </div>
+        </div>
+        <div class="first-badge">
+          <span class="first-number">1st</span>
+          <div>
+            <div class="text-sm font-semibold text-white">BB10 ticketing app in LATAM</div>
+            <div class="text-sm text-slate-400 mt-1">Full native BlackBerry 10 experience, a platform with significant penetration in the region at the time.</div>
+          </div>
+        </div>
+        <div class="first-badge">
+          <span class="first-number">1st</span>
+          <div>
+            <div class="text-sm font-semibold text-white">SmartTV ticketing app in Argentina</div>
+            <div class="text-sm text-slate-400 mt-1">Bringing the ticket purchase experience directly to the living room TV — ahead of the market by several years.</div>
+          </div>
+        </div>
+        <div class="first-badge">
+          <span class="first-number">1st</span>
+          <div>
+            <div class="text-sm font-semibold text-white">Social ticketing app in the region</div>
+            <div class="text-sm text-slate-400 mt-1">The "Cines Hoyts Social Ticketing" app allowed groups to coordinate seat selection socially — a concept that earned a worldwide BlackBerry award.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2015 REVAMP -->
+    <div class="mb-10">
+      <p class="section-label">Long-term partnership</p>
+      <h2 class="text-xl md:text-2xl font-bold text-white mb-4">From paper tickets to fully digital ticketing — 2015</h2>
+      <p class="text-slate-300 leading-relaxed">
+        In 2015, six years into the relationship, we rebuilt and relaunched the Cinemark app to introduce fully digital ticketing, eliminating paper entirely. The revamped app handled the complete purchase flow — movie selection, showtime, seat picker, payment, and mobile QR code for entry — making it one of the most advanced ticketing experiences in LATAM at the time.
+      </p>
+
+      <div class="insight-block mt-6">
+        <p class="text-slate-200 leading-relaxed">
+          A client that trusts you with their first Android app in 2009 and then calls you back to rebuild the whole thing in 2015 — that's not a project relationship, it's a partnership. We take that seriously.
+        </p>
+        <p class="text-sm text-slate-500 mt-2">— Orugga engineering team</p>
+      </div>
+    </div>
+
+    <!-- TECH -->
+    <div class="mb-12">
+      <p class="section-label">Technologies across the partnership</p>
+      <div class="flex flex-wrap gap-2 mt-3">
+        <span class="tech-pill">Native Android</span>
+        <span class="tech-pill">Native iOS</span>
+        <span class="tech-pill">Windows Phone</span>
+        <span class="tech-pill">BlackBerry 10</span>
+        <span class="tech-pill">SmartTV</span>
+        <span class="tech-pill">Social APIs</span>
+        <span class="tech-pill">Mobile payments</span>
+        <span class="tech-pill">QR code ticketing</span>
+        <span class="tech-pill">Seat selection UI</span>
+      </div>
+    </div>
+
+    <!-- RELATED -->
+    <div class="mb-12">
+      <p class="section-label">Related experience</p>
+      <p class="text-sm text-slate-400 leading-relaxed">
+        Our mobile ticketing and events experience extends beyond Cinemark. We built Latin America's first mobile ticketing app overall with Ticketek in 2008 — which won the Nokia Calling All Innovators award worldwide. We also developed an entertainment and events platform for Buenos Aires City Government covering personalized event recommendations and integrated ticketing for all shows.
+      </p>
+    </div>
+
+    <!-- CTA -->
+    <div class="border border-white/10 rounded-2xl bg-white/[0.03] p-8 text-center">
+      <h2 class="text-xl font-bold text-white mb-2">Building a mobile product that needs to last?</h2>
+      <p class="text-sm text-slate-400 mb-6">Our best client relationships are measured in years, not sprints. If you need a team that takes full ownership of your mobile product, let's talk.</p>
+      <a href="../contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">Contact us</a>
+    </div>
+
+  </main>
+
+  <div id="siteFooter"></div>
+  <script src="../../assets/js/includes.js"></script>
+</body>
+</html>
