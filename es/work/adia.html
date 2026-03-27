@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../../assets/img/favicon.ico" sizes="any">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+
+  <title>AdIA — Plataforma de Ejecución Creativa con IA | Orugga</title>
+  <meta name="description" content="Cómo Orugga construyó AdIA desde cero: una plataforma de IA production-grade que convierte briefs en campañas audiovisuales listas para lanzar en semanas. En producción con Netflix, Disney, HBO, Samsung y más.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.orugga.com/es/work/adia.html">
+  <link rel="alternate" hreflang="es" href="https://www.orugga.com/es/work/adia.html">
+  <link rel="alternate" hreflang="en" href="https://www.orugga.com/en/work/adia.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Orugga">
+  <meta property="og:title" content="AdIA — Plataforma de Ejecución Creativa con IA | Orugga">
+  <meta property="og:description" content="Orugga construyó todo el stack de IA y software de AdIA — una plataforma que convierte briefs en campañas production-ready en semanas. Con Netflix, Disney, HBO y Samsung.">
+  <meta property="og:url" content="https://www.orugga.com/es/work/adia.html">
+  <meta property="og:image" content="https://www.orugga.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] } } } }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+
+  <style>
+    :root { color-scheme: dark; }
+    body { background: radial-gradient(1200px 600px at 10% 5%, rgba(16,185,129,0.10), transparent 55%), radial-gradient(800px 400px at 90% 15%, rgba(56,189,248,0.08), transparent 55%), #05070f; }
+    .noise { position:fixed;inset:0;pointer-events:none;opacity:.06;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E"); }
+    .section-label { font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#6FBF8E;margin-bottom:0.75rem; }
+    .tech-pill { font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:4px 12px; }
+    .back-link { display:inline-flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s; }
+    .back-link:hover { color:rgba(255,255,255,0.8); }
+    .insight-block { border-left:2px solid #6FBF8E;padding-left:1.25rem;margin:2rem 0; }
+    .stat-card { border:1px solid rgba(111,191,142,0.2);background:rgba(111,191,142,0.05);border-radius:16px;padding:1.5rem; }
+    .stat-big { font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.04em;color:#6FBF8E;line-height:1; }
+    .stat-sub { font-size:13px;color:rgba(255,255,255,0.5);margin-top:6px;line-height:1.4; }
+    .client-grid { display:flex;flex-wrap:wrap;gap:8px; }
+    .client-chip { font-size:12px;font-weight:500;color:rgba(255,255,255,0.6);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:5px 12px; }
+    .built-card { border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.25rem 1.5rem;background:rgba(255,255,255,0.02); }
+    .built-num { font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6FBF8E;background:rgba(111,191,142,0.12);border-radius:6px;padding:2px 8px;display:inline-block;margin-bottom:10px; }
+    .pos-row { display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.08); }
+    .pos-cell { padding:12px 16px;background:#05070f;font-size:13px;line-height:1.5; }
+    .pos-cell.header { font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.03); }
+    .pos-cell.bad { color:rgba(255,255,255,0.35); }
+    .pos-cell.good { color:rgba(255,255,255,0.85); }
+  </style>
+</head>
+
+<body class="font-sans text-slate-100">
+  <div class="noise"></div>
+  <div id="siteHeader"></div>
+
+  <main class="mx-auto max-w-4xl px-6 pt-20 md:pt-28 pb-24">
+
+    <a href="../services.html" class="back-link mb-10 block">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Volver a servicios
+    </a>
+
+    <div class="mb-4 flex flex-wrap items-center gap-2">
+      <span style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#6FBF8E;border:1px solid rgba(111,191,142,0.3);border-radius:999px;padding:3px 10px;">Producto de IA</span>
+      <span style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:3px 10px;">Venture propio</span>
+      <span style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:3px 10px;">En producción</span>
+    </div>
+
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+      AdIA — Ejecución creativa<br>potenciada por IA
+    </h1>
+
+    <p class="mt-5 text-lg text-slate-300 leading-relaxed max-w-2xl">
+      No construimos software para un cliente. Cofundamos AdIA — una joint venture con <a href="https://frame.com.ar" target="_blank" rel="noopener" class="text-[color:var(--accent)] hover:underline">Frame</a> — y construimos todo el stack de IA y software detrás del producto. AdIA convierte briefs en campañas audiovisuales listas para producción en semanas, combinando dirección creativa humana con IA de nivel productivo.
+    </p>
+
+    <div class="mt-6 inline-flex">
+      <a href="https://www.getadia.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:#6FBF8E;border:1px solid rgba(111,191,142,0.3);border-radius:999px;padding:6px 16px;text-decoration:none;" onmouseover="this.style.background='rgba(111,191,142,0.08)'" onmouseout="this.style.background='transparent'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Visitar getadia.com
+      </a>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12">
+      <div class="stat-card"><div class="stat-big">2 semanas</div><div class="stat-sub">De brief a campaña lista para producción</div></div>
+      <div class="stat-card"><div class="stat-big">Humano + IA</div><div class="stat-sub">La dirección creativa es humana, la ejecución es IA-accelerated</div></div>
+      <div class="stat-card col-span-2 md:col-span-1"><div class="stat-big">En producción</div><div class="stat-sub">Activo con Netflix, Disney, HBO, Samsung y más</div></div>
+    </div>
+
+    <hr style="border-color:rgba(255,255,255,0.08);margin:3rem 0;">
+
+    <div class="mb-10">
+      <p class="section-label">El problema que decidimos resolver</p>
+      <h2 class="text-xl md:text-2xl font-bold text-white mb-4">La producción es el verdadero cuello de botella para las marcas modernas</h2>
+      <p class="text-slate-300 leading-relaxed">Las marcas necesitan más contenido que nunca — más plataformas, más formatos, más versiones — pero los equipos y presupuestos no crecen al mismo ritmo. El desafío no es la creatividad. Es la ejecución a escala, sin comprometer la calidad.</p>
+      <p class="mt-4 text-slate-300 leading-relaxed">La mayoría de las herramientas de IA para producción creativa son experimentales: dependientes de prompts, difíciles de reproducir, con control de marca inconsistente. AdIA fue construida para resolver un problema diferente — entrega predecible a nivel de producción, siempre.</p>
+    </div>
+
+    <div class="mb-10">
+      <p class="section-label">Qué construyó Orugga</p>
+      <h2 class="text-xl md:text-2xl font-bold text-white mb-6">Todo el stack de IA y software, desde cero</h2>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div class="built-card">
+          <span class="built-num">Sistemas de IA</span>
+          <h3 class="text-base font-semibold text-white">Motor de ejecución IA de nivel productivo</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Workflows de IA diseñados más allá del prompting — pipelines reproducibles para output de marca consistente a calidad publicitaria, no solo demos impresionantes.</p>
+        </div>
+        <div class="built-card">
+          <span class="built-num">Plataforma</span>
+          <h3 class="text-base font-semibold text-white">Sistema de ejecución creativa end-to-end</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Desde el brief y la generación de conceptos hasta el storyboard, producción y entrega multiplataforma — un sistema completo con accountability creativa humana en cada etapa.</p>
+        </div>
+        <div class="built-card">
+          <span class="built-num">Workflows</span>
+          <h3 class="text-base font-semibold text-white">Pipelines de producción estructurados</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Workflows configurables para diferentes modelos de engagement — desde entregas rápidas en 2 semanas (Pack Boost) hasta brand deep-dives de 3 semanas (Pack Impact) con casting virtual y múltiples rondas de feedback.</p>
+        </div>
+        <div class="built-card">
+          <span class="built-num">Ingeniería</span>
+          <h3 class="text-base font-semibold text-white">Entrega brand-safe a escala</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Guardrails enterprise-grade para tono, consistencia visual y cumplimiento de marca — para que cada asset que se entrega sea on-brand y listo para producción, no solo generado técnicamente.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-10">
+      <p class="section-label">Cómo se diferencia AdIA de otras herramientas de IA creativa</p>
+      <div class="rounded-2xl overflow-hidden border border-white/8 mt-4">
+        <div class="pos-row">
+          <div class="pos-cell header">Herramientas de IA típicas</div>
+          <div class="pos-cell header">AdIA</div>
+        </div>
+        <div class="pos-row">
+          <div class="pos-cell bad">Experimentación basada en tools</div>
+          <div class="pos-cell good">Sistema de ejecución end-to-end</div>
+        </div>
+        <div class="pos-row">
+          <div class="pos-cell bad">Resultados dependientes de prompts, difíciles de reproducir</div>
+          <div class="pos-cell good">Workflows diseñados, output predecible</div>
+        </div>
+        <div class="pos-row">
+          <div class="pos-cell bad">Control de marca inconsistente a escala</div>
+          <div class="pos-cell good">Accountability creativa humana en cada entregable</div>
+        </div>
+        <div class="pos-row">
+          <div class="pos-cell bad">Falla cuando toca la producción real</div>
+          <div class="pos-cell good">Construida para producción real desde el día uno</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-10">
+      <p class="section-label">El venture</p>
+      <h2 class="text-xl md:text-2xl font-bold text-white mb-4">Orugga + Frame — dos capacidades complementarias</h2>
+      <p class="text-slate-300 leading-relaxed">AdIA fue creada a través de una alianza estratégica entre Orugga y <a href="https://frame.com.ar" target="_blank" rel="noopener" class="text-[color:var(--accent)] hover:underline">Frame</a>. Orugga aportó sistemas de IA, plataformas e ingeniería de nivel productivo. Frame aportó producción creativa y ejecución a escala publicitaria. Juntos, la combinación cubre el stack completo de brief a entrega.</p>
+      <div class="insight-block mt-6">
+        <p class="text-slate-200 leading-relaxed italic">"Esto no es IA reemplazando la producción. Es IA haciendo la producción finalmente escalable."</p>
+        <p class="text-sm text-slate-500 mt-2">— Posicionamiento de AdIA</p>
+      </div>
+    </div>
+
+    <div class="mb-10">
+      <p class="section-label">Confían en AdIA</p>
+      <div class="client-grid mt-3">
+        <span class="client-chip">Netflix</span>
+        <span class="client-chip">Disney+</span>
+        <span class="client-chip">HBO Max</span>
+        <span class="client-chip">Samsung</span>
+        <span class="client-chip">Cinemark</span>
+        <span class="client-chip">Despegar</span>
+        <span class="client-chip">Ticketek</span>
+        <span class="client-chip">BBVA</span>
+        <span class="client-chip">Cencosud</span>
+        <span class="client-chip">Sony Music</span>
+        <span class="client-chip">Nickelodeon</span>
+        <span class="client-chip">Discovery</span>
+        <span class="client-chip">Fox Sports</span>
+        <span class="client-chip">Paramount+</span>
+        <span class="client-chip">Microsoft</span>
+        <span class="client-chip">Telecom</span>
+      </div>
+    </div>
+
+    <div class="mb-12">
+      <p class="section-label">Con qué lo construimos</p>
+      <div class="flex flex-wrap gap-2 mt-3">
+        <span class="tech-pill">Pipelines de ejecución IA</span>
+        <span class="tech-pill">IA generativa (imagen + video)</span>
+        <span class="tech-pill">Workflows production-grade</span>
+        <span class="tech-pill">Sistema de casting virtual</span>
+        <span class="tech-pill">Entrega multiplataforma</span>
+        <span class="tech-pill">Guardrails de brand safety</span>
+        <span class="tech-pill">Backend cloud</span>
+        <span class="tech-pill">Integración LLM</span>
+      </div>
+    </div>
+
+    <div class="mb-12">
+      <p class="section-label">Qué significa esto para vos</p>
+      <p class="text-sm text-slate-400 leading-relaxed">AdIA no es solo un caso de éxito — es la prueba de que Orugga puede llevar una idea de cero a un producto de IA en producción con clientes enterprise reales. Si tu empresa está explorando aplicaciones de IA, automatización, o la construcción de un nuevo producto potenciado por IA, nosotros ya lo hicimos — con nuestro propio capital, nuestro propio equipo, y con el estándar de calidad de Netflix y Disney como vara.</p>
+    </div>
+
+    <div class="border border-white/10 rounded-2xl bg-white/[0.03] p-8 text-center">
+      <h2 class="text-xl font-bold text-white mb-2">¿Estás pensando en construir un producto de IA?</h2>
+      <p class="text-sm text-slate-400 mb-6">Construimos AdIA end-to-end — sistemas de IA, plataforma, workflows y entrega. Podemos hacer lo mismo para tu producto.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="../contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">Contactanos</a>
+        <a href="https://www.getadia.com" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Visitar AdIA →</a>
+      </div>
+    </div>
+
+  </main>
+
+  <div id="siteFooter"></div>
+  <script src="../../assets/js/includes.js"></script>
+</body>
+</html>
