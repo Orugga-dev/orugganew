@@ -165,23 +165,84 @@
     </section>
 
     <section class="mx-auto max-w-7xl px-6 pb-24">
-      <div class="grid gap-10 lg:grid-cols-12 lg:items-start">
-        <div class="lg:col-span-5">
-          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Decisiones tecnológicas<br>guiadas por la entrega.</h2>
-          <p class="mt-3 text-slate-400 leading-relaxed max-w-prose">Elegimos tecnologías por su confiabilidad, mantenibilidad a largo plazo y porque realmente se entregan a tiempo. No por tendencias.</p>
+      <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-5 flex flex-col items-center lg:items-start">
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-3">Decisiones tecnológicas<br>guiadas por la entrega.</h2>
+          <p class="text-slate-400 leading-relaxed max-w-prose mb-6">Elegimos tecnologías por su confiabilidad, mantenibilidad a largo plazo y porque realmente se entregan a tiempo. No por tendencias.</p>
+          <canvas id="techSphere" width="340" height="340" style="max-width:100%;opacity:0.92;cursor:grab;"></canvas>
         </div>
         <div class="lg:col-span-7">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
             <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg><h3 class="text-base font-semibold text-white">Mobile</h3><p class="mt-1 text-sm text-slate-400">Android · iOS · Flutter · React Native · Wearables · SmartTV</p></div>
-            <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="6" rx="2"/><rect x="4" y="14" width="16" height="6" rx="2"/></svg><h3 class="text-base font-semibold text-white">Backend</h3><p class="mt-1 text-sm text-slate-400">Java · JVM · PHP (Lumen) · Node.js · Python</p></div>
-            <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/><path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg><h3 class="text-base font-semibold text-white">Bases de datos</h3><p class="mt-1 text-sm text-slate-400">PostgreSQL · MySQL · Oracle · SQL Server · NoSQL</p></div>
+            <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="6" rx="2"/><rect x="4" y="14" width="16" height="6" rx="2"/></svg><h3 class="text-base font-semibold text-white">Backend</h3><p class="mt-1 text-sm text-slate-400">Java · JVM · Node.js · Python · TypeScript</p></div>
+            <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/><path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg><h3 class="text-base font-semibold text-white">Bases de datos</h3><p class="mt-1 text-sm text-slate-400">PostgreSQL · MySQL · Redis · SQL Server · NoSQL</p></div>
             <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 1 0-7l.7-.7a5 5 0 0 1 7 7l-.7.7"/><path d="M14 11a5 5 0 0 1 0 7l-.7.7a5 5 0 0 1-7-7l.7-.7"/></svg><h3 class="text-base font-semibold text-white">APIs e Integraciones</h3><p class="mt-1 text-sm text-slate-400">REST · GraphQL · GDS (Sabre, Amadeus) · Pasarelas de pago · APIs gubernamentales</p></div>
-            <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 4 5.7 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.7-4-9s1.5-6.4 4-9Z"/></svg><h3 class="text-base font-semibold text-white">Web y Cloud</h3><p class="mt-1 text-sm text-slate-400">Web responsive · React · AWS · Azure · Backends cloud · SaaS y PaaS</p></div>
-            <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg><h3 class="text-base font-semibold text-white">IA y Tecnologías Emergentes</h3><p class="mt-1 text-sm text-slate-400">Integración LLM · IoT · Reconocimiento de imágenes · Geofencing y Beacons · SDKs</p></div>
+            <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 4 5.7 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.7-4-9s1.5-6.4 4-9Z"/></svg><h3 class="text-base font-semibold text-white">Web y Cloud</h3><p class="mt-1 text-sm text-slate-400">React · AWS · Azure · Docker · Kubernetes · CI/CD</p></div>
+            <div class="cap-item" data-reveal><svg class="h-5 w-5 mb-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg><h3 class="text-base font-semibold text-white">IA y Tecnologías Emergentes</h3><p class="mt-1 text-sm text-slate-400">LLM · RAG · Agents · MCP · IoT · Geofencing · SDKs</p></div>
           </div>
         </div>
       </div>
     </section>
+
+    <script>
+    (function() {
+      const canvas = document.getElementById('techSphere');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const W = canvas.width, H = canvas.height;
+      const cx = W/2, cy = H/2, R = 138;
+      const TAGS = [
+        'Android','iOS','Flutter','React Native',
+        'Java','Node.js','Python','TypeScript',
+        'PostgreSQL','MySQL','Redis','NoSQL',
+        'REST APIs','GraphQL','AWS','Azure',
+        'React','Docker','Kubernetes','CI/CD',
+        'LLM','RAG','Agents','MCP',
+        'IoT','Cloud','Fintech','Mobile'
+      ];
+      const points = TAGS.map((tag,i) => {
+        const phi=Math.acos(1-2*(i+0.5)/TAGS.length);
+        const theta=Math.PI*(1+Math.sqrt(5))*i;
+        return {tag, ox:Math.sin(phi)*Math.cos(theta), oy:Math.sin(phi)*Math.sin(theta), oz:Math.cos(phi)};
+      });
+      let angleX=0, angleY=0, dragging=false, lastMX=0, lastMY=0, velX=0, velY=0;
+      canvas.addEventListener('mousedown',e=>{dragging=true;lastMX=e.clientX;lastMY=e.clientY;canvas.style.cursor='grabbing';});
+      window.addEventListener('mouseup',()=>{dragging=false;canvas.style.cursor='grab';});
+      window.addEventListener('mousemove',e=>{if(!dragging)return;velY=(e.clientX-lastMX)*0.008;velX=(e.clientY-lastMY)*0.008;lastMX=e.clientX;lastMY=e.clientY;});
+      canvas.addEventListener('touchstart',e=>{dragging=true;lastMX=e.touches[0].clientX;lastMY=e.touches[0].clientY;},{passive:true});
+      window.addEventListener('touchend',()=>{dragging=false;});
+      window.addEventListener('touchmove',e=>{if(!dragging)return;velY=(e.touches[0].clientX-lastMX)*0.008;velX=(e.touches[0].clientY-lastMY)*0.008;lastMX=e.touches[0].clientX;lastMY=e.touches[0].clientY;},{passive:true});
+      function rotate(p,ax,ay){
+        const x=p.ox*Math.cos(ay)-p.oz*Math.sin(ay), z=p.ox*Math.sin(ay)+p.oz*Math.cos(ay), y=p.oy;
+        return {x, y:y*Math.cos(ax)-z*Math.sin(ax), z:y*Math.sin(ax)+z*Math.cos(ax)};
+      }
+      const ACCENT='#6FBF8E';
+      function draw(){
+        ctx.clearRect(0,0,W,H);
+        if(!dragging){angleY+=0.013+velY*0.3;angleX+=0.008+velX*0.3;velX*=0.92;velY*=0.92;}
+        else{angleY+=velY;angleX+=velX;}
+        const proj=points.map(p=>{const r=rotate(p,angleX,angleY);return{tag:p.tag,x:cx+r.x*R,y:cy+r.y*R,z:r.z};});
+        proj.sort((a,b)=>a.z-b.z);
+        proj.forEach(p=>{
+          const norm=(p.z+1)/2;
+          if(norm<0.08)return;
+          const hi=p.z>0.55, fs=Math.round(9+norm*5);
+          ctx.save();ctx.globalAlpha=0.15+norm*0.85;
+          ctx.font=`${hi?600:400} ${fs}px Inter,ui-sans-serif,sans-serif`;
+          const tw=ctx.measureText(p.tag).width, ph=fs+8, pw=tw+16;
+          ctx.fillStyle=hi?'rgba(111,191,142,0.12)':`rgba(255,255,255,${0.02+norm*0.04})`;
+          ctx.strokeStyle=hi?'rgba(111,191,142,0.45)':`rgba(255,255,255,${0.06+norm*0.1})`;
+          ctx.lineWidth=0.8;
+          ctx.beginPath();ctx.roundRect(p.x-pw/2,p.y-ph/2,pw,ph,ph/2);ctx.fill();ctx.stroke();
+          ctx.fillStyle=hi?ACCENT:`rgba(148,163,184,${0.4+norm*0.6})`;
+          ctx.textAlign='center';ctx.textBaseline='middle';
+          ctx.fillText(p.tag,p.x,p.y);ctx.restore();
+        });
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
+    </script>
 
     <section class="mx-auto max-w-7xl px-6 pb-24">
       <h2 class="text-2xl font-bold text-white mb-2">Trabajo real, resultados reales</h2>
