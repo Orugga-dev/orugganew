@@ -114,4 +114,21 @@
     <priority>0.9</priority>
   </url>
 
+
+  <!-- Latin Energy Group case study -->
+  <url>
+    <loc>https://www.orugga.com/en/work/latin-energy-invoices.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.orugga.com/en/work/latin-energy-invoices.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.orugga.com/es/work/latin-energy-invoices.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.orugga.com/es/work/latin-energy-invoices.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.orugga.com/es/work/latin-energy-invoices.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.orugga.com/en/work/latin-energy-invoices.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

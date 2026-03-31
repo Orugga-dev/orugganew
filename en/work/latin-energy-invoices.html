@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../../assets/img/favicon.ico" sizes="any">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+
+  <title>From Manual Invoices to Structured Data in 5 Weeks — Latin Energy Group | Orugga</title>
+  <meta name="description" content="How Orugga automated invoice processing for Latin Energy Group — multiple supplier formats, email or folder ingestion, data loaded directly into the client's database. Delivered in 5 weeks.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.orugga.com/en/work/latin-energy-invoices.html">
+  <link rel="alternate" hreflang="en" href="https://www.orugga.com/en/work/latin-energy-invoices.html">
+  <link rel="alternate" hreflang="es" href="https://www.orugga.com/es/work/latin-energy-invoices.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Orugga">
+  <meta property="og:title" content="From Manual Invoices to Structured Data in 5 Weeks | Orugga">
+  <meta property="og:description" content="AI-powered invoice automation for an energy company. multiple supplier formats, zero manual processing.">
+  <meta property="og:url" content="https://www.orugga.com/en/work/latin-energy-invoices.html">
+  <meta property="og:image" content="https://www.orugga.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] } } } }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+
+  <style>
+    :root { color-scheme: dark; }
+    body { background: radial-gradient(1200px 600px at 10% 5%, rgba(16,185,129,0.10), transparent 55%), radial-gradient(800px 400px at 90% 15%, rgba(56,189,248,0.08), transparent 55%), #05070f; }
+    .noise { position:fixed;inset:0;pointer-events:none;opacity:.06;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E"); }
+    .section-label { font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#6FBF8E;margin-bottom:0.75rem; }
+    .tech-pill { font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:4px 12px; }
+    .back-link { display:inline-flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s; }
+    .back-link:hover { color:rgba(255,255,255,0.8); }
+    .insight-block { border-left:2px solid #6FBF8E;padding-left:1.25rem;margin:2rem 0; }
+    .stat-card { border:1px solid rgba(111,191,142,0.2);background:rgba(111,191,142,0.05);border-radius:16px;padding:1.5rem; }
+    .stat-big { font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.04em;color:#6FBF8E;line-height:1; }
+    .stat-sub { font-size:13px;color:rgba(255,255,255,0.5);margin-top:6px;line-height:1.4; }
+    .timeline-item { position:relative;padding-left:2rem;padding-bottom:2rem;border-left:1px solid rgba(255,255,255,0.1); }
+    .timeline-item:last-child { border-left-color:transparent;padding-bottom:0; }
+    .timeline-dot { position:absolute;left:-5px;top:4px;width:10px;height:10px;border-radius:50%;background:#6FBF8E;border:2px solid #05070f; }
+    /* Before/after comparison */
+    .compare-grid { display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.08);border-radius:16px;overflow:hidden; }
+    .compare-cell { padding:14px 18px;background:#05070f;font-size:13px;line-height:1.6; }
+    .compare-cell.header { font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,0.03); }
+    .compare-cell.header.bad { color:rgba(255,100,100,0.7); }
+    .compare-cell.header.good { color:#6FBF8E; }
+    .compare-cell.bad { color:rgba(255,255,255,0.35); }
+    .compare-cell.good { color:rgba(255,255,255,0.85); }
+    /* Flow diagram */
+    .flow-step { display:flex;align-items:center;gap:12px; }
+    .flow-box { border:1px solid rgba(111,191,142,0.25);background:rgba(111,191,142,0.06);border-radius:12px;padding:10px 16px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.85);white-space:nowrap; }
+    .flow-arrow { color:#6FBF8E;font-size:18px;flex-shrink:0; }
+  </style>
+</head>
+
+<body class="font-sans text-slate-100">
+  <div class="noise"></div>
+  <div id="siteHeader"></div>
+
+  <main class="mx-auto max-w-4xl px-6 pt-20 md:pt-28 pb-24">
+
+    <a href="../services.html" class="back-link mb-10 block">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Back to services
+    </a>
+
+    <!-- HEADER -->
+    <div class="mb-4 flex flex-wrap items-center gap-2">
+      <span style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#6FBF8E;border:1px solid rgba(111,191,142,0.3);border-radius:999px;padding:3px 10px;">AI Automation</span>
+      <span style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:3px 10px;">Energy</span>
+      <span style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:3px 10px;">Latin Energy Group</span>
+    </div>
+
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+      From manual invoices<br>to structured data<br>in 5 weeks.
+    </h1>
+
+    <p class="mt-5 text-lg text-slate-300 leading-relaxed max-w-2xl">
+      Latin Energy Group receives invoices from multiple energy service providers — each with a different format. Processing them was slow, error-prone, and entirely manual. We automated the full pipeline in 5 weeks: from email or folder ingestion to clean data loaded directly into the client's database.
+    </p>
+
+    <!-- STATS -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12">
+      <div class="stat-card">
+        <div class="stat-big">5 weeks</div>
+        <div class="stat-sub">From kickoff to production</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-big">Multiple formats</div>
+        <div class="stat-sub">Supplier invoice types handled automatically</div>
+      </div>
+      <div class="stat-card col-span-2 md:col-span-1">
+        <div class="stat-big">Zero</div>
+        <div class="stat-sub">Manual data entry. Data loads directly into client's database</div>
+      </div>
+    </div>
+
+    <hr style="border-color:rgba(255,255,255,0.08);margin:3rem 0;">
+
+    <!-- THE PROBLEM -->
+    <div class="mb-10">
+      <p class="section-label">The problem</p>
+      <h2 class="text-xl md:text-2xl font-bold text-white mb-4">A high-volume, repetitive process eating team capacity</h2>
+      <p class="text-slate-300 leading-relaxed">Latin Energy Group works with multiple energy service providers, each issuing invoices in their own format. The team had to open each invoice, manually extract the relevant fields, and enter them into their systems — a repetitive, time-intensive process that scaled poorly as invoice volume grew.</p>
+      <p class="mt-4 text-slate-300 leading-relaxed">The core challenge: each supplier had a different document structure. A solution that worked for one wouldn't work for another. The system needed to be flexible enough to handle structural variation across providers while still producing consistent, clean output.</p>
+    </div>
+
+    <!-- BEFORE / AFTER -->
+    <div class="mb-10">
+      <p class="section-label">Before and after</p>
+      <div class="compare-grid mt-4">
+        <div class="compare-cell header bad">Before</div>
+        <div class="compare-cell header good">After</div>
+        <div class="compare-cell bad">Manual review of each invoice</div>
+        <div class="compare-cell good">Automatic ingestion via email or folder</div>
+        <div class="compare-cell bad">Different handling per supplier format</div>
+        <div class="compare-cell good">Unified pipeline, multiple formats handled automatically</div>
+        <div class="compare-cell bad">High risk of manual entry errors</div>
+        <div class="compare-cell good">Structured, validated data output every time</div>
+        <div class="compare-cell bad">Hours of processing per batch</div>
+        <div class="compare-cell good">Data loaded directly into the client's database seconds after receipt</div>
+        <div class="compare-cell bad">Bottleneck when volume spikes</div>
+        <div class="compare-cell good">Scales with zero additional effort</div>
+      </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="mb-10">
+      <p class="section-label">How the system works</p>
+      <h2 class="text-xl md:text-2xl font-bold text-white mb-6">A fully automated extraction pipeline</h2>
+
+      <!-- Flow diagram -->
+      <div class="flex flex-wrap items-center gap-3 mb-8 p-5 border border-white/8 rounded-2xl bg-white/[0.02]">
+        <div class="flow-box">Invoice arrives<br><span style="font-size:11px;color:rgba(255,255,255,0.4);">email or folder</span></div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-box">AI extraction<br><span style="font-size:11px;color:rgba(255,255,255,0.4);">per supplier template</span></div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-box">Validation<br><span style="font-size:11px;color:rgba(255,255,255,0.4);">fields &amp; format</span></div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-box">Output<br><span style="font-size:11px;color:rgba(255,255,255,0.4);">client's database</span></div>
+      </div>
+
+      <div class="space-y-6">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3 class="text-base font-semibold text-white">Automatic document ingestion</h3>
+          <p class="mt-1 text-sm text-slate-400 leading-relaxed">The system monitors an email inbox or designated folder. When a new invoice arrives — regardless of format — it's picked up automatically, with no manual intervention required to start the process.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3 class="text-base font-semibold text-white">Per-supplier template matching</h3>
+          <p class="mt-1 text-sm text-slate-400 leading-relaxed">Each energy provider has a configured extraction template specifying exactly which fields to extract and where to find them. The system identifies the supplier and applies the correct template automatically — covering all supplier invoice formats.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3 class="text-base font-semibold text-white">AI-powered field extraction</h3>
+          <p class="mt-1 text-sm text-slate-400 leading-relaxed">Data is extracted from each invoice using AI — handling variations in layout, font, and structure that would trip up rule-based systems. The extraction is designed for the specific fields the client needs, not generic document parsing.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3 class="text-base font-semibold text-white">Structured output delivery</h3>
+          <p class="mt-1 text-sm text-slate-400 leading-relaxed">The extracted data is written directly into the client's database — no intermediate files, no manual import step, no reformatting needed.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DELIVERY -->
+    <div class="mb-10">
+      <p class="section-label">How we delivered it</p>
+      <h2 class="text-xl md:text-2xl font-bold text-white mb-6">5 weeks, weekly touchpoints, zero surprises</h2>
+      <div class="space-y-4">
+        <div class="flex gap-4 items-start">
+          <span style="font-size:11px;font-weight:700;color:#6FBF8E;background:rgba(111,191,142,0.12);border-radius:6px;padding:2px 8px;white-space:nowrap;flex-shrink:0;margin-top:2px;">Week 1</span>
+          <p class="text-sm text-slate-400 leading-relaxed">Deep understanding of each invoice format and the fields to extract. First extraction tests with real documents.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <span style="font-size:11px;font-weight:700;color:#6FBF8E;background:rgba(111,191,142,0.12);border-radius:6px;padding:2px 8px;white-space:nowrap;flex-shrink:0;margin-top:2px;">Week 2</span>
+          <p class="text-sm text-slate-400 leading-relaxed">Full development of the extraction solution for all invoice types.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <span style="font-size:11px;font-weight:700;color:#6FBF8E;background:rgba(111,191,142,0.12);border-radius:6px;padding:2px 8px;white-space:nowrap;flex-shrink:0;margin-top:2px;">Week 3</span>
+          <p class="text-sm text-slate-400 leading-relaxed">Progress presentation to the client. Feedback round and refinements.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <span style="font-size:11px;font-weight:700;color:#6FBF8E;background:rgba(111,191,142,0.12);border-radius:6px;padding:2px 8px;white-space:nowrap;flex-shrink:0;margin-top:2px;">Week 4</span>
+          <p class="text-sm text-slate-400 leading-relaxed">Corrections and full test coverage across all invoice formats and suppliers and edge cases.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <span style="font-size:11px;font-weight:700;color:#6FBF8E;background:rgba(111,191,142,0.12);border-radius:6px;padding:2px 8px;white-space:nowrap;flex-shrink:0;margin-top:2px;">Week 5</span>
+          <p class="text-sm text-slate-400 leading-relaxed">Production deployment. Handover of source code and documentation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-block">
+      <p class="text-slate-200 leading-relaxed italic">"The challenge wasn't building something that extracts data from one invoice format. The challenge was building something reliable enough to handle multiple different formats — consistently, in production, with real supplier documents that don't always look the same twice."</p>
+      <p class="text-sm text-slate-500 mt-2">— Orugga engineering team</p>
+    </div>
+
+    <!-- TECH -->
+    <div class="mb-12">
+      <p class="section-label">Technologies used</p>
+      <div class="flex flex-wrap gap-2 mt-3">
+        <span class="tech-pill">AI document extraction</span>
+        <span class="tech-pill">LLM integration</span>
+        <span class="tech-pill">Email monitoring</span>
+        <span class="tech-pill">File system automation</span>
+        <span class="tech-pill">Direct database integration</span>
+        <span class="tech-pill">Template-based parsing</span>
+        <span class="tech-pill">Python</span>
+      </div>
+    </div>
+
+    <!-- BROADER CONTEXT -->
+    <div class="mb-12">
+      <p class="section-label">Where this applies</p>
+      <p class="text-sm text-slate-400 leading-relaxed">Invoice automation is one of the most common high-ROI AI applications for mid-size companies — but it's not limited to energy. Any business receiving structured documents from multiple sources (suppliers, logistics providers, insurers, government agencies) can eliminate manual processing with the same approach. If your team spends hours each week extracting data from documents, this is a solvable problem.</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="border border-white/10 rounded-2xl bg-white/[0.03] p-8 text-center">
+      <h2 class="text-xl font-bold text-white mb-2">Have a repetitive document process?</h2>
+      <p class="text-sm text-slate-400 mb-6">If your team manually processes invoices, forms, or any structured documents from multiple sources — we can automate it. Let's talk.</p>
+      <a href="../contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">Contact us</a>
+    </div>
+
+  </main>
+
+  <div id="siteFooter"></div>
+  <script src="../../assets/js/includes.js"></script>
+</body>
+</html>
