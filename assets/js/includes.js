@@ -152,7 +152,10 @@
     /* ================= HEADER ================= */
 
     const logo = headerHost.querySelector("[data-logo]");
-    if (logo) logo.src = P.logo;
+    if (logo) {
+      logo.src = P.logo;
+      logo.alt = lang === "en" ? "Orugga logo" : "Logo de Orugga";
+    }
 
     const homeLink = headerHost.querySelector("[data-home]");
     if (homeLink) homeLink.href = routes.home;
@@ -169,6 +172,20 @@
     const navContact = headerHost.querySelector('[data-nav="contact"]');
     if (navContact) navContact.href = routes.contact;
 
+    const currentPage =
+      path.includes("/services.html") ? "services" :
+      path.includes("/about-us.html") ? "about" :
+      path.includes("/contact.html") ? "contact" :
+      "home";
+
+    headerHost.querySelectorAll("[data-nav]").forEach((link) => {
+      if (link.getAttribute("data-nav") === currentPage) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+
     const cta = headerHost.querySelector("[data-cta]");
     if (cta) cta.href = routes.contact;
 
@@ -176,7 +193,17 @@
     if (langSwitch) {
       langSwitch.href = P.switchTo;
       langSwitch.textContent = lang === "en" ? "ES" : "EN";
+      langSwitch.setAttribute(
+        "aria-label",
+        lang === "en" ? "Switch site language to Spanish" : "Cambiar el idioma del sitio a inglés"
+      );
     }
+
+    headerHost.querySelectorAll("[data-lang-current]").forEach((badge) => {
+      badge.textContent = lang === "en" ? "EN" : "ES";
+      badge.setAttribute("aria-label", lang === "en" ? "Current language English" : "Idioma actual español");
+      badge.setAttribute("aria-current", "true");
+    });
 
     /* ================= FOOTER ================= */
 

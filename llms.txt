@@ -1,0 +1,33 @@
+# Orugga
+
+> Senior software engineering partner with 20+ years of experience. Orugga builds AI products, mobile apps, fintech platforms, backend systems, and modernized software for teams across LATAM and beyond.
+
+## Website
+- [Home EN](/en/index.html)
+- [Home ES](/es/index.html)
+- [Services EN](/en/services.html)
+- [Services ES](/es/services.html)
+- [About EN](/en/about-us.html)
+- [About ES](/es/about-us.html)
+- [Contact EN](/en/contact.html)
+- [Contact ES](/es/contact.html)
+
+## Services
+- [AI product engineering](/en/services.html#services)
+- [Mobile app development](/en/services.html#services)
+- [Fintech platform development](/en/services.html#services)
+- [Backend engineering and integrations](/en/services.html#services)
+- [Legacy modernization](/en/services.html#services)
+- [UX and product strategy](/en/services.html#services)
+
+## Case Studies
+- [AdIA](/en/work/adia.html)
+- [Cinemark Mobile Ticketing](/en/work/cinemark-ticketing.html)
+- [Online Lending Platform](/en/work/fintech-lending.html)
+- [Latin Energy Group Invoice Automation](/en/work/latin-energy-invoices.html)
+
+## Spanish Case Studies
+- [AdIA ES](/es/work/adia.html)
+- [Cinemark Mobile Ticketing ES](/es/work/cinemark-ticketing.html)
+- [Plataforma de Crédito Online](/es/work/fintech-lending.html)
+- [Automatización Latin Energy Group](/es/work/latin-energy-invoices.html)

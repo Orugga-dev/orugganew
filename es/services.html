@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#070B14" />
   <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/img/favicon-96x96.png" sizes="96x96">
@@ -15,6 +16,7 @@
   <meta name="robots" content="index, follow">
   <link rel="alternate" hreflang="es" href="https://www.orugga.com/es/services.html">
   <link rel="alternate" hreflang="en" href="https://www.orugga.com/en/services.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.orugga.com/en/services.html">
   <link rel="canonical" href="https://www.orugga.com/es/services.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_AR">
@@ -73,7 +75,7 @@
         <p class="mt-6 max-w-2xl text-lg text-slate-300 leading-relaxed">Desde automatización con IA hasta apps móviles, plataformas fintech e integraciones complejas — somos responsables de la entrega de punta a punta, en entornos reales de negocio.</p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="./contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">Iniciar un proyecto</a>
-          <a href="#servicios" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Explorar servicios →</a>
+          <a href="#servicios" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Recorrer capacidades de ingeniería →</a>
         </div>
       </div>
     </section>
@@ -87,6 +89,31 @@
       </div>
     </section>
 
+    <section class="mx-auto max-w-7xl px-6 py-16">
+      <div class="max-w-3xl">
+        <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Para qué nos contratan</p>
+        <h2 class="mt-4 text-2xl md:text-3xl font-bold tracking-tight text-white">Ejecución senior para software que tiene que funcionar en el mundo real.</h2>
+        <p class="mt-4 text-slate-300 leading-relaxed">Normalmente entramos cuando el producto importa, las integraciones son complejas y la entrega no admite improvisación. Eso incluye iniciativas con IA que deben llegar a producción, productos mobile con usuarios exigentes, flujos fintech con restricciones regulatorias y entornos legacy que no se pueden reemplazar de un día para otro.</p>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <p class="text-xs uppercase tracking-[0.18em] text-slate-500">Momento del producto</p>
+          <h3 class="mt-3 text-lg font-semibold text-white">De cero a operativo</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Ayudamos a lanzar productos nuevos, destrabar iniciativas demoradas y convertir roadmaps ambiciosos en software entregado y estable.</p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <p class="text-xs uppercase tracking-[0.18em] text-slate-500">Modelo de trabajo</p>
+          <h3 class="mt-3 text-lg font-semibold text-white">Equipo senior y hands-on</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Nos suman cuando hace falta gente con experiencia real para hacerse cargo de arquitectura, ejecución y decisiones difíciles de punta a punta.</p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <p class="text-xs uppercase tracking-[0.18em] text-slate-500">Restricción típica</p>
+          <h3 class="mt-3 text-lg font-semibold text-white">Sistemas complejos bajo presión</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Terceros múltiples, compliance, bases grandes de usuarios, dependencias legacy o lanzamientos críticos donde “más o menos” no alcanza.</p>
+        </article>
+      </div>
+    </section>
+
     <section id="servicios" class="mx-auto max-w-7xl px-6 py-20">
       <div class="max-w-2xl mb-14">
         <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Qué construimos</h2>
@@ -94,7 +121,7 @@
       </div>
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
-        <div class="service-card">
+        <div id="ia-aplicada" class="service-card scroll-mt-28">
           <span class="service-tag">IA aplicada</span>
           <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></div>
           <h3 class="text-lg font-semibold text-white">IA Generativa y Automatización</h3>
@@ -118,7 +145,7 @@
           <div class="mt-4 flex flex-wrap gap-2"><span class="tech-badge">Crédito online</span><span class="tech-badge">Billeteras digitales</span><span class="tech-badge">APIs de scoring</span><span class="tech-badge">Cumplimiento PCI</span></div>
         </div>
 
-        <div class="service-card">
+        <div id="backend-apis" class="service-card scroll-mt-28">
           <span class="service-tag">Backend</span>
           <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="6" rx="2"/><rect x="4" y="14" width="16" height="6" rx="2"/><path d="M8 7h.01M12 7h.01M8 17h.01M12 17h.01"/></svg></div>
           <h3 class="text-lg font-semibold text-white">Backends Escalables e Integración de APIs</h3>
@@ -134,7 +161,7 @@
           <div class="mt-4 flex flex-wrap gap-2"><span class="tech-badge">Middleware</span><span class="tech-badge">Integración legacy</span><span class="tech-badge">Conectores ERP</span><span class="tech-badge">APIs GDS</span></div>
         </div>
 
-        <div class="service-card">
+        <div id="ux-ui-estrategia" class="service-card scroll-mt-28">
           <span class="service-tag">Diseño y Estrategia</span>
           <div class="mb-3 h-7 w-7 text-white/60"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-7 w-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8l-2 6-6 2 2-6 6-2Z"/></svg></div>
           <h3 class="text-lg font-semibold text-white">Diseño UX/UI y Estrategia de Producto</h3>
@@ -164,12 +191,46 @@
       </div>
     </section>
 
+    <section class="mx-auto max-w-7xl px-6 pb-20">
+      <div class="max-w-3xl">
+        <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Servicios conectados con evidencia</p>
+        <h2 class="mt-4 text-2xl md:text-3xl font-bold tracking-tight text-white">Dónde se ve cada capacidad en entregas reales.</h2>
+        <p class="mt-4 text-slate-300 leading-relaxed">Nuestros servicios están atados a sistemas entregados, tecnologías concretas y resultados medibles. La idea es que quede explícita la relación entre lo que ofrecemos y lo que ya entregamos.</p>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-2">
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <p class="text-xs uppercase tracking-[0.18em] text-slate-500">Delivery con IA</p>
+          <h3 class="mt-3 text-lg font-semibold text-white">Automatización, flujos con LLM e ingeniería de producto con IA</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Usamos integración LLM, RAG, automatización de flujos, extracción documental y monitoreo en producción cuando la IA genera ventaja real o habilita un producto.</p>
+          <p class="mt-4 text-sm text-slate-300">Prueba relacionada: <a href="./work/adia.html" class="text-[color:var(--accent)] hover:underline">AdIA</a> y <a href="./work/latin-energy-invoices.html" class="text-[color:var(--accent)] hover:underline">Latin Energy Group</a>.</p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <p class="text-xs uppercase tracking-[0.18em] text-slate-500">Mobile y UX de producto</p>
+          <h3 class="mt-3 text-lg font-semibold text-white">Apps orientadas al usuario con operación real y exigente</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Nuestro trabajo mobile incluye apps nativas, Flutter, React Native, ticketing, loyalty, streaming y experiencias donde la calidad de release importa de verdad.</p>
+          <p class="mt-4 text-sm text-slate-300">Prueba relacionada: <a href="./work/cinemark-ticketing.html" class="text-[color:var(--accent)] hover:underline">Cinemark Mobile Ticketing</a>.</p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <p class="text-xs uppercase tracking-[0.18em] text-slate-500">Fintech y flujos regulados</p>
+          <h3 class="mt-3 text-lg font-semibold text-white">Crédito, pagos, scoring y riesgo operativo</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Construimos sistemas fintech con backends cloud, integraciones en tiempo real, APIs de bureaus crediticios, chequeos de identidad y reglas de negocio que tienen que soportar regulación y escala.</p>
+          <p class="mt-4 text-sm text-slate-300">Prueba relacionada: <a href="./work/fintech-lending.html" class="text-[color:var(--accent)] hover:underline">Plataforma de Crédito Online</a>.</p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <p class="text-xs uppercase tracking-[0.18em] text-slate-500">Plataformas e integración</p>
+          <h3 class="mt-3 text-lg font-semibold text-white">Backends, middleware, SDKs y terceros complejos</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Acá convergen Java, Node.js, Python, APIs REST, integraciones gubernamentales, SDKs, cloud e ingeniería de sistemas de larga vida útil.</p>
+          <p class="mt-4 text-sm text-slate-300">Prueba relacionada: casos fintech, ticketing y automatización a lo largo de esta página.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="mx-auto max-w-7xl px-6 pb-24">
       <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
         <div class="lg:col-span-5 flex flex-col items-center lg:items-start">
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-3">Decisiones tecnológicas<br>guiadas por la entrega.</h2>
           <p class="text-slate-400 leading-relaxed max-w-prose mb-6">Elegimos tecnologías por su confiabilidad, mantenibilidad a largo plazo y porque realmente se entregan a tiempo. No por tendencias.</p>
-          <canvas id="techSphere" width="340" height="340" style="max-width:100%;opacity:0.92;cursor:grab;"></canvas>
+          <canvas id="techSphere" width="340" height="340" style="max-width:100%;opacity:0.92;cursor:grab;" aria-label="Mapa interactivo de capacidades tecnológicas"></canvas>
         </div>
         <div class="lg:col-span-7">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
@@ -252,32 +313,89 @@
           <span class="service-tag">Fintech</span>
           <h3 class="text-base font-semibold text-white group-hover:text-[color:var(--accent)] transition">Plataforma de Crédito Online</h3>
           <p class="text-sm text-slate-400">Plataforma de crédito end-to-end: más de 80.000 préstamos y ~USD 40M en cartera en el primer año.</p>
-          <span class="text-xs text-[color:var(--accent)] mt-auto">Ver caso de éxito →</span>
+          <span class="text-xs text-[color:var(--accent)] mt-auto">Ver prueba fintech →</span>
         </a>
         <a href="./work/cinemark-ticketing.html" class="case-teaser group">
           <span class="service-tag">Mobile · Ticketing</span>
           <h3 class="text-base font-semibold text-white group-hover:text-[color:var(--accent)] transition">Cinemark Mobile Ticketing</h3>
           <p class="text-sm text-slate-400">Primera app de ticketing en Android, Windows Phone, BB10, SmartTV y ticketing social en LATAM. Cliente desde 2009.</p>
-          <span class="text-xs text-[color:var(--accent)] mt-auto">Ver caso de éxito →</span>
+          <span class="text-xs text-[color:var(--accent)] mt-auto">Ver prueba mobile →</span>
         </a>
         <a href="./work/adia.html" class="case-teaser group">
           <span class="service-tag">Producto de IA</span>
           <h3 class="text-base font-semibold text-white group-hover:text-[color:var(--accent)] transition">AdIA — Ejecución Creativa con IA</h3>
           <p class="text-sm text-slate-400">Cofundamos y construimos todo el stack de IA. En producción con Netflix, Disney, HBO y Samsung.</p>
-          <span class="text-xs text-[color:var(--accent)] mt-auto">Ver caso de éxito →</span>
+          <span class="text-xs text-[color:var(--accent)] mt-auto">Ver prueba de IA →</span>
         </a>
         <a href="./work/latin-energy-invoices.html" class="case-teaser group">
           <span class="service-tag">Automatización IA</span>
           <h3 class="text-base font-semibold text-white group-hover:text-[color:var(--accent)] transition">Latin Energy Group — Facturas sin procesamiento manual</h3>
           <p class="text-sm text-slate-400">Pipeline completo de extracción de facturas. Múltiples formatos, 5 semanas, cero carga manual.</p>
-          <span class="text-xs text-[color:var(--accent)] mt-auto">Ver caso de éxito →</span>
+          <span class="text-xs text-[color:var(--accent)] mt-auto">Ver prueba de automatización →</span>
         </a>
         <a href="./contact.html" class="case-teaser group" style="border-style:dashed;">
           <span class="service-tag">+30 proyectos</span>
           <h3 class="text-base font-semibold text-white">TransUnion · BBVA · Despegar · SUBE · Samsung · y más</h3>
           <p class="text-sm text-slate-400">Consultanos sobre experiencia específica en tu industria.</p>
-          <span class="text-xs text-[color:var(--accent)] mt-auto">Contactanos →</span>
+          <span class="text-xs text-[color:var(--accent)] mt-auto">Consultanos por proyectos similares →</span>
         </a>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 pb-24">
+      <div class="grid gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Cómo trabajamos</p>
+          <h2 class="mt-4 text-2xl md:text-3xl font-bold tracking-tight text-white">Un proceso de entrega pensado para restricciones reales.</h2>
+          <p class="mt-4 text-slate-300 leading-relaxed">Hacemos explícito el proceso para que sea claro qué pasa entre la primera conversación y un sistema funcionando en producción.</p>
+        </div>
+        <div class="lg:col-span-7 grid gap-4">
+          <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <p class="text-xs uppercase tracking-[0.18em] text-slate-500">1. Enmarque</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Aclarar el objetivo de negocio y las restricciones duras</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-400">Arrancamos entendiendo producto, usuarios, riesgo operativo y dependencias técnicas que podrían romper la entrega más adelante.</p>
+          </article>
+          <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <p class="text-xs uppercase tracking-[0.18em] text-slate-500">2. Arquitectura</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Elegir stack por confiabilidad, no por moda</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-400">La arquitectura sigue al objetivo de entrega: IA donde da ventaja, mobile donde el producto la necesita y decisiones estables de backend/cloud para escalar y mantener.</p>
+          </article>
+          <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <p class="text-xs uppercase tracking-[0.18em] text-slate-500">3. Ejecución</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Construir con producción en mente desde el primer día</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-400">Trabajamos desde temprano sobre integraciones reales, flujos operativos, tooling interno, observabilidad y calidad en lugar de dejar lo difícil para el final.</p>
+          </article>
+          <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <p class="text-xs uppercase tracking-[0.18em] text-slate-500">4. Evolución</p>
+            <h3 class="mt-2 text-lg font-semibold text-white">Acompañar el producto después del lanzamiento</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-400">Nos mantenemos lo bastante cerca para estabilizar, iterar y expandir el sistema una vez que está en vivo y expuesto a uso real.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 pb-24">
+      <div class="max-w-4xl">
+        <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Preguntas frecuentes</p>
+        <h2 class="mt-4 text-2xl md:text-3xl font-bold tracking-tight text-white">Preguntas comunes sobre cómo trabaja Orugga.</h2>
+      </div>
+      <div class="mt-8 grid gap-4">
+        <details class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <summary class="cursor-pointer text-lg font-semibold text-white">¿Qué tipo de proyectos encajan mejor con Orugga?</summary>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Proyectos que necesitan ejecución senior, integraciones complejas, calidad mobile, flujos fintech o regulados, productización con IA o modernización legacy sin frenar el negocio.</p>
+        </details>
+        <details class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <summary class="cursor-pointer text-lg font-semibold text-white">¿Trabajan solo en productos nuevos?</summary>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">No. Trabajamos en productos nuevos, iniciativas demoradas, plataformas existentes que necesitan modernización y sistemas con usuarios reales que requieren más confiabilidad o velocidad de ejecución.</p>
+        </details>
+        <details class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <summary class="cursor-pointer text-lg font-semibold text-white">¿Cómo eligen las tecnologías para un proyecto?</summary>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Las elegimos según riesgo de entrega, mantenibilidad, encaje con el equipo, restricciones operativas y lo que ya demostró funcionar en sistemas reales similares.</p>
+        </details>
+        <details class="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <summary class="cursor-pointer text-lg font-semibold text-white">¿Pueden conectar servicios con resultados concretos?</summary>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Sí. Nuestro trabajo con IA se conecta con AdIA y automatización documental, el trabajo mobile con Cinemark, y el trabajo fintech/plataforma con crédito online, integraciones, SDKs y backends de alto volumen.</p>
+        </details>
       </div>
     </section>
 
@@ -289,8 +407,8 @@
           <h2 class="mt-4 text-3xl md:text-4xl font-extrabold tracking-tight text-white">Contanos sobre tu proyecto.</h2>
           <p class="mt-4 text-slate-300 leading-relaxed">Tanto si necesitás una app móvil, una solución de IA, una plataforma fintech o un equipo que tome el control de un sistema legacy — ya lo hicimos antes, a escala.</p>
           <div class="mt-8 flex flex-wrap gap-4">
-            <a href="./contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">Contactanos</a>
-            <a href="./about-us.html" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Sobre Orugga →</a>
+            <a href="./contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">Iniciar conversación sobre tu proyecto</a>
+            <a href="./about-us.html" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Ver quién trabajaría con vos →</a>
           </div>
         </div>
       </div>
@@ -300,5 +418,134 @@
   <div id="siteFooter"></div>
   <script src="../assets/js/includes.js"></script>
   <script src="../assets/js/hero-particles.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Servicios de ingenieria y desarrollo de software",
+      "serviceType": [
+        "Ingenieria de producto con IA",
+        "Desarrollo de apps moviles",
+        "Plataformas fintech",
+        "Backends e integracion de APIs",
+        "Modernizacion de sistemas legacy",
+        "UX y estrategia de producto"
+      ],
+      "provider": {
+        "@type": "Organization",
+        "name": "Orugga",
+        "url": "https://www.orugga.com/"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Desarrollo de software a medida"
+        },
+        {
+          "@type": "Offer",
+          "name": "Ingenieria de producto con IA"
+        },
+        {
+          "@type": "Offer",
+          "name": "Staff augmentation para entrega senior"
+        }
+      ],
+      "areaServed": [
+        "Argentina",
+        "LATAM",
+        "Estados Unidos",
+        "Europa"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Catalogo de servicios Orugga",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ingenieria de producto con IA"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Desarrollo de apps moviles"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Plataformas fintech"
+            }
+          }
+        ]
+      },
+      "url": "https://www.orugga.com/es/services.html",
+      "description": "Orugga diseña y construye productos con IA, apps moviles, plataformas fintech, backends y modernizacion de sistemas para equipos que necesitan entregar de verdad."
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué tipo de proyectos encajan mejor con Orugga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Proyectos que necesitan ejecución senior, integraciones complejas, calidad mobile, flujos fintech o regulados, productización con IA o modernización legacy sin frenar el negocio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Trabajan solo en productos nuevos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Orugga trabaja en productos nuevos, iniciativas demoradas, plataformas existentes que necesitan modernización y sistemas con usuarios reales que requieren más confiabilidad o velocidad de ejecución."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo eligen las tecnologías para un proyecto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las tecnologías se eligen según riesgo de entrega, mantenibilidad, encaje con el equipo, restricciones operativas y lo que ya demostró funcionar en sistemas reales similares."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Pueden conectar servicios con resultados concretos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. El trabajo con IA se conecta con AdIA y automatización documental, el trabajo mobile con Cinemark, y el trabajo fintech y plataforma con crédito online, integraciones, SDKs y backends de alto volumen."
+          }
+        }
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.orugga.com/es/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Servicios",
+          "item": "https://www.orugga.com/es/services.html"
+        }
+      ]
+    }
+  </script>
 </body>
 </html>

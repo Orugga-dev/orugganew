@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#070B14" />
   <!-- Favicons -->
 <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
@@ -19,7 +20,7 @@
   <!-- Hreflang for bilingual site -->
   <link rel="alternate" hreflang="en" href="https://www.orugga.com/en/index.html">
   <link rel="alternate" hreflang="es" href="https://www.orugga.com/es/index.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.orugga.com/en/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.orugga.com/">
   <link rel="canonical" href="https://www.orugga.com/en/index.html">
 
   <!-- Open Graph -->
@@ -127,7 +128,7 @@
 
           <a href="./services.html"
    class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">
-  Explore services →
+  Explore software capabilities →
 </a>
         </div>
       </div>
@@ -168,7 +169,7 @@
             We design and build AI-driven solutions focused on automation, decision support, and measurable productivity gains.
           </p>
           <span class="mt-5 inline-flex items-center text-sm font-medium text-[color:var(--accent)]">
-            Learn more →
+            Explore AI case studies →
           </span>
         </a>
 
@@ -187,7 +188,7 @@
             We build robust, scalable software and take full responsibility for delivery, end to end.
           </p>
           <span class="mt-5 inline-flex items-center text-sm font-medium text-[color:var(--accent)]">
-            Learn more →
+            Explore delivery case studies →
           </span>
         </a>
 
@@ -207,7 +208,7 @@
             We design intuitive user interfaces that align business goals with real product usability.
           </p>
           <span class="mt-5 inline-flex items-center text-sm font-medium text-[color:var(--accent)]">
-            Learn more →
+            See product design examples →
           </span>
         </a>
 
@@ -226,9 +227,49 @@
             We help define the right strategy, scope, and roadmap to support successful execution.
           </p>
           <span class="mt-5 inline-flex items-center text-sm font-medium text-[color:var(--accent)]">
-            Learn more →
+            See strategy and execution work →
           </span>
         </a>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+      <div class="grid gap-8 lg:grid-cols-[1.2fr_.8fr]">
+        <div>
+          <p class="text-xs uppercase tracking-[0.22em] text-slate-400">What Orugga Does</p>
+          <h2 class="mt-3 text-2xl md:text-4xl font-extrabold tracking-tight text-white">
+            We design, build, integrate, and scale software that has to work in the real world.
+          </h2>
+          <p class="mt-4 max-w-3xl text-slate-300 leading-relaxed">
+            Orugga is a senior software engineering team founded in 2005. We help companies launch AI products,
+            mobile apps, fintech platforms, and complex integrations with clear ownership from discovery to production.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="industry-pill">20+ years shipping software</span>
+            <span class="industry-pill">LATAM + global delivery</span>
+            <span class="industry-pill">AI, mobile, fintech, integrations</span>
+            <span class="industry-pill">Trusted by Samsung, BBVA, ESPN, Cinemark</span>
+          </div>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <p class="text-2xl font-extrabold text-white">800M+</p>
+            <p class="mt-2 text-sm text-slate-400">Monthly transactions supported in production systems.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <p class="text-2xl font-extrabold text-white">80,000+</p>
+            <p class="mt-2 text-sm text-slate-400">Loans processed in our fintech work during year one.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <p class="text-2xl font-extrabold text-white">30+</p>
+            <p class="mt-2 text-sm text-slate-400">Projects across fintech, media, telecom, retail, and AI ventures.</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="./services.html" class="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition">Explore services</a>
+        <a href="./services.html#real-work" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">See shipped work →</a>
+        <a href="./about-us.html" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Meet the engineering team →</a>
       </div>
     </section>
 
@@ -391,14 +432,43 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "ProfessionalService"],
     "name": "Orugga",
     "url": "https://www.orugga.com",
     "logo": "https://www.orugga.com/assets/img/orugga_logo_white_transparent_wgreen.png",
     "foundingDate": "2005",
+    "slogan": "Senior software engineering with execution you can trust.",
+    "email": "orugga@orugga.com",
     "description": "Software factory specializing in AI solutions, mobile development, and scalable software platforms. 20+ years of experience serving global companies.",
     "areaServed": ["AR", "US", "LATAM", "Worldwide"],
     "knowsAbout": ["Software Development", "Artificial Intelligence", "Mobile Development", "Fintech", "UI/UX Design", "System Integration"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Orugga services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI product engineering"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mobile app development"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Fintech platform development"
+          }
+        }
+      ]
+    },
     "address": [
       {
         "@type": "PostalAddress",
@@ -421,7 +491,8 @@
       "contactType": "sales"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/orugga"
+      "https://www.linkedin.com/company/orugga",
+      "https://www.orugga.com/en/index.html"
     ]
   }
   </script>
@@ -433,6 +504,20 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-7YGFFH5BNR');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Orugga",
+    "url": "https://www.orugga.com/en/index.html",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Orugga",
+      "url": "https://www.orugga.com/"
+    }
+  }
   </script>
 </body>
 </html>

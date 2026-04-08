@@ -3,13 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Orugga — Mobile Innovation &amp; Software Factory</title>
+  <meta name="theme-color" content="#070B14" />
+  <title>Orugga — AI, Mobile &amp; Software Engineering</title>
   <meta name="description" content="Orugga is a software factory with 20+ years of experience. We build AI solutions, mobile apps, and scalable platforms for companies across LATAM and globally." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.orugga.com/" />
   <link rel="icon" href="./assets/img/favicon.ico" sizes="any">
   <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
   <style>body{margin:0;background:#05070f;}</style>
+  <style>
+    body{background:radial-gradient(1000px 500px at 15% 10%,rgba(16,185,129,.12),transparent 55%),#05070f;color:#f8fafc;font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+    .root-shell{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 24px}
+    .root-card{max-width:760px;width:100%;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);backdrop-filter:blur(12px);border-radius:28px;padding:32px}
+    .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#6FBF8E}
+    h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.05;margin:14px 0 0}
+    p{font-size:1rem;line-height:1.7;color:#cbd5e1;max-width:62ch}
+    .links{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .link{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:600}
+    .primary{background:#fff;color:#05070f}
+    .secondary{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);color:#fff}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .chip{font-size:12px;color:#94a3b8;border:1px solid rgba(255,255,255,.08);padding:6px 10px;border-radius:999px}
+  </style>
 </head>
 <body>
+  <main class="root-shell">
+    <section class="root-card">
+      <div class="eyebrow">Orugga</div>
+      <h1>AI, mobile and software engineering for products that need to ship.</h1>
+      <p>We build AI products, mobile apps, fintech platforms and modern software systems for teams across LATAM and beyond. Choose your language or wait a moment to be redirected automatically.</p>
+      <div class="meta">
+        <span class="chip">AI product engineering</span>
+        <span class="chip">Mobile apps</span>
+        <span class="chip">Fintech platforms</span>
+        <span class="chip">Legacy modernization</span>
+      </div>
+      <div class="links">
+        <a class="link primary" href="./en/index.html">English</a>
+        <a class="link secondary" href="./es/index.html">Español</a>
+      </div>
+    </section>
+  </main>
+  <noscript>
+    <p><a href="./en/index.html">English</a> | <a href="./es/index.html">Español</a></p>
+  </noscript>
   <script>
     // Detect browser language and redirect accordingly
     // Prefers ES for Spanish-speaking LATAM users, EN for everyone else
@@ -17,9 +54,14 @@
     var isSpanish = lang.startsWith('es');
     window.location.replace(isSpanish ? './es/index.html' : './en/index.html');
   </script>
-  <!-- Fallback for no-JS -->
-  <noscript>
-    <meta http-equiv="refresh" content="0; url=./en/index.html" />
-  </noscript>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Orugga",
+    "url": "https://www.orugga.com/",
+    "inLanguage": ["en", "es"]
+  }
+  </script>
 </body>
 </html>

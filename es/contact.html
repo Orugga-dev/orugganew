@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#070B14" />
     <!-- Favicons -->
 <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
@@ -11,6 +12,23 @@
 <link rel="manifest" href="../assets/img/site.webmanifest">
 
     <title>Orugga — Contacto</title>
+    <meta name="description" content="Listo para construir tu proximo producto? Contacta al equipo de ingenieria de Orugga. Oficinas en Buenos Aires, Argentina y Carbondale, CO, Estados Unidos. Trabajamos con clientes de LATAM y el mundo.">
+    <meta name="robots" content="index, follow">
+    <link rel="alternate" hreflang="es" href="https://www.orugga.com/es/contact.html">
+    <link rel="alternate" hreflang="en" href="https://www.orugga.com/en/contact.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.orugga.com/en/contact.html">
+    <link rel="canonical" href="https://www.orugga.com/es/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="Orugga">
+    <meta property="og:title" content="Contacto Orugga - Empeza Tu Proyecto">
+    <meta property="og:description" content="Contacta al equipo de Orugga para hablar sobre tu proyecto de software. Buenos Aires y Carbondale, CO.">
+    <meta property="og:url" content="https://www.orugga.com/es/contact.html">
+    <meta property="og:image" content="https://www.orugga.com/assets/img/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contacto Orugga">
+    <meta name="twitter:description" content="Listo para construir? Contacta a nuestro equipo senior de ingenieria.">
+    <meta name="twitter:image" content="https://www.orugga.com/assets/img/og-image.jpg">
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -61,13 +79,13 @@
           <!-- Left card -->
           <div class="lg:col-span-5">
             <div class="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,.45)]">
-              <p class="text-xs uppercase tracking-wider text-slate-500">Dirección</p>
+              <p class="text-xs uppercase tracking-wider text-slate-500">Oficina Buenos Aires</p>
               <p class="mt-2 text-slate-200 leading-relaxed">
                 Paraná 522, Piso 2 Of 22<br />
                 CABA, Argentina
               </p>
 
-              <p class="mt-8 text-xs uppercase tracking-wider text-slate-500">Dirección</p>
+              <p class="mt-8 text-xs uppercase tracking-wider text-slate-500">Oficina Estados Unidos</p>
               <p class="mt-2 text-slate-200 leading-relaxed">
                 89 Meadowood Dr, Apt A4<br />
                 Carbondale, CO 81623, Estados Unidos
@@ -77,6 +95,15 @@
               <a class="mt-2 inline-block text-slate-200 hover:text-white transition" href="mailto:orugga@orugga.com">
                 orugga@orugga.com
               </a>
+
+              <div class="mt-8 rounded-2xl border border-white/10 bg-black/20 p-5">
+                <p class="text-xs uppercase tracking-wider text-slate-500">Dónde encajamos mejor</p>
+                <ul class="mt-3 space-y-3 text-sm leading-relaxed text-slate-300">
+                  <li>IA, mobile, fintech o plataformas que realmente tienen que llegar a producción.</li>
+                  <li>Productos con integraciones complejas, compliance o dependencias legacy.</li>
+                  <li>Equipos que necesitan ejecución senior, no solo sumar manos.</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -156,6 +183,7 @@
                   <button
                     id="contactSubmit"
                     type="submit"
+                    aria-label="Enviar formulario de contacto"
                     class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-slate-100 transition"
                   >
                     <span class="btnLabel">Enviar</span>
@@ -177,6 +205,35 @@
     <!-- JS (IMPORTANT: this must match other pages) -->
     <script src="../assets/js/hero-particles.js" defer></script>
     <script src="../assets/js/includes.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contacto Orugga",
+      "url": "https://www.orugga.com/es/contact.html",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Orugga",
+        "url": "https://www.orugga.com/"
+      },
+      "about": {
+        "@type": "Organization",
+        "name": "Orugga",
+        "email": "orugga@orugga.com"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.orugga.com/es/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Contacto", "item": "https://www.orugga.com/es/contact.html" }
+      ]
+    }
+    </script>
 
     <!-- Contact form submit -> Google Apps Script Web App -->
     <script>
